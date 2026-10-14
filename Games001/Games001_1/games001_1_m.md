@@ -133,17 +133,20 @@ $`(AB)^T=B^TA^T`$相等的原因
 $$(AB)_{ij}=\sum_k a_{ik}b_{kj}$$
 
 $$a(i,1)b(1,j)+a(i,2)b(2,j)+.....$$
+
 转置后，第 i 行第 j 列变成原来的第 j 行第 i 列：
 
 $$(AB)^T_{ij}=(AB)_{ji}=\sum_k a_{jk}b_{ki}$$
 
 $$a(j,1)b(1,i)+a(j,2)b(2,i)+.....$$
+
 而 B^T A^T 的第 i 行第 j 列是：
 
 $$(B^TA^T)_{ij}=\sum_k B^T_{ik}A^T_{kj}
 =\sum_k b_{ki}a_{jk}$$
 
 $$b(1,i)a(j,1)+b(2,i)a(j,2)+.....$$
+
 两项一样（只是乘积顺序换了），所以：
 
 $$(AB)^T=B^TA^T$$

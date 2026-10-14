@@ -548,6 +548,7 @@ $`f = \sum_{j=1}^n \left( \sum_{i=1}^m a_i x_{ij} \right) \left( \sum_{k=1}^m x_
 此部分包含 $`x_{pq}`$，对 $`x_{pq}`$ 求导后，留下 $`a_p b_k x_{kq}`$。再对 $`k`$ 求和：
 
 $$\frac{\partial}{\partial x_{pq}} \left( \sum_{k=1}^m a_p b_k x_{pq} x_{kq} \right) = \sum_{k=1}^m a_p b_k x_{kq} = a_p \sum_{k=1}^m b_k x_{kq}$$
+
 注意 $`\sum_{k=1}^m b_k x_{kq}`$ 恰好是行向量 $`b^T X`$ 的第 $`q`$ 个分量，即 $`(b^T X)_q`$。所以这部分结果为：
 
 $$a_p (b^T X)_q$$
@@ -558,6 +559,7 @@ $$a_p (b^T X)_q$$
 此部分包含 $`x_{pq}`$，对 $`x_{pq}`$ 求导后，留下 $`a_i b_p x_{iq}`$。再对 $`i`$ 求和：
 
 $$\frac{\partial}{\partial x_{pq}} \left( \sum_{i=1}^m a_i b_p x_{iq} x_{pq} \right) = \sum_{i=1}^m a_i b_p x_{iq} = b_p \sum_{i=1}^m a_i x_{iq}$$
+
 注意 $`\sum_{i=1}^m a_i x_{iq}`$ 恰好是行向量 $`a^T X`$ 的第 $`q`$ 个分量，即 $`(a^T X)_q`$。所以这部分结果为：
 
 $$b_p (a^T X)_q$$
@@ -784,16 +786,19 @@ todo 不算难，练习不够不熟悉
 **常数微分法则**
 
 $$\text{d}\boldsymbol{A}_{m \times n} = \boldsymbol{0}_{m \times n}$$
+
 *   **解释**：常数矩阵对任何自变量都没有变化率，其微分为全零矩阵。
 
 **微分线性法则**
 
 $$\text{d}(c_1 \boldsymbol{F}(X) + c_2 \boldsymbol{G}(X)) = c_1 \text{d}\boldsymbol{F}(X) + c_2 \text{d}\boldsymbol{G}(X)$$
+
 *   **解释**：和普通标量微积分一样，常数系数可以提出来，加法可以拆开。求微分是一个线性算子。
 
 **微分乘积法则（重要）**
 
 $$\text{d}[\boldsymbol{F}(X)\boldsymbol{G}(X)] = [\text{d}\boldsymbol{F}(X)]\boldsymbol{G}(X) + \boldsymbol{F}(X)[\text{d}\boldsymbol{G}(X)]$$
+
 *   **解释**：形式上和标量的“左乘右导，右乘左导”一模一样，但必须严格保持矩阵乘法的顺序！
 *   你不能写成 $`\boldsymbol{G}(X)[\text{d}\boldsymbol{F}(X)]`$。因为矩阵乘法不满足交换律（$`\boldsymbol{A}\boldsymbol{B} \neq \boldsymbol{B}\boldsymbol{A}`$）。
 *   **三阶推广**：
@@ -803,5 +808,6 @@ $$\text{d}[\boldsymbol{F}(X)\boldsymbol{G}(X)\boldsymbol{H}(X)] = [\text{d}\bold
 **微分转置法则**
 
 $$\text{d}\boldsymbol{F}^{T}_{p \times q}(X) = [\text{d}\boldsymbol{F}_{p \times q}(X)]^{T}$$
+
  **解释**：微分的转置 = 转置的微分。先转置再求微分，或者先求微分再转置，结果一样。注意维度变化：$`p \times q`$ 变成 $`q \times p`$。
 

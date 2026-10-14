@@ -74,9 +74,11 @@ $$\Vert A\Vert_\infty = \max_{1\le i\le m}\sum_{j=1}^{n}|a_{ij}| \quad(\boldsymb
 把矩阵 $`A`$ 的行向量记为：
 
 $$r_1, r_2, \cdots, r_m$$
+
 （每一行是一个横向量）。那么 $`Ax`$ 的第 $`i`$ 个分量是点积：
 
 $$(Ax)_i = r_i \cdot x$$
+
 根据绝对值不等式（点积绝对值 ≤ 各分量绝对值乘积之和）：
 
 把有负，有正的全部拉到正值，则乘积之和必定比有正有负的点积值大
@@ -126,6 +128,7 @@ $$\Vert x\Vert_\infty = 1$$
 此时第 $`k`$ 行的点积为：
 
 $$|(Ax)_k| = |a_{k1}x_1 + a_{k2}x_2 + \cdots + a_{kn}x_n|$$
+
 由于每个 $`x_j`$ 的符号与 $`a_{kj}`$ 一致，所以每一项的乘积 $`a_{kj}x_j`$ 都等于 $`|a_{kj}|`$，因此：
 
 $$|(Ax)_k| = |a_{k1}| + |a_{k2}| + \cdots + |a_{kn}| = M$$
@@ -167,11 +170,13 @@ $$\max_{x \neq 0} \frac{\Vert Ax\Vert_2^2}{\Vert x\Vert_2^2}
 设
 
 $$B = A^T A$$
+
 这是一个对称半正定矩阵（必然满足）。
 
 根据线性代数中的**瑞利商（Rayleigh quotient）定理**：对于一个对称矩阵，
 
 $$\max_{x \neq 0} \frac{x^T B x}{x^T x}$$
+
 恰好等于矩阵 $`B`$ 的最大特征值 $`\lambda_{\max}(B)`$。
 
 因此：
