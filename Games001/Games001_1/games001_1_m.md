@@ -5,6 +5,7 @@
 ## 二阶矩阵伴随矩阵
 
 设矩阵：
+
 $$A = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$$
 
 **求每个元素的余子式**
@@ -21,6 +22,7 @@ $$A = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$$
 **代数余子式矩阵**
 
 把代数余子式按原位置排成矩阵：
+
 $$C = \begin{pmatrix} A_{11} & A_{12} \\\\ A_{21} & A_{22} \end{pmatrix}
 = \begin{pmatrix} d & -c \\\\ -b & a \end{pmatrix}$$
 
@@ -681,6 +683,7 @@ TODO：特征向量变成特征函数，矩阵对角化变成谱分解。
 存在可逆矩阵 $P$，使得 $P^{-1}AP = B$，则称矩阵 $A$ 与 $B$ 相似，记作 $A \sim B$。
 
 例子：
+
 $$A = \begin{bmatrix}1 & 2 \\\\ 3 & 4\end{bmatrix}, \qquad P = \begin{bmatrix}0 & 1 \\\\ 1 & 0\end{bmatrix}$$
 
 因为 $P$ 是交换矩阵，所以 $P^{-1} = P$。

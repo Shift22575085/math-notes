@@ -42,6 +42,7 @@ $$\begin{bmatrix} \pi/2 \\\\ 0 \end{bmatrix} = \begin{bmatrix} \pi/2 \\\\ 0 + \s
 要找到的就是这种极小的局部如何表示的函数
 
 ### 雅可比矩阵
+
 $$f\left(\begin{bmatrix} x \\\\ y \end{bmatrix}\right) = \begin{bmatrix} x + \sin(y) \\\\ y + \sin(x) \end{bmatrix}$$
 
 $$J = \begin{bmatrix} 
@@ -76,9 +77,11 @@ $$\begin{bmatrix} \cos(y) \\\\ 1 \end{bmatrix}$$
 # 向量变元的实值标量函数(梯度方向)
 
 输入（列向量）：
+
 $$x_{n \times 1} = (x_1, x_2, \dots, x_n)^T$$
 
 求导结果（梯度，转置为列向量）：
+
 $$\nabla_x f(x) = \left( \frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \dots, \frac{\partial f}{\partial x_n} \right)^T$$
 
 分子布局：分母转置
@@ -104,17 +107,20 @@ $$\frac{\partial [c_1 f(\boldsymbol{x}) + c_2 g(\boldsymbol{x})]}{\partial \bold
 $$\frac{\partial [f(\boldsymbol{x}) g(\boldsymbol{x})]}{\partial \boldsymbol{x}} = \frac{\partial f(\boldsymbol{x})}{\partial \boldsymbol{x}} g(\boldsymbol{x}) + f(\boldsymbol{x}) \frac{\partial g(\boldsymbol{x})}{\partial \boldsymbol{x}}$$
 
 商法则：
+
 $$\frac{\partial \left[\frac{f(\boldsymbol{x})}{g(\boldsymbol{x})}\right]}{\partial \boldsymbol{x}} = \frac{1}{g^2(\boldsymbol{x})} \left[ \frac{\partial f(\boldsymbol{x})}{\partial \boldsymbol{x}} g(\boldsymbol{x}) - f(\boldsymbol{x}) \frac{\partial g(\boldsymbol{x})}{\partial \boldsymbol{x}} \right]$$
 
 **函数相除 （商法则）**
 
 **第一步：写出增量后的表达式**
 设原比值为 $q = \frac{f}{g}$。给 $x$ 一个微小增量 $\Delta x$，分子变为 $f+\Delta f$，分母变为 $g+\Delta g$。
+
 $$q + \Delta q = \frac{f + \Delta f}{g + \Delta g}$$
 
 **第二步：求增量 $\Delta q$**
 
 用新结果减去老结果：
+
 $$\Delta q = \frac{f + \Delta f}{g + \Delta g} - \frac{f}{g}$$
 
 $$\Delta q = \frac{g(f + \Delta f) - f(g + \Delta g)}{g(g + \Delta g)}$$
@@ -124,6 +130,7 @@ $$\text{分子} = gf + g\Delta f - fg - f\Delta g = g\Delta f - f\Delta g$$
 $$\Delta q = \frac{g\Delta f - f\Delta g}{g(g + \Delta g)}$$
 
 **第三步：除以 $\Delta x$ 并令 $\Delta x \to 0$**
+
 $$\frac{\Delta q}{\Delta x} = \frac{g \frac{\Delta f}{\Delta x} - f \frac{\Delta g}{\Delta x}}{g(g + \Delta g)}
 \quad \longrightarrow \quad
 q' = \frac{g f' - f g'}{g^2}$$
@@ -138,6 +145,7 @@ $A$：常数矩阵（$n \times n$）
 所有求导结果都对齐成 $n \times 1$ 的列向量。
 
 **一次型求导**：
+
 $$\frac{\partial(x^Ta)}{\partial x} = \frac{\partial(a^Tx)}{\partial x} = a$$
 
 等同于标量函数 $ax$ 求导得到常数 $a$。
@@ -145,11 +153,13 @@ $$\frac{\partial(x^Ta)}{\partial x} = \frac{\partial(a^Tx)}{\partial x} = a$$
 $x_1a_1+x_1a_1$的求偏导就是$a$
 
 **平方和求导**：
+
 $$\frac{\partial(x^Tx)}{\partial x} = 2x$$
 
 等同于标量函数 $x^2$ 求导得到 $2x$。
 
 **二次型求导**：
+
 $$\frac{\partial(x^TAx)}{\partial x} = Ax + A^Tx$$
 
 套用乘积法则 $(x^TA) \cdot (x)$。如果 $A$ 是对称矩阵，简化为 $2Ax$。完全类比标量 $ax^2$ 求导得到 $2ax$。
@@ -302,6 +312,7 @@ Ax+A^Tx
 }$$
 
 **双重乘积求导**：
+
 $$\frac{\partial(a^T x x^T b)}{\partial x} = \frac{\partial(x^T a b^T x)}{\partial x} = ab^Tx + ba^Tx$$
 
 a,b,x均为列向量，无矩阵，矩阵后面由$ab^T$得到
@@ -510,6 +521,7 @@ $a_{m \times 1}, b_{m \times 1}$ 为常数列向量
 **将函数展开成求和形式**
 
 原函数为：
+
 $$f(X) = a^T X X^T b$$
 
 由于 $a$ 是 $m \times 1$，$X$ 是 $m \times n$，$X^T b$ 是 $n \times 1$，因此 $f(X)$ 是一个标量。
@@ -534,19 +546,24 @@ $f = \sum_{j=1}^n \left( \sum_{i=1}^m a_i x_{ij} \right) \left( \sum_{k=1}^m x_{
 
 **第一部分：当 $i=p$ 时**
 此部分包含 $x_{pq}$，对 $x_{pq}$ 求导后，留下 $a_p b_k x_{kq}$。再对 $k$ 求和：
+
 $$\frac{\partial}{\partial x_{pq}} \left( \sum_{k=1}^m a_p b_k x_{pq} x_{kq} \right) = \sum_{k=1}^m a_p b_k x_{kq} = a_p \sum_{k=1}^m b_k x_{kq}$$
 注意 $\sum_{k=1}^m b_k x_{kq}$ 恰好是行向量 $b^T X$ 的第 $q$ 个分量，即 $(b^T X)_q$。所以这部分结果为：
+
 $$a_p (b^T X)_q$$
 
 向量的迭代和矩阵列不变，行迭代的迭代对应相乘，结果就是向量转置乘以矩阵，因为默认是左行右列，而这个乘法中是左列右行，所以向量转置
 
 **第二部分：当 $k=p$ 时**
 此部分包含 $x_{pq}$，对 $x_{pq}$ 求导后，留下 $a_i b_p x_{iq}$。再对 $i$ 求和：
+
 $$\frac{\partial}{\partial x_{pq}} \left( \sum_{i=1}^m a_i b_p x_{iq} x_{pq} \right) = \sum_{i=1}^m a_i b_p x_{iq} = b_p \sum_{i=1}^m a_i x_{iq}$$
 注意 $\sum_{i=1}^m a_i x_{iq}$ 恰好是行向量 $a^T X$ 的第 $q$ 个分量，即 $(a^T X)_q$。所以这部分结果为：
+
 $$b_p (a^T X)_q$$
 
 合并两部分：
+
 $$\frac{\partial f}{\partial x_{pq}} = a_p (b^T X)_q + b_p (a^T X)_q$$
 
 **第三步：还原为矩阵形式**
@@ -564,6 +581,7 @@ $$\frac{\partial f}{\partial x_{pq}} = a_p (b^T X)_q + b_p (a^T X)_q$$
    - 因此，第二项正好是外积矩阵 $b (a^T X)$ 的第 $p$ 行第 $q$ 列元素。
 
 将两者拼合，得到最终的矩阵导数：
+
 $$\frac{\partial(a^T X X^T b)}{\partial X} = a (b^T X) + b (a^T X) = a b^T X + b a^T X$$
 
 **维度验证（防止出错）**
@@ -662,14 +680,17 @@ x_{21}x_{11} + x_{22}x_{21} & x_{21}x_{12} + x_{22}^2
 **求全微分 $\mathrm{d}\boldsymbol{F}(X)$**
 
 全微分公式：
+
 $$\mathrm{d}f = \sum \frac{\partial f}{\partial x_{ij}} \mathrm{d}x_{ij}$$
 
 为了不晕，先把双下标换成普通变量：
+
 $$x_{11} = a, \quad x_{12} = b, \quad x_{21} = c, \quad x_{22} = d$$
 
 **左上角 $f_{11} = x_{11}^2 + x_{12}x_{21}$**
 
 替换变量：
+
 $$f_{11} = a^2 + bc$$
 
 分别求偏导：
@@ -679,14 +700,17 @@ $$f_{11} = a^2 + bc$$
 - 对 $d$ 求偏导：$0$
 
 根据全微分公式拼起来：
+
 $$\mathrm{d}f_{11} = 2a \cdot \mathrm{d}a + c \cdot \mathrm{d}b + b \cdot \mathrm{d}c$$
 
 换回双下标：
+
 $$\mathrm{d}f_{11} = 2x_{11}\mathrm{d}x_{11} + x_{21}\mathrm{d}x_{12} + x_{12}\mathrm{d}x_{21}$$
 
 **右上角 $f_{12} = x_{11}x_{12} + x_{12}x_{22}$**
 
 替换变量：
+
 $$f_{12} = ab + bd$$
 
 分别求偏导：
@@ -696,14 +720,17 @@ $$f_{12} = ab + bd$$
 - 对 $d$ 求偏导：$b$
 
 拼起来：
+
 $$\mathrm{d}f_{12} = b \cdot \mathrm{d}a + (a+d) \cdot \mathrm{d}b + b \cdot \mathrm{d}d$$
 
 换回双下标：
+
 $$\mathrm{d}f_{12} = x_{12}\mathrm{d}x_{11} + (x_{11}+x_{22})\mathrm{d}x_{12} + x_{12}\mathrm{d}x_{22}$$
 
 **左下角 $f_{21} = x_{21}x_{11} + x_{22}x_{21}$**
 
 替换变量：
+
 $$f_{21} = ca + dc$$
 
 分别求偏导：
@@ -713,14 +740,17 @@ $$f_{21} = ca + dc$$
 - 对 $d$ 求偏导：$c$
 
 拼起来：
+
 $$\mathrm{d}f_{21} = c \cdot \mathrm{d}a + (a+d) \cdot \mathrm{d}c + c \cdot \mathrm{d}d$$
 
 换回双下标：
+
 $$\mathrm{d}f_{21} = x_{21}\mathrm{d}x_{11} + (x_{11}+x_{22})\mathrm{d}x_{21} + x_{21}\mathrm{d}x_{22}$$
 
 **右下角 $f_{22} = x_{21}x_{12} + x_{22}^2$**
 
 替换变量：
+
 $$f_{22} = cb + d^2$$
 
 分别求偏导：
@@ -730,9 +760,11 @@ $$f_{22} = cb + d^2$$
 - 对 $d$ 求偏导：$2d$
 
 拼起来：
+
 $$\mathrm{d}f_{22} = c \cdot \mathrm{d}b + b \cdot \mathrm{d}c + 2d \cdot \mathrm{d}d$$
 
 换回双下标：
+
 $$\mathrm{d}f_{22} = x_{12}\mathrm{d}x_{21} + x_{21}\mathrm{d}x_{12} + 2x_{22}\mathrm{d}x_{22}$$
 
 **拼成矩阵**
@@ -750,21 +782,26 @@ $$\mathrm{d}\boldsymbol{F}(X) =
 todo 不算难，练习不够不熟悉
 
 **常数微分法则**
+
 $$\text{d}\boldsymbol{A}_{m \times n} = \boldsymbol{0}_{m \times n}$$
 *   **解释**：常数矩阵对任何自变量都没有变化率，其微分为全零矩阵。
 
 **微分线性法则**
+
 $$\text{d}(c_1 \boldsymbol{F}(X) + c_2 \boldsymbol{G}(X)) = c_1 \text{d}\boldsymbol{F}(X) + c_2 \text{d}\boldsymbol{G}(X)$$
 *   **解释**：和普通标量微积分一样，常数系数可以提出来，加法可以拆开。求微分是一个线性算子。
 
 **微分乘积法则（重要）**
+
 $$\text{d}[\boldsymbol{F}(X)\boldsymbol{G}(X)] = [\text{d}\boldsymbol{F}(X)]\boldsymbol{G}(X) + \boldsymbol{F}(X)[\text{d}\boldsymbol{G}(X)]$$
 *   **解释**：形式上和标量的“左乘右导，右乘左导”一模一样，但必须严格保持矩阵乘法的顺序！
 *   你不能写成 $\boldsymbol{G}(X)[\text{d}\boldsymbol{F}(X)]$。因为矩阵乘法不满足交换律（$\boldsymbol{A}\boldsymbol{B} \neq \boldsymbol{B}\boldsymbol{A}$）。
 *   **三阶推广**：
+
 $$\text{d}[\boldsymbol{F}(X)\boldsymbol{G}(X)\boldsymbol{H}(X)] = [\text{d}\boldsymbol{F}(X)]\boldsymbol{G}(X)\boldsymbol{H}(X) + \boldsymbol{F}(X)[\text{d}\boldsymbol{G}(X)]\boldsymbol{H}(X) + \boldsymbol{F}(X)\boldsymbol{G}(X)[\text{d}\boldsymbol{H}(X)]$$
 
 **微分转置法则**
+
 $$\text{d}\boldsymbol{F}^{T}_{p \times q}(X) = [\text{d}\boldsymbol{F}_{p \times q}(X)]^{T}$$
  **解释**：微分的转置 = 转置的微分。先转置再求微分，或者先求微分再转置，结果一样。注意维度变化：$p \times q$ 变成 $q \times p$。
 

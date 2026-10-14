@@ -72,8 +72,10 @@ $$\Vert A\Vert_\infty = \max_{1\le i\le m}\sum_{j=1}^{n}|a_{ij}| \quad(\boldsymb
 ## 第一步：证明放大倍数 ≤ 最大行和
 
 把矩阵 $A$ 的行向量记为：
+
 $$r_1, r_2, \cdots, r_m$$
 （每一行是一个横向量）。那么 $Ax$ 的第 $i$ 个分量是点积：
+
 $$(Ax)_i = r_i \cdot x$$
 根据绝对值不等式（点积绝对值 ≤ 各分量绝对值乘积之和）：
 
@@ -84,6 +86,7 @@ $$|(Ax)_i| \le |a_{i1}||x_1| + |a_{i2}||x_2| + \cdots + |a_{in}||x_n|$$
 $L_\infty$的定义就是向量中的值的绝对值的最大项
 
 因为 $L_\infty$ 范数 $\Vert x\Vert_\infty = \max\limits_{1\le j\le n} |x_j|$，所以每个分量都满足：
+
 $$|x_j| \le \Vert x\Vert_\infty$$
 
 于是第 $i$ 行绝对值的和满足：
@@ -103,6 +106,7 @@ $M = \max_{1\le i\le m} \sum_{j=1}^n |a_{ij}|$即最大的绝对行和。
 $\Vert Ax\Vert_\infty \le M \cdot \Vert x\Vert_\infty$
 
 因此放大倍数：
+
 $$\frac{\Vert Ax\Vert_\infty}{\Vert x\Vert_\infty} \le M$$
 
 上界证完。
@@ -116,18 +120,22 @@ $$\frac{\Vert Ax\Vert_\infty}{\Vert x\Vert_\infty} \le M$$
 $$|x_j| = 1$$
 
 于是：
+
 $$\Vert x\Vert_\infty = 1$$
 
 此时第 $k$ 行的点积为：
+
 $$|(Ax)_k| = |a_{k1}x_1 + a_{k2}x_2 + \cdots + a_{kn}x_n|$$
 由于每个 $x_j$ 的符号与 $a_{kj}$ 一致，所以每一项的乘积 $a_{kj}x_j$ 都等于 $|a_{kj}|$，因此：
 
 $$|(Ax)_k| = |a_{k1}| + |a_{k2}| + \cdots + |a_{kn}| = M$$
 
 因为其他任何一行的点积绝对值都不会超过该行的行和，而行和最大也才 $M$，所以整个向量 $Ax$ 的 $L_\infty$ 范数（所有分量绝对值的最大值）正好就是：
+
 $$\Vert Ax\Vert_\infty = M$$
 
 因此：
+
 $$\frac{\Vert Ax\Vert_\infty}{\Vert x\Vert_\infty} = \frac{M}{1} = M$$
 
 等号可以取到，证毕。
@@ -148,31 +156,39 @@ $$\Vert A\Vert_2 = \sigma_{\max}(A) \quad(\boldsymbol A\text{ 的最大奇异值
 ## 证明过程
 
 我们要最大化放大倍数：
+
 $$\frac{\Vert Ax\Vert_2}{\Vert x\Vert_2}$$
 
 因为开根号是单调递增的，可以先最大化它的平方，这样能避免根号带来的计算麻烦：
+
 $$\max_{x \neq 0} \frac{\Vert Ax\Vert_2^2}{\Vert x\Vert_2^2}
 = \max_{x \neq 0} \frac{x^T A^T A x}{x^T x}$$
 
 设
+
 $$B = A^T A$$
 这是一个对称半正定矩阵（必然满足）。
 
 根据线性代数中的**瑞利商（Rayleigh quotient）定理**：对于一个对称矩阵，
+
 $$\max_{x \neq 0} \frac{x^T B x}{x^T x}$$
 恰好等于矩阵 $B$ 的最大特征值 $\lambda_{\max}(B)$。
 
 因此：
+
 $$\max_{x \neq 0} \frac{\Vert Ax\Vert_2^2}{\Vert x\Vert_2^2}
 = \lambda_{\max}(A^T A)$$
 
 两边同时开平方（因为范数是非负的，且特征值非负）：
+
 $$\Vert A\Vert_2 = \sqrt{\lambda_{\max}(A^T A)}$$
 
 而矩阵 $A$ 的**最大奇异值** $\sigma_{\max}(A)$ 的定义正是：
+
 $$\sigma_{\max}(A) = \sqrt{\lambda_{\max}(A^T A)}$$
 
 所以最终得到：
+
 $$\boxed{\Vert A\Vert_2 = \sigma_{\max}(A)}$$
 
 ## 补充说明（等号成立条件）

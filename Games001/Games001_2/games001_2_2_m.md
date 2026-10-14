@@ -3,12 +3,14 @@
 ## 基本设定
 
 **自变量**
+
 $$f(X), \quad X_{m \times n} = (x_{ij})_{i=1, j=1}^{m, n}$$
 
 - $X$ 是一个 $m \times n$ 的矩阵。
 - $f(X)$ 是一个实值标量函数（输入矩阵，输出一个数）。
 
 **自变量的微分**
+
 $$\mathrm{d}X_{m \times n} =
 \begin{pmatrix}
 \mathrm{d}x_{11} & \mathrm{d}x_{12} & \dots & \mathrm{d}x_{1n} \\\\
@@ -72,8 +74,10 @@ $A_{ij}$：该元素的代数余子式，等于 $(-1)^{i+j}$ 乘以划掉第 $i$
 $A_{i2} = (-1)^{i+2} M_{i2}$，其中 $M_{i2}$ 是划掉第 $i$ 行第 2 列后剩下的行列式。
 
 在按第 $i$ 行展开的公式
+
 $$|X|=\sum_{j=1}^{n}x_{ij}A_{ij}$$
 中，对于固定的 $x_{ij}$，只有一项显式含有 $x_{ij}$，就是
+
 $$x_{ij}A_{ij},$$
 这一项。所以求导结果是 $A_{ij}$,行列式作为函数，固定点作为变量，求导结果为这个点的余子式。
 
@@ -160,6 +164,7 @@ $$\frac{\partial |X|}{\partial X^T} = X^*$$
 $\frac{\partial |X|}{\partial X^T} = X^*$（$X^*$ 即伴随矩阵，$X^{-1} = X^* / |X|$）。
 
 **推导：**
+
 $${X^{-1} = \frac{X^*}{|X|}}$$
 
 **第一步：伴随矩阵的核心性质**
@@ -290,7 +295,9 @@ $$\mathrm{d}|X| = \operatorname{tr}(|X| X^{-1} \mathrm{d}X)
 
 ### 逆矩阵的微分
 由 $X X^{-1} = E$ 两边求微分：
+
 $$(\mathrm{d}X)X^{-1} + X(\mathrm{d}(X^{-1})) = 0$$
+
 $$\mathrm{d}(X^{-1}) = -X^{-1}(\mathrm{d}X)X^{-1}$$
 
 ## 经典证明案例
@@ -302,6 +309,7 @@ $\mathrm{d}\thinspace\mathrm{tr}(X^T X) = \mathrm{tr}[\mathrm{d}(X^T)X] + \mathr
 
 利用转置法则和迹的转置不变性（因为 $\mathrm{tr}(A) = \mathrm{tr}(A^T)$）：
 外面带着tr，里面的利用$(AB)^T = B^T A^T$进行转置（第一项）。
+
 $$= \mathrm{tr}[(\mathrm{d}X)^T X] + \mathrm{tr}[X^T \mathrm{d}X] = \mathrm{tr}[X^T \mathrm{d}X] + \mathrm{tr}[X^T \mathrm{d}X] = 2\mathrm{tr}[X^T \mathrm{d}X]$$
 
 对照标准公式 $\mathrm{d}f = \mathrm{tr}\left[\frac{\partial f}{\partial X^T} \mathrm{d}X\right]$，可得 $\frac{\partial f}{\partial X^T} = 2X^T$，转置后得 $\frac{\partial f}{\partial X} = 2X$（因为分母是 $X^T$，提取出的是 $\frac{\partial f}{\partial X^T}$；若要分母布局的 $\frac{\partial f}{\partial X}$，转置即可）。
@@ -336,6 +344,7 @@ a_z b_x & a_z b_y & a_z b_z
 **迹等于内积**
 
 图片中给出了一个非常重要的性质：
+
 $$\operatorname{tr}(\boldsymbol{a} \otimes \boldsymbol{b}) = \boldsymbol{a} \cdot \boldsymbol{b}$$
 
 因为是$ab^T$，这个的对角线之后等于对应点相乘
@@ -344,6 +353,7 @@ $$\operatorname{tr}(\boldsymbol{a} \otimes \boldsymbol{b}) = \boldsymbol{a} \cdo
 
 **定义**
 对矩阵 $A_{m \times n}$ 和 $B_{p \times q}$，克罗内克积 $A \otimes B$ 是一个 $mp \times nq$ 的分块矩阵：
+
 $$A \otimes B = \begin{pmatrix} a_{11}B & \cdots & a_{1n}B \\\\ \vdots & \ddots & \vdots \\\\ a_{m1}B & \cdots & a_{mn}B \end{pmatrix}$$
 
 设 
@@ -457,6 +467,7 @@ $$\boldsymbol{x} = \sum_{i=1}^{n} x_i \boldsymbol{e}^i = \sum_{i=1}^{n} x^i \bol
 逆变分量：$x^1\boldsymbol{e}_1+x^2\boldsymbol{e}_2=\boldsymbol{x}$，即 $x^1(1,0)+x^2(1,1)=(2,1)$，解得 $x^1=1,\ x^2=1$
 
 则：
+
 $$\boldsymbol{x}=x^1\boldsymbol{e}_1+x^2\boldsymbol{e}_2=1(1,0)+1(1,1)=(2,1)$$
 
 在三维空间中（$n=3$）：
