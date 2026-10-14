@@ -63,8 +63,7 @@ $`U=E_2E_1E_0A`$
 
 两边左乘 $`(E_2E_1E_0)^{-1}`$：
 
-$$(E_2E_1E_0)^{-1}U
-=
+$$(E_2E_1E_0)^{-1}U =
 (E_2E_1E_0)^{-1}E_2E_1E_0A$$
 
 $$A=(E_2E_1E_0)^{-1}U$$
@@ -206,8 +205,7 @@ l_{21}l_{31}+l_{22}l_{32}\\\\
 l_{11}l_{31}&
 l_{21}l_{31}+l_{22}l_{32}&
 l_{31}^2+l_{32}^2+l_{33}^2
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 4&2&2\\\\
 2&5&1\\\\
@@ -607,8 +605,7 @@ $$A^\mathrm{T}A=
 \begin{pmatrix}
 0 & 2 \\\\
 1 & 0
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 1 & 0 \\\\
 0 & 4
@@ -647,8 +644,7 @@ $$AV=
 \begin{pmatrix}
 0 & 1 \\\\
 1 & 0
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 2 & 0 \\\\
 0 & 1
@@ -668,8 +664,7 @@ $$U=
 \begin{pmatrix}
 \dfrac12 & 0 \\\\
 0 & 1
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 1 & 0 \\\\
 0 & 1
@@ -689,8 +684,7 @@ $$U\Sigma V^\mathrm{T}=
 \begin{pmatrix}
 0 & 1 \\\\
 1 & 0
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 0 & 2 \\\\
 1 & 0
@@ -853,8 +847,7 @@ $`\Vert x\Vert_2 = \sqrt{\sum_{i=1}^n x_i^2}`$
 
 不随幺正变换而改变的范数
 
-$$\Vert\boldsymbol{A}\Vert_p
-=
+$$\Vert\boldsymbol{A}\Vert_p =
 \left(
 \sum_{i=1}^{\max\lbrace m,n\rbrace}
 \sigma_i^p
@@ -866,12 +859,10 @@ $$\Vert\boldsymbol{A}\Vert_p
 
 p为无限的时候，这个取极限值
 
-$$\Vert\boldsymbol{A}\Vert_\infty
-=
+$$\Vert\boldsymbol{A}\Vert_\infty =
 \lim_{p \to \infty}
 \left(
 \sum_{i=1}^{\max\lbrace m,n\rbrace} \sigma_i^p
-\right)^{1/p}
-=
+\right)^{1/p} =
 \max_{1 \le i \le \max\lbrace m,n\rbrace} \sigma_i
 = 3$$

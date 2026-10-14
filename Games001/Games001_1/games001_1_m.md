@@ -51,8 +51,7 @@ $$\det(A) = 1 \cdot 4 - 2 \cdot 3 = -2$$
 
 $$A \cdot \operatorname{adj}(A) =
 \begin{pmatrix} 1 & 2 \\\\ 3 & 4 \end{pmatrix}
-\begin{pmatrix} 4 & -2 \\\\ -3 & 1 \end{pmatrix}
-=
+\begin{pmatrix} 4 & -2 \\\\ -3 & 1 \end{pmatrix} =
 \begin{pmatrix} -2 & 0 \\\\ 0 & -2 \end{pmatrix}
 = -2E$$
 
@@ -107,8 +106,7 @@ B=\begin{pmatrix}5&6\\\\7&8\end{pmatrix}$$
 
 $$AB=
 \begin{pmatrix}1&2\\\\3&4\end{pmatrix}
-\begin{pmatrix}5&6\\\\7&8\end{pmatrix}
-=
+\begin{pmatrix}5&6\\\\7&8\end{pmatrix} =
 \begin{pmatrix}19&22\\\\43&50\end{pmatrix}$$
 
 转置：
@@ -120,8 +118,7 @@ $$(AB)^T=
 
 $$B^TA^T=
 \begin{pmatrix}5&7\\\\6&8\end{pmatrix}
-\begin{pmatrix}1&3\\\\2&4\end{pmatrix}
-=
+\begin{pmatrix}1&3\\\\2&4\end{pmatrix} =
 \begin{pmatrix}19&43\\\\22&50\end{pmatrix}$$
 
 结果相同，验证成立。
@@ -223,10 +220,8 @@ $$X=\begin{pmatrix}x&y\\\\z&w\end{pmatrix}$$
 把 $`AX=E`$ 展开：
 
 $$\begin{pmatrix}a&b\\\\c&d\end{pmatrix}
-\begin{pmatrix}x&y\\\\z&w\end{pmatrix}
-=
-\begin{pmatrix}ax+bz&ay+bw\\\\cx+dz&cy+dw\end{pmatrix}
-=
+\begin{pmatrix}x&y\\\\z&w\end{pmatrix} =
+\begin{pmatrix}ax+bz&ay+bw\\\\cx+dz&cy+dw\end{pmatrix} =
 \begin{pmatrix}1&0\\\\0&1\end{pmatrix}$$
 
 得到 4 个方程：
@@ -330,15 +325,13 @@ $$A=\begin{pmatrix}1&2\\\\3&2\end{pmatrix}$$
 
 $$A^{-1}=
 \frac{1}{-4}
-\begin{pmatrix}2&-2\\\\-3&1\end{pmatrix}
-=
+\begin{pmatrix}2&-2\\\\-3&1\end{pmatrix} =
 \begin{pmatrix}-1/2&1/2\\\\3/4&-1/4\end{pmatrix}$$
 
 验证 $`AA^{-1}=E`$：
 
 $$\begin{pmatrix}1&2\\\\3&2\end{pmatrix}
-\begin{pmatrix}-1/2&1/2\\\\3/4&-1/4\end{pmatrix}
-=
+\begin{pmatrix}-1/2&1/2\\\\3/4&-1/4\end{pmatrix} =
 \begin{pmatrix}1&0\\\\0&1\end{pmatrix}$$
 
 # 迹(tr)
@@ -551,13 +544,10 @@ $$\langle u,v\rangle=u^Tv=v^Tu$$
 $$\boldsymbol u^T=
 \begin{bmatrix}u_1 & u_2\end{bmatrix}$$
 
-$$\langle \boldsymbol u,\boldsymbol v\rangle
-=
-\boldsymbol u^T\boldsymbol v
-=
+$$\langle \boldsymbol u,\boldsymbol v\rangle =
+\boldsymbol u^T\boldsymbol v =
 \begin{bmatrix}u_1 & u_2\end{bmatrix}
-\begin{bmatrix}v_1 \\\\ v_2\end{bmatrix}
-=
+\begin{bmatrix}v_1 \\\\ v_2\end{bmatrix} =
 u_1v_1+u_2v_2$$
 
 # 复数

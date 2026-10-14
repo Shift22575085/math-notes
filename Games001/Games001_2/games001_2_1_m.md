@@ -2,8 +2,7 @@
 
 ### 分子布局：分母转置
 
-$$\frac{\partial \boldsymbol{f}_{2\times1}(\boldsymbol{x})}{\partial \boldsymbol{x}^{T}_{3\times1}}
-=
+$$\frac{\partial \boldsymbol{f}_{2\times1}(\boldsymbol{x})}{\partial \boldsymbol{x}^{T}_{3\times1}} =
 \begin{pmatrix}
 \frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \frac{\partial f_1}{\partial x_3} \\\\
 \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \frac{\partial f_2}{\partial x_3}
@@ -11,8 +10,7 @@ $$\frac{\partial \boldsymbol{f}_{2\times1}(\boldsymbol{x})}{\partial \boldsymbol
 
 ### 分母布局：分子转置
 
-$$\frac{\partial \boldsymbol{f}^{T}_{2\times1}(\boldsymbol{x})}{\partial \boldsymbol{x}_{3\times1}}
-=
+$$\frac{\partial \boldsymbol{f}^{T}_{2\times1}(\boldsymbol{x})}{\partial \boldsymbol{x}_{3\times1}} =
 \begin{pmatrix}
 \frac{\partial f_1}{\partial x_1} & \frac{\partial f_2}{\partial x_1} \\\\
 \frac{\partial f_1}{\partial x_2} & \frac{\partial f_2}{\partial x_2} \\\\
@@ -185,8 +183,7 @@ $$\frac{\partial(x^TAx)}{\partial x}$$
 
 展开二次型
 
-$$x^TAx
-=
+$$x^TAx =
 \begin{pmatrix}
 x_1&x_2
 \end{pmatrix}
@@ -206,8 +203,7 @@ $$\begin{pmatrix}
 \begin{pmatrix}
 x_1\\\\
 x_2
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 x_1+2x_2\\\\
 3x_1+4x_2
@@ -219,8 +215,7 @@ x_1&x_2
 \begin{pmatrix}
 x_1+2x_2\\\\
 3x_1+4x_2
-\end{pmatrix}
-=
+\end{pmatrix} =
 x_1^2+5x_1x_2+4x_2^2$$
 
 $$x^TAx=x_1^2+5x_1x_2+4x_2^2$$
@@ -232,8 +227,7 @@ $$x^TAx=x_1^2+5x_1x_2+4x_2^2$$
 $$\frac{\partial}{\partial x_1}
 \left(
 x_1^2+5x_1x_2+4x_2^2
-\right)
-=
+\right) =
 2x_1+5x_2$$
 
 对 $`x_2`$ 求偏导：
@@ -241,14 +235,12 @@ x_1^2+5x_1x_2+4x_2^2
 $$\frac{\partial}{\partial x_2}
 \left(
 x_1^2+5x_1x_2+4x_2^2
-\right)
-=
+\right) =
 5x_1+8x_2$$
 
 所以：
 
-$$\frac{\partial(x^TAx)}{\partial x}
-=
+$$\frac{\partial(x^TAx)}{\partial x} =
 \begin{pmatrix}
 2x_1+5x_2\\\\
 5x_1+8x_2
@@ -264,8 +256,7 @@ $$Ax=
 \begin{pmatrix}
 x_1\\\\
 x_2
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 x_1+2x_2\\\\
 3x_1+4x_2
@@ -279,25 +270,21 @@ $$A^Tx=
 \begin{pmatrix}
 x_1\\\\
 x_2
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 x_1+3x_2\\\\
 2x_1+4x_2
 \end{pmatrix}$$
 
-$$Ax+A^Tx
-=
+$$Ax+A^Tx =
 \begin{pmatrix}
 x_1+2x_2\\\\
 3x_1+4x_2
-\end{pmatrix}
-+
+\end{pmatrix} +
 \begin{pmatrix}
 x_1+3x_2\\\\
 2x_1+4x_2
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 2x_1+5x_2\\\\
 5x_1+8x_2
@@ -306,8 +293,7 @@ x_1+3x_2\\\\
 结果一致：
 
 $${
-\frac{\partial(x^TAx)}{\partial x}
-=
+\frac{\partial(x^TAx)}{\partial x} =
 Ax+A^Tx
 }$$
 
@@ -317,10 +303,8 @@ $$\frac{\partial(a^T x x^T b)}{\partial x} = \frac{\partial(x^T a b^T x)}{\parti
 
 a,b,x均为列向量，无矩阵，矩阵后面由$`ab^T`$得到
 
-$$a^T x x^T b
-=
-x^T a b^T x
-=
+$$a^T x x^T b =
+x^T a b^T x =
 x^T(ab^T)x$$
 
 令：
@@ -329,20 +313,17 @@ $$A=ab^T$$
 
 则：
 
-$$a^T x x^T b
-=
+$$a^T x x^T b =
 x^T A x$$
 
 可以直接套用二次型求导公式：
 
-$$\frac{\partial(x^T A x)}{\partial x}
-=
+$$\frac{\partial(x^T A x)}{\partial x} =
 Ax+A^T x$$
 
 所以：
 
-$$\frac{\partial(a^T x x^T b)}{\partial x}
-=
+$$\frac{\partial(a^T x x^T b)}{\partial x} =
 ab^T x+ba^T x$$
 
 # 矩阵变元的实值标量函数(梯度方向)
@@ -386,15 +367,13 @@ $$\frac{\partial (a^T X b)}{\partial x_{ij}} = a_i b_j$$
 
 **排成矩阵**
 
-$$\frac{\partial (a^T X b)}{\partial X}
-=
+$$\frac{\partial (a^T X b)}{\partial X} =
 \begin{pmatrix}
 a_1 b_1 & a_1 b_2 & \cdots & a_1 b_n \\\\
 a_2 b_1 & a_2 b_2 & \cdots & a_2 b_n \\\\
 \vdots & \vdots & \ddots & \vdots \\\\
 a_m b_1 & a_m b_2 & \cdots & a_m b_n
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix} a_1 \\\\ a_2 \\\\ \vdots \\\\ a_m \end{pmatrix}
 \begin{pmatrix} b_1 & b_2 & \cdots & b_n \end{pmatrix}$$
 
@@ -418,12 +397,10 @@ $$(X^T)_{ij} = x_{ji}$$
 
 因此
 
-$$a^T X^T b
-=
+$$a^T X^T b =
 \sum_{i=1}^n \sum_{j=1}^m a_i (X^T)_{ij} b_j$$
 
-$$a^T X^T b
-=
+$$a^T X^T b =
 \sum_{i=1}^n \sum_{j=1}^m a_i x_{ji} b_j$$
 
 设
@@ -439,8 +416,7 @@ $$(X^T)_{ji}=x_{ij}.$$
 
 在
 
-$$a^TX^Tb
-=
+$$a^TX^Tb =
 \sum_{i=1}^m\sum_{j=1}^n b_i x_{ij} a_j$$
 
 这个的x下标的ij和上面是反着，因为把i和j的指标换掉了，a和b也换了位置，相当于全部转置，因为这个的结果是标量，转置等于自身
@@ -451,8 +427,7 @@ $$b_i x_{ij} a_j.$$
 
 其余项都不含 $`x_{ij}`$，对 $`x_{ij}`$ 求偏导时为 $`0`$。因此
 
-$$\frac{\partial(a^TX^Tb)}{\partial x_{ij}}
-=
+$$\frac{\partial(a^TX^Tb)}{\partial x_{ij}} =
 b_i a_j.$$
 
 注意这里结果是
@@ -475,8 +450,7 @@ $$b_i a_j.$$
 
 所以
 
-$$\frac{\partial(a^TX^Tb)}{\partial X}
-=
+$$\frac{\partial(a^TX^Tb)}{\partial X} =
 \begin{pmatrix}
 b_1a_1 & b_1a_2 & \cdots & b_1a_n\\\\
 b_2a_1 & b_2a_2 & \cdots & b_2a_n\\\\
@@ -494,8 +468,7 @@ b_m
 \end{pmatrix}
 \begin{pmatrix}
 a_1 & a_2 & \cdots & a_n
-\end{pmatrix}
-=
+\end{pmatrix} =
 ba^T.$$
 
 **结论**

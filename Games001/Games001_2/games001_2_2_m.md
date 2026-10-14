@@ -333,8 +333,7 @@ $`H`$：表示共轭转置（Hermitian 转置）。
 **实数域上的矩阵表示**
 
 $$\begin{pmatrix} a_x \\\\ a_y \\\\ a_z \end{pmatrix} 
-\begin{pmatrix} b_x & b_y & b_z \end{pmatrix} 
-= 
+\begin{pmatrix} b_x & b_y & b_z \end{pmatrix} =
 \begin{pmatrix}
 a_x b_x & a_x b_y & a_x b_z \\\\
 a_y b_x & a_y b_y & a_y b_z \\\\
