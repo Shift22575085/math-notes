@@ -10,12 +10,12 @@ $$A = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$$
 
 **求每个元素的余子式**
 
-代数余子式 $`A_{ij} = (-1)^{i+j} M_{ij}`$，其中 $M_{ij}$ 是划掉第 $i$ 行第 $j$ 列后剩下的行列式。
+代数余子式 $`A_{ij} = (-1)^{i+j} M_{ij}`$，其中 $`M_{ij}`$ 是划掉第 $`i`$ 行第 $`j`$ 列后剩下的行列式。
 
-- $`A_{11}`$：划掉第1行第1列，剩下 $`d`$，符号 $`+`$，所以 $A_{11} = d$
-- $`A_{12}`$：划掉第1行第2列，剩下 $`c`$，符号 $`-`$，所以 $A_{12} = -c$
-- $`A_{21}`$：划掉第2行第1列，剩下 $`b`$，符号 $`-`$，所以 $A_{21} = -b$
-- $`A_{22}`$：划掉第2行第2列，剩下 $`a`$，符号 $`+`$，所以 $A_{22} = a$
+- $`A_{11}`$：划掉第1行第1列，剩下 $`d`$，符号 $`+`$，所以 $`A_{11} = d`$
+- $`A_{12}`$：划掉第1行第2列，剩下 $`c`$，符号 $`-`$，所以 $`A_{12} = -c`$
+- $`A_{21}`$：划掉第2行第1列，剩下 $`b`$，符号 $`-`$，所以 $`A_{21} = -b`$
+- $`A_{22}`$：划掉第2行第2列，剩下 $`a`$，符号 $`+`$，所以 $`A_{22} = a`$
 
 #### 代数余子式
 
@@ -34,7 +34,7 @@ $$\operatorname{adj}(A) = C^T = \begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}
 
 $$A = \begin{pmatrix} 1 & 2 \\\\ 3 & 4 \end{pmatrix}$$
 
-- $`A_{11} = 4`$，$`A_{12} = -3`$，$`A_{21} = -2`$，$A_{22} = 1$
+- $`A_{11} = 4`$，$`A_{12} = -3`$，$`A_{21} = -2`$，$`A_{22} = 1`$
 - 代数余子式矩阵：
 
 $$\begin{pmatrix} 4 & -3 \\\\ -2 & 1 \end{pmatrix}$$
@@ -126,7 +126,7 @@ $$B^TA^T=
 
 结果相同，验证成立。
 
-$(AB)^T=B^TA^T$相等的原因
+$`(AB)^T=B^TA^T`$相等的原因
 
 矩阵乘法第 i 行第 j 列的元素是：
 
@@ -199,7 +199,7 @@ $$3\cdot7+4\cdot(-6)=-3$$
 
 **高斯消元法：TODO**
 
-行列式乘法：$\det(AB)=\det(A)\det(B)$
+行列式乘法：$`\det(AB)=\det(A)\det(B)`$
 
 # 逆矩阵推导
 
@@ -217,7 +217,7 @@ $$X=\begin{pmatrix}x&y\\\\z&w\end{pmatrix}$$
 
 。
 
-把 $AX=E$ 展开：
+把 $`AX=E`$ 展开：
 
 $$\begin{pmatrix}a&b\\\\c&d\end{pmatrix}
 \begin{pmatrix}x&y\\\\z&w\end{pmatrix}
@@ -234,11 +234,11 @@ $$(3)\ ay+bw=0,\qquad (4)\ cy+dw=1$$
 
 **求 x（消去 z）**
 
-(1) 乘 $`d`$，使 $z$ 的系数变成 $`bd`$：
+(1) 乘 $`d`$，使 $`z`$ 的系数变成 $`bd`$：
 
 $$adx+bdz=d$$
 
-(2) 乘 $`b`$，使 $z$ 的系数也变成 $`bd`$：
+(2) 乘 $`b`$，使 $`z`$ 的系数也变成 $`bd`$：
 
 $$cbx+bdz=0$$
 
@@ -323,7 +323,7 @@ $$A^{-1}=\frac{1}{\det A}
 
 $$A=\begin{pmatrix}1&2\\\\3&2\end{pmatrix}$$
 
-，$\det A=1\cdot2-2\cdot3=-4$
+，$`\det A=1\cdot2-2\cdot3=-4`$
 
 $$A^{-1}=
 \frac{1}{-4}
@@ -352,7 +352,7 @@ $$\operatorname{tr}(cA)=c\operatorname{tr}A$$
 
 # 特征值与特征向量
 
-矩阵 A 做的线性变换，等价于数 $\lambda$ 对向量做数乘缩放，只对特定向量 $\boldsymbol x$成立，不是对任意向量
+矩阵 A 做的线性变换，等价于数 $`\lambda`$ 对向量做数乘缩放，只对特定向量 $`\boldsymbol x`$成立，不是对任意向量
 
 $$A=\begin{bmatrix}3&1\\\\2&2\end{bmatrix}$$
 
@@ -364,11 +364,11 @@ $$\lambda E-A=\begin{bmatrix}\lambda&0\\\\0&\lambda\end{bmatrix}-\begin{bmatrix}
 
 $$(\lambda-3)(\lambda-2)-(-1)(-2)=\lambda^2-5\lambda+4=(\lambda-1)(\lambda-4)$$
 
-所以 $\lambda=1$ 或 $`\lambda=4`$。
+所以 $`\lambda=1`$ 或 $`\lambda=4`$。
 
 $`\lambda=1`$：
 
-代入矩阵$\lambda E-A$的第一行得到$u_1,u_2$的比值
+代入矩阵$`\lambda E-A`$的第一行得到$`u_1,u_2`$的比值
 
 当前为特殊矩阵，行1，2得到是公式相同，直接忽略一个可以得到结果，正常不能忽略
 
@@ -381,7 +381,7 @@ $$u_1-u_2=0 \implies u=t(1,1)$$
 TODO:
 
 - 谱半径：$`\rho=\max|\lambda_i|`$，取模长最大
-- 条件数：一般用奇异值 $`\sigma_{\max}/\sigma_{\min}`$；只有对称正定矩阵才是 $\lambda_{\max}/\lambda_{\min}$
+- 条件数：一般用奇异值 $`\sigma_{\max}/\sigma_{\min}`$；只有对称正定矩阵才是 $`\lambda_{\max}/\lambda_{\min}`$
 - 函数求特征值
 
 # 特征分解
@@ -440,11 +440,11 @@ $$\langle u,v\rangle:V\times V\to\mathbb{R}$$
 
 笛卡尔积
 
-符号：$A\times B$
+符号：$`A\times B`$
 
-含义：从 $A$ 中取第一个元素，从 $B$ 中取第二个元素，组成一个有序对
+含义：从 $`A`$ 中取第一个元素，从 $`B`$ 中取第二个元素，组成一个有序对
 
-$u$与v的内积记作$<u,v>$
+$`u`$与v的内积记作$`<u,v>`$
 
 输入V(向量)，V(向量)，输出点乘值
 
@@ -462,9 +462,9 @@ $$\langle u,av\rangle=a\langle u,v\rangle$$
 
 正定性：
 
-$\langle u,u\rangle\ge0$(非负)
+$`\langle u,u\rangle\ge0`$(非负)
 
-$\langle u,u\rangle=0$ 当且仅当 $u=0$（只有零向量长度才是 0）
+$`\langle u,u\rangle=0`$ 当且仅当 $`u=0`$（只有零向量长度才是 0）
 
 # 赋范线性空间 vs 内积空间
 
@@ -473,15 +473,15 @@ TODO：不够详细
 
 # 内积与正交
 
-$\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}=\frac{\Vert u\Vert\cdot\Vert v\Vert\cdot\cos\theta}{\Vert u\Vert\cdot\Vert v\Vert}=\cos\theta$
+$`\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}=\frac{\Vert u\Vert\cdot\Vert v\Vert\cdot\cos\theta}{\Vert u\Vert\cdot\Vert v\Vert}=\cos\theta`$
 
-两向量夹角为 $\theta_{uv}=\arccos\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}$ ，当cosθ_uv=0时称为两向量正交
+两向量夹角为 $`\theta_{uv}=\arccos\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}`$ ，当cosθ_uv=0时称为两向量正交
 
-范(向量的长度)：$\Vert u\Vert=\sqrt{\langle u,u\rangle}=\sqrt{\langle u,u\rangle}\cos 0\ (\cos 0=1),\ \langle u,u\rangle=\Vert u\Vert^2$
+范(向量的长度)：$`\Vert u\Vert=\sqrt{\langle u,u\rangle}=\sqrt{\langle u,u\rangle}\cos 0\ (\cos 0=1),\ \langle u,u\rangle=\Vert u\Vert^2`$
 
-点乘：$\langle u,v\rangle=\Vert u\Vert\cdot\Vert v\Vert\cdot\cos\theta$
+点乘：$`\langle u,v\rangle=\Vert u\Vert\cdot\Vert v\Vert\cdot\cos\theta`$
 
-$\arccos(\cos\theta)=\theta$
+$`\arccos(\cos\theta)=\theta`$
 
 # 单位正交基底
 
@@ -493,7 +493,7 @@ $$v_1=(1,1),\quad v_2=(1,0)$$
 
 $$e_1=\frac{v_1}{\Vert v_1\Vert}=\left(\frac{1}{\sqrt2},\frac{1}{\sqrt2}\right)$$
 
-投影,之后用$u_2$减去投影，得到与$u_1$垂直的向量：
+投影,之后用$`u_2`$减去投影，得到与$`u_1`$垂直的向量：
 
 $$\langle v_2,e_1\rangle e_1=\left(\frac12,\frac12\right)=投影$$
 
@@ -521,7 +521,7 @@ $$\langle u,v\rangle=u_1v_1+u_2v_2+u_3v_3$$
 
 对应正交矩阵：
 
-只能旋转，镜像，不能缩放，移动，$det=\pm1,R^T=R^{-1}$
+只能旋转，镜像，不能缩放，移动，$`det=\pm1,R^T=R^{-1}`$
 
 内积不变 → 夹角不变、长度不变；保持单位正交性质 → 两两正交、模长为 1。
 
@@ -571,7 +571,7 @@ $$|z|^2=\overline{z}z$$
 
 # 幺正空间与幺正变换
 
-$\mathbb{R}$(实数域) 是 $\mathbb{C}$ (复数域)的一部分。
+$`\mathbb{R}`$(实数域) 是 $`\mathbb{C}`$ (复数域)的一部分。
 
 幺正空间（酉空间）= 复数域上的内积空间。
 
@@ -590,21 +590,21 @@ $$\langle u,u\rangle=u^Hu=
 
 $$\Vert u\Vert=\sqrt{\langle u,u\rangle}=\sqrt{15}$$
 
-实数矩阵：$L^H = L^T$
+实数矩阵：$`L^H = L^T`$
 
-复数矩阵：$L^H = \overline{L}^T$
+复数矩阵：$`L^H = \overline{L}^T`$
 
 ## 幺正变换
 
 $$U^\dagger U=E$$
 
-其中 $U^\dagger$ 是先取共轭再转置，且 $|\det U|=1$
+其中 $`U^\dagger`$ 是先取共轭再转置，且 $`|\det U|=1`$
 
-实数中共轭等于自身，所以 $U^\dagger=U^T$
+实数中共轭等于自身，所以 $`U^\dagger=U^T`$
 
 实数域的正交变换：
 
-$Q^TQ=E,\quad \det Q=\pm1$
+$`Q^TQ=E,\quad \det Q=\pm1`$
 
 纯旋转或者镜像
 
@@ -643,8 +643,8 @@ $$\psi(x)=Ae^{ikx}$$
 - $`\psi`$：波函数
 - $`x`$：位置
 - $`A`$：振幅（复常数）
-- $`e`$：自然常数 $\approx2.718$
-- $`k`$：波数，$k=\dfrac{2\pi}{\lambda}$
+- $`e`$：自然常数 $`\approx2.718`$
+- $`k`$：波数，$`k=\dfrac{2\pi}{\lambda}`$
 
 由欧拉公式：
 
@@ -660,9 +660,9 @@ $$\langle Uu,Uv\rangle=\langle u,v\rangle$$
 
 一旦内积不变，下面全部自动不变：
 
-- 长度：$\Vert Uu\Vert=\Vert u\Vert$
+- 长度：$`\Vert Uu\Vert=\Vert u\Vert`$
 - 夹角：夹角公式只含内积和长度
-- 正交性：若 $`\langle u,v\rangle=0`$，则 $\langle Uu,Uv\rangle=0$
+- 正交性：若 $`\langle u,v\rangle=0`$，则 $`\langle Uu,Uv\rangle=0`$
 - 单位正交基：变换后仍然单位正交
 
 # 线性算子
@@ -680,13 +680,13 @@ TODO：特征向量变成特征函数，矩阵对角化变成谱分解。
 
 # 相似矩阵
 
-存在可逆矩阵 $`P`$，使得 $`P^{-1}AP = B`$，则称矩阵 $A$ 与 $B$ 相似，记作 $`A \sim B`$。
+存在可逆矩阵 $`P`$，使得 $`P^{-1}AP = B`$，则称矩阵 $`A`$ 与 $`B`$ 相似，记作 $`A \sim B`$。
 
 例子：
 
 $$A = \begin{bmatrix}1 & 2 \\\\ 3 & 4\end{bmatrix}, \qquad P = \begin{bmatrix}0 & 1 \\\\ 1 & 0\end{bmatrix}$$
 
-因为 $P$ 是交换矩阵，所以 $`P^{-1} = P`$。
+因为 $`P`$ 是交换矩阵，所以 $`P^{-1} = P`$。
 
 $$AP = \begin{bmatrix}1 & 2 \\\\ 3 & 4\end{bmatrix}\begin{bmatrix}0 & 1 \\\\ 1 & 0\end{bmatrix} = \begin{bmatrix}2 & 1 \\\\ 4 & 3\end{bmatrix}$$
 
@@ -696,13 +696,13 @@ $$B = P^{-1}AP = \begin{bmatrix}0 & 1 \\\\ 1 & 0\end{bmatrix}\begin{bmatrix}2 & 
 
 相似矩阵的性质：
 
-迹相同：$\operatorname{tr}(A) = \operatorname{tr}(B)$
+迹相同：$`\operatorname{tr}(A) = \operatorname{tr}(B)`$
 
-行列式相同：$\det(A) = \det(B)$
+行列式相同：$`\det(A) = \det(B)`$
 
-$A$ 与 $B$ 可以看作同一个线性变换在不同基底下的表象
+$`A`$ 与 $`B`$ 可以看作同一个线性变换在不同基底下的表象
 
-$A$ 与 $B$ 描述的是同一个几何动作（同一个线性变换），只是用了两套不同的坐标系来"记录"它
+$`A`$ 与 $`B`$ 描述的是同一个几何动作（同一个线性变换），只是用了两套不同的坐标系来"记录"它
 
 # 相似对角化
 
@@ -724,19 +724,19 @@ $`\lambda = 3`$：
 
 $$(A - 3E)u = 0 \implies \begin{bmatrix}-1 & 1 \\\\ 1 & -1\end{bmatrix}\begin{pmatrix}x \\\\ y\end{pmatrix} = \begin{pmatrix}0 \\\\ 0\end{pmatrix} \implies x = y$$
 
- $u_1 = (1, 1)$
+ $`u_1 = (1, 1)`$
 
 $`\lambda = 1`$：
 
 $$\begin{bmatrix}1 & 1 \\\\ 1 & 1\end{bmatrix}\begin{pmatrix}x \\\\ y\end{pmatrix} = \begin{pmatrix}0 \\\\ 0\end{pmatrix} \implies x = -y$$
 
- $u_2 = (1, -1)$
+ $`u_2 = (1, -1)`$
 
 4. 将特征向量拼成 P
 
 $$P = \begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix}$$
 
-求 $P$ 的逆（二阶公式 
+求 $`P`$ 的逆（二阶公式 
 
 $$P^{-1} = \dfrac{1}{ad-bc}\begin{bmatrix}d & -b \\ -c & a\end{bmatrix}$$
 
@@ -744,7 +744,7 @@ $$P^{-1} = \dfrac{1}{ad-bc}\begin{bmatrix}d & -b \\ -c & a\end{bmatrix}$$
 
 $$P^{-1} = \frac{1}{2}\begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix}$$
 
-5. 验证 $P^{-1}AP$
+5. 验证 $`P^{-1}AP`$
 
 $$AP = \begin{bmatrix}2 & 1 \\\\ 1 & 2\end{bmatrix}\begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix} = \begin{bmatrix}3 & 1 \\\\ 3 & -1\end{bmatrix}$$
 
@@ -754,13 +754,13 @@ $$D = P^{-1}(AP) = \frac{1}{2}\begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix}\begi
 
 $$A = PDP^{-1}, \qquad D = P^{-1}AP$$
 
-$A$ 和 $D$ 是同一个变换的两套表示：$A$ 在标准坐标系里看，$D$ 在特征向量坐标系里看。
+$`A`$ 和 $`D`$ 是同一个变换的两套表示：$`A`$ 在标准坐标系里看，$`D`$ 在特征向量坐标系里看。
 
-$P$ 的每一列（不是 $P$ 本身）是特征向量坐标系的基向量
+$`P`$ 的每一列（不是 $`P`$ 本身）是特征向量坐标系的基向量
 
-从标准坐标角度执行：$A = PDP^{-1}$（换进 → 缩放 → 换回）
+从标准坐标角度执行：$`A = PDP^{-1}`$（换进 → 缩放 → 换回）
 
-从 $P$ 坐标角度执行：$D = P^{-1}AP$（换进 → 变换 → 换回）
+从 $`P`$ 坐标角度执行：$`D = P^{-1}AP`$（换进 → 变换 → 换回）
 
 # 二次型
 
@@ -782,7 +782,7 @@ $$A = \begin{bmatrix}3 & 1 \\\\ 1 & 2\end{bmatrix}, \qquad f(x) = x^TAx = 3x_1^2
 
 第二步：选换坐标矩阵 C
 
-C只需要在$f(x) = x^TAx = 3x_1^2 + 2x_1x_2 + 2x_2^2$坐标下垂直
+C只需要在$`f(x) = x^TAx = 3x_1^2 + 2x_1x_2 + 2x_2^2`$坐标下垂直
 
 $$C = \begin{bmatrix}1 & 1 \\\\ -1 & 2\end{bmatrix} \quad \left(\text{可逆，}\det C = 3\right)$$
 
@@ -806,7 +806,7 @@ $$f(y) = y^TBy = 3y_1^2 + 15y_2^2$$
 
 # 正定矩阵
 
-定义：满足 $\boldsymbol{x^TAx > 0\ (x \neq 0)}$ 的矩阵
+定义：满足 $`\boldsymbol{x^TAx > 0\ (x \neq 0)}`$ 的矩阵
 
 意义：可以构建恒取正值的二次型
 
@@ -820,11 +820,11 @@ $$\begin{pmatrix} \mathrm{d}x & \mathrm{d}y \end{pmatrix} \begin{pmatrix} \frac{
 
 性质：正定矩阵的特征值全为正数（逆命题不成立）
 
-半正定矩阵：满足 $\boldsymbol{x^TAx \ge 0\ (x \neq 0)}$ 的矩阵
+半正定矩阵：满足 $`\boldsymbol{x^TAx \ge 0\ (x \neq 0)}`$ 的矩阵
 
 # 实对称正定矩阵
 
-定义：实数域上的对称矩阵（$\boldsymbol{A}^\mathrm{T}=\boldsymbol{A}$）
+定义：实数域上的对称矩阵（$`\boldsymbol{A}^\mathrm{T}=\boldsymbol{A}`$）
 
 性质：可以被正交矩阵对角化；只要特征值全为正数就是正定的
 
