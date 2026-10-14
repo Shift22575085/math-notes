@@ -12,7 +12,7 @@ $$\tan(\alpha \pm \beta) = \frac{\tan\alpha \pm \tan\beta}{1 \mp \tan\alpha\tan\
 
 $$\langle u,v\rangle = u_1v_1 + u_2v_2$$
 
-$$\langle u,v\rangle = \|u\|\cdot\|v\|\cdot\cos\theta$$
+$$\langle u,v\rangle = \Vertu\Vert\cdot\Vertv\Vert\cdot\cos\theta$$
 
 ## 推导一：用点乘推出 cos 的差角公式
 
@@ -22,7 +22,7 @@ $$\langle u,v\rangle = \|u\|\cdot\|v\|\cdot\cos\theta$$
 
 $$u=(\cos\alpha,\ \sin\alpha),\qquad v=(\cos\beta,\ \sin\beta)$$
 
-它们都是单位向量：$\|u\|=\|v\|=1$（模长就是 $\sqrt{\cos^2+\sin^2}=1$）。
+它们都是单位向量：$\Vertu\Vert=\Vertv\Vert=1$（模长就是 $\sqrt{\cos^2+\sin^2}=1$）。
 
 2 ：用代数算法算点乘
 
@@ -32,7 +32,7 @@ $$\langle u,v\rangle = \cos\alpha\cos\beta + \sin\alpha\sin\beta$$
 
 两个向量分别转了 $\alpha$ 和 $\beta$，它们之间的夹角就是 $\alpha-\beta$：
 
-$$\langle u,v\rangle = \underbrace{\|u\|}_{1}\cdot\underbrace{\|v\|}_{1}\cdot\cos(\alpha-\beta) = \cos(\alpha-\beta)$$
+$$\langle u,v\rangle = \underbrace{\Vertu\Vert}_{1}\cdot\underbrace{\Vertv\Vert}_{1}\cdot\cos(\alpha-\beta) = \cos(\alpha-\beta)$$
 
 4 ：两种算法相等，得到公式
 
@@ -229,7 +229,7 @@ $$e^{i\theta}=\cos\theta+i\sin\theta$$
 推导骨架（待展开成完整步骤）：
 
 $$e^{i\theta}=\sum_{n=0}^{\infty}\frac{(i\theta)^n}{n!}
-\;\xrightarrow{\;i^n\text{ 四次循环}\;}\;
+\thickspace\xrightarrow{\thickspacei^n\text{ 四次循环}\thickspace}\thickspace
 \underbrace{\left(1-\frac{\theta^2}{2!}+\frac{\theta^4}{4!}-\cdots\right)}_{\text{偶次项}=\cos\theta}
 +i\underbrace{\left(\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\cdots\right)}_{\text{奇次项系数}=\sin\theta}$$
 

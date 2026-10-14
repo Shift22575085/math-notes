@@ -5,7 +5,7 @@
 ## 二阶矩阵伴随矩阵
 
 设矩阵：
-$$A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$$
+$$A = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$$
 
 **求每个元素的余子式**
 
@@ -21,20 +21,20 @@ $$A = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$$
 **代数余子式矩阵**
 
 把代数余子式按原位置排成矩阵：
-$$C = \begin{pmatrix} A_{11} & A_{12} \\ A_{21} & A_{22} \end{pmatrix}
-= \begin{pmatrix} d & -c \\ -b & a \end{pmatrix}$$
+$$C = \begin{pmatrix} A_{11} & A_{12} \\\\ A_{21} & A_{22} \end{pmatrix}
+= \begin{pmatrix} d & -c \\\\ -b & a \end{pmatrix}$$
 
 **转置得到伴随矩阵**
 
-$$\operatorname{adj}(A) = C^T = \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$$
+$$\operatorname{adj}(A) = C^T = \begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}$$
 
 ### 具体例子
 
-$$A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$$
+$$A = \begin{pmatrix} 1 & 2 \\\\ 3 & 4 \end{pmatrix}$$
 
 - $A_{11} = 4$，$A_{12} = -3$，$A_{21} = -2$，$A_{22} = 1$
-- 代数余子式矩阵：$\begin{pmatrix} 4 & -3 \\ -2 & 1 \end{pmatrix}$
-- 伴随矩阵：$\operatorname{adj}(A) = \begin{pmatrix} 4 & -2 \\ -3 & 1 \end{pmatrix}$
+- 代数余子式矩阵：$\begin{pmatrix} 4 & -3 \\\\ -2 & 1 \end{pmatrix}$
+- 伴随矩阵：$\operatorname{adj}(A) = \begin{pmatrix} 4 & -2 \\\\ -3 & 1 \end{pmatrix}$
 
 验证 $A \cdot \operatorname{adj}(A) = \det(A) E$：
 
@@ -43,10 +43,10 @@ $$A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}$$
 $$\det(A) = 1 \cdot 4 - 2 \cdot 3 = -2$$
 
 $$A \cdot \operatorname{adj}(A) =
-\begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}
-\begin{pmatrix} 4 & -2 \\ -3 & 1 \end{pmatrix}
+\begin{pmatrix} 1 & 2 \\\\ 3 & 4 \end{pmatrix}
+\begin{pmatrix} 4 & -2 \\\\ -3 & 1 \end{pmatrix}
 =
-\begin{pmatrix} -2 & 0 \\ 0 & -2 \end{pmatrix}
+\begin{pmatrix} -2 & 0 \\\\ 0 & -2 \end{pmatrix}
 = -2E$$
 
 **验证正确**
@@ -71,8 +71,8 @@ $$A \cdot \operatorname{adj}(A) =
 
 $$A=
 \begin{pmatrix}
-1&2&3\\
-4&5&6\\
+1&2&3\\\\
+4&5&6\\\\
 7&8&9
 \end{pmatrix}$$
 
@@ -80,8 +80,8 @@ $$A=
 
 $$A^T=
 \begin{pmatrix}
-1&4&7\\
-2&5&8\\
+1&4&7\\\\
+2&5&8\\\\
 3&6&9
 \end{pmatrix}$$
 
@@ -93,29 +93,29 @@ $$(AB)^T=B^TA^T$$
 
 例子：
 
-$$A=\begin{pmatrix}1&2\\3&4\end{pmatrix},\qquad
-B=\begin{pmatrix}5&6\\7&8\end{pmatrix}$$
+$$A=\begin{pmatrix}1&2\\\\3&4\end{pmatrix},\qquad
+B=\begin{pmatrix}5&6\\\\7&8\end{pmatrix}$$
 
 先算 AB：
 
 $$AB=
-\begin{pmatrix}1&2\\3&4\end{pmatrix}
-\begin{pmatrix}5&6\\7&8\end{pmatrix}
+\begin{pmatrix}1&2\\\\3&4\end{pmatrix}
+\begin{pmatrix}5&6\\\\7&8\end{pmatrix}
 =
-\begin{pmatrix}19&22\\43&50\end{pmatrix}$$
+\begin{pmatrix}19&22\\\\43&50\end{pmatrix}$$
 
 转置：
 
 $$(AB)^T=
-\begin{pmatrix}19&43\\22&50\end{pmatrix}$$
+\begin{pmatrix}19&43\\\\22&50\end{pmatrix}$$
 
 再算 B^T A^T：
 
 $$B^TA^T=
-\begin{pmatrix}5&7\\6&8\end{pmatrix}
-\begin{pmatrix}1&3\\2&4\end{pmatrix}
+\begin{pmatrix}5&7\\\\6&8\end{pmatrix}
+\begin{pmatrix}1&3\\\\2&4\end{pmatrix}
 =
-\begin{pmatrix}19&43\\22&50\end{pmatrix}$$
+\begin{pmatrix}19&43\\\\22&50\end{pmatrix}$$
 
 结果相同，验证成立。
 
@@ -151,11 +151,11 @@ $$(AB)^T=B^TA^T$$
 
 二阶
 
-$$\det\begin{bmatrix} a & b \\ c & d \end{bmatrix}=ad-bc$$
+$$\det\begin{bmatrix} a & b \\\\ c & d \end{bmatrix}=ad-bc$$
 
 三阶
 
-$$\det\begin{bmatrix} 2 & 1 & 0 \\ 1 & 3 & 1 \\ 0 & 2 & 4 \end{bmatrix}$$
+$$\det\begin{bmatrix} 2 & 1 & 0 \\\\ 1 & 3 & 1 \\\\ 0 & 2 & 4 \end{bmatrix}$$
 
 用萨鲁斯法则：
 
@@ -165,15 +165,15 @@ $$2\cdot3\cdot4+1\cdot1\cdot0+0\cdot1\cdot2-(0\cdot3\cdot0+2\cdot1\cdot2+1\cdot1
 
 按行/列展开。矩阵：
 
-$$\begin{bmatrix} 1 & 0 & 2 & 0 \\ 0 & 3 & 0 & 4 \\ 2 & 0 & 5 & 0 \\ 0 & 6 & 0 & 7 \end{bmatrix}$$
+$$\begin{bmatrix} 1 & 0 & 2 & 0 \\\\ 0 & 3 & 0 & 4 \\\\ 2 & 0 & 5 & 0 \\\\ 0 & 6 & 0 & 7 \end{bmatrix}$$
 
 去掉第二行的 3、4，得到两个三阶余子式：
 
 #### 余子式
 
-$$\det\begin{bmatrix} 1 & 2 & 0 \\ 2 & 5 & 0 \\ 0 & 0 & 7 \end{bmatrix}=7$$
+$$\det\begin{bmatrix} 1 & 2 & 0 \\\\ 2 & 5 & 0 \\\\ 0 & 0 & 7 \end{bmatrix}=7$$
 
-$$\det\begin{bmatrix} 1 & 0 & 2 \\ 2 & 0 & 5 \\ 0 & 6 & 0 \end{bmatrix}=-6$$
+$$\det\begin{bmatrix} 1 & 0 & 2 \\\\ 2 & 0 & 5 \\\\ 0 & 6 & 0 \end{bmatrix}=-6$$
 
 #### 代数余子式
 
@@ -200,18 +200,18 @@ $$3\cdot7+4\cdot(-6)=-3$$
 
 #### 高斯消元法求逆矩阵
 
-目标：已知 $A=\begin{pmatrix}a&b\\c&d\end{pmatrix}$，求 $X=A^{-1}$，使得 $AX=E$。
+目标：已知 $A=\begin{pmatrix}a&b\\\\c&d\end{pmatrix}$，求 $X=A^{-1}$，使得 $AX=E$。
 
-设 $X=\begin{pmatrix}x&y\\z&w\end{pmatrix}$。
+设 $X=\begin{pmatrix}x&y\\\\z&w\end{pmatrix}$。
 
 把 $AX=E$ 展开：
 
-$$\begin{pmatrix}a&b\\c&d\end{pmatrix}
-\begin{pmatrix}x&y\\z&w\end{pmatrix}
+$$\begin{pmatrix}a&b\\\\c&d\end{pmatrix}
+\begin{pmatrix}x&y\\\\z&w\end{pmatrix}
 =
-\begin{pmatrix}ax+bz&ay+bw\\cx+dz&cy+dw\end{pmatrix}
+\begin{pmatrix}ax+bz&ay+bw\\\\cx+dz&cy+dw\end{pmatrix}
 =
-\begin{pmatrix}1&0\\0&1\end{pmatrix}$$
+\begin{pmatrix}1&0\\\\0&1\end{pmatrix}$$
 
 得到 4 个方程：
 
@@ -295,31 +295,31 @@ $$w=\frac{a}{ad-bc}$$
 
 $$X=
 \frac{1}{ad-bc}
-\begin{pmatrix}d&-b\\-c&a\end{pmatrix}$$
+\begin{pmatrix}d&-b\\\\-c&a\end{pmatrix}$$
 
 也就是：
 
 $$A^{-1}=\frac{1}{\det A}
-\begin{pmatrix}d&-b\\-c&a\end{pmatrix}$$
+\begin{pmatrix}d&-b\\\\-c&a\end{pmatrix}$$
 
 其中 $\det A=ad-bc$。如果 $\det A=0$，分母为 0，无法相除，矩阵不可逆。
 
 **数字验证**
 
-例：$A=\begin{pmatrix}1&2\\3&2\end{pmatrix}$，$\det A=1\cdot2-2\cdot3=-4$
+例：$A=\begin{pmatrix}1&2\\\\3&2\end{pmatrix}$，$\det A=1\cdot2-2\cdot3=-4$
 
 $$A^{-1}=
 \frac{1}{-4}
-\begin{pmatrix}2&-2\\-3&1\end{pmatrix}
+\begin{pmatrix}2&-2\\\\-3&1\end{pmatrix}
 =
-\begin{pmatrix}-1/2&1/2\\3/4&-1/4\end{pmatrix}$$
+\begin{pmatrix}-1/2&1/2\\\\3/4&-1/4\end{pmatrix}$$
 
 验证 $AA^{-1}=E$：
 
-$$\begin{pmatrix}1&2\\3&2\end{pmatrix}
-\begin{pmatrix}-1/2&1/2\\3/4&-1/4\end{pmatrix}
+$$\begin{pmatrix}1&2\\\\3&2\end{pmatrix}
+\begin{pmatrix}-1/2&1/2\\\\3/4&-1/4\end{pmatrix}
 =
-\begin{pmatrix}1&0\\0&1\end{pmatrix}$$
+\begin{pmatrix}1&0\\\\0&1\end{pmatrix}$$
 
 # 迹(tr)
 
@@ -337,11 +337,11 @@ $$\operatorname{tr}(cA)=c\operatorname{tr}A$$
 
 矩阵 A 做的线性变换，等价于数 $\lambda$ 对向量做数乘缩放，只对特定向量 $\boldsymbol x$成立，不是对任意向量
 
-$$A=\begin{bmatrix}3&1\\2&2\end{bmatrix}$$
+$$A=\begin{bmatrix}3&1\\\\2&2\end{bmatrix}$$
 
 $$\lambda u=Au \implies \lambda Eu-Au=0 \implies (\lambda E-A)u=0$$
 
-$$\lambda E-A=\begin{bmatrix}\lambda&0\\0&\lambda\end{bmatrix}-\begin{bmatrix}3&1\\2&2\end{bmatrix}=\begin{bmatrix}\lambda-3&-1\\-2&\lambda-2\end{bmatrix}$$
+$$\lambda E-A=\begin{bmatrix}\lambda&0\\\\0&\lambda\end{bmatrix}-\begin{bmatrix}3&1\\\\2&2\end{bmatrix}=\begin{bmatrix}\lambda-3&-1\\\\-2&\lambda-2\end{bmatrix}$$
 
 行列式：
 
@@ -401,7 +401,7 @@ $$(a+b)v=av+bv$$
 
 向量空间 + 度量函数：
 
-$$d(u,v)=\|u-v\|$$
+$$d(u,v)=\Vertu-v\Vert$$
 
 u 到 v 的距离 = 差向量 u-v 的长度。这个公式把“向量有多长”和“两个向量隔多远”连接起来。
 
@@ -458,13 +458,13 @@ TODO：不够详细
 
 # 内积与正交
 
-$\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}=\frac{\|u\|\cdot\|v\|\cdot\cos\theta}{\|u\|\cdot\|v\|}=\cos\theta$
+$\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}=\frac{\Vertu\Vert\cdot\Vertv\Vert\cdot\cos\theta}{\Vertu\Vert\cdot\Vertv\Vert}=\cos\theta$
 
 两向量夹角为 $\theta_{uv}=\arccos\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}$ ，当cosθ_uv=0时称为两向量正交
 
-范(向量的长度)：$\|u\|=\sqrt{\langle u,u\rangle}=\sqrt{\langle u,u\rangle}\cos 0\ (\cos 0=1),\ \langle u,u\rangle=\|u\|^2$
+范(向量的长度)：$\Vertu\Vert=\sqrt{\langle u,u\rangle}=\sqrt{\langle u,u\rangle}\cos 0\ (\cos 0=1),\ \langle u,u\rangle=\Vertu\Vert^2$
 
-点乘：$\langle u,v\rangle=\|u\|\cdot\|v\|\cdot\cos\theta$
+点乘：$\langle u,v\rangle=\Vertu\Vert\cdot\Vertv\Vert\cdot\cos\theta$
 
 $\arccos(\cos\theta)=\theta$
 
@@ -476,7 +476,7 @@ $\arccos(\cos\theta)=\theta$
 
 $$v_1=(1,1),\quad v_2=(1,0)$$
 
-$$e_1=\frac{v_1}{\|v_1\|}=\left(\frac{1}{\sqrt2},\frac{1}{\sqrt2}\right)$$
+$$e_1=\frac{v_1}{\Vertv_1\Vert}=\left(\frac{1}{\sqrt2},\frac{1}{\sqrt2}\right)$$
 
 投影,之后用$u_2$减去投影，得到与$u_1$垂直的向量：
 
@@ -490,9 +490,9 @@ $$\langle e_1,w_2\rangle=\frac{1}{\sqrt2}\cdot\frac12+\frac{1}{\sqrt2}\cdot\left
 
 规范化：
 
-$$\|w_2\|=\sqrt{\frac14+\frac14}=\frac{1}{\sqrt2}$$
+$$\Vertw_2\Vert=\sqrt{\frac14+\frac14}=\frac{1}{\sqrt2}$$
 
-$$e_2=\frac{w_2}{\|w_2\|}=\left(\frac{1}{\sqrt2},-\frac{1}{\sqrt2}\right)$$
+$$e_2=\frac{w_2}{\Vertw_2\Vert}=\left(\frac{1}{\sqrt2},-\frac{1}{\sqrt2}\right)$$
 
 # 单位正交基底的性质
 
@@ -538,7 +538,7 @@ $$\langle \boldsymbol u,\boldsymbol v\rangle
 \boldsymbol u^T\boldsymbol v
 =
 \begin{bmatrix}u_1 & u_2\end{bmatrix}
-\begin{bmatrix}v_1 \\ v_2\end{bmatrix}
+\begin{bmatrix}v_1 \\\\ v_2\end{bmatrix}
 =
 u_1v_1+u_2v_2$$
 
@@ -570,10 +570,10 @@ $$u=(1+i,2-3i)$$
 
 $$\langle u,u\rangle=u^Hu=
 \begin{pmatrix}1-i & 2+3i\end{pmatrix}
-\begin{pmatrix}1+i\\2-3i\end{pmatrix}
+\begin{pmatrix}1+i\\\\2-3i\end{pmatrix}
 =(1-i)(1+i)+(2+3i)(2-3i)=15$$
 
-$$\|u\|=\sqrt{\langle u,u\rangle}=\sqrt{15}$$
+$$\Vertu\Vert=\sqrt{\langle u,u\rangle}=\sqrt{15}$$
 
 实数矩阵：$L^H = L^T$
 
@@ -600,15 +600,15 @@ $Q^TQ=E,\quad \det Q=\pm1$
 
 # 幺正矩阵例子
 
-$U=\begin{bmatrix}i & 0\\0 & 1\end{bmatrix}$
+$U=\begin{bmatrix}i & 0\\\\0 & 1\end{bmatrix}$
 
 共轭转置：
 
-$U^\dagger=\begin{bmatrix}-i & 0\\0 & 1\end{bmatrix}$
+$U^\dagger=\begin{bmatrix}-i & 0\\\\0 & 1\end{bmatrix}$
 
 所以：
 
-$U^\dagger U=\begin{bmatrix}-i & 0\\0 & 1\end{bmatrix}\begin{bmatrix}i & 0\\0 & 1\end{bmatrix}=\begin{bmatrix}(-i)i & 0\\0 & 1\end{bmatrix}=\begin{bmatrix}1 & 0\\0 & 1\end{bmatrix}=E$
+$U^\dagger U=\begin{bmatrix}-i & 0\\\\0 & 1\end{bmatrix}\begin{bmatrix}i & 0\\\\0 & 1\end{bmatrix}=\begin{bmatrix}(-i)i & 0\\\\0 & 1\end{bmatrix}=\begin{bmatrix}1 & 0\\\\0 & 1\end{bmatrix}=E$
 
 U为幺正矩阵
 
@@ -646,7 +646,7 @@ $$\langle Uu,Uv\rangle=\langle u,v\rangle$$
 
 一旦内积不变，下面全部自动不变：
 
-- 长度：$\|Uu\|=\|u\|$
+- 长度：$\VertUu\Vert=\Vertu\Vert$
 - 夹角：夹角公式只含内积和长度
 - 正交性：若 $\langle u,v\rangle=0$，则 $\langle Uu,Uv\rangle=0$
 - 单位正交基：变换后仍然单位正交
@@ -669,13 +669,13 @@ TODO：特征向量变成特征函数，矩阵对角化变成谱分解。
 存在可逆矩阵 $P$，使得 $P^{-1}AP = B$，则称矩阵 $A$ 与 $B$ 相似，记作 $A \sim B$。
 
 例子：
-$$A = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}, \qquad P = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}$$
+$$A = \begin{bmatrix}1 & 2 \\\\ 3 & 4\end{bmatrix}, \qquad P = \begin{bmatrix}0 & 1 \\\\ 1 & 0\end{bmatrix}$$
 
 因为 $P$ 是交换矩阵，所以 $P^{-1} = P$。
 
-$$AP = \begin{bmatrix}1 & 2 \\ 3 & 4\end{bmatrix}\begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix} = \begin{bmatrix}2 & 1 \\ 4 & 3\end{bmatrix}$$
+$$AP = \begin{bmatrix}1 & 2 \\\\ 3 & 4\end{bmatrix}\begin{bmatrix}0 & 1 \\\\ 1 & 0\end{bmatrix} = \begin{bmatrix}2 & 1 \\\\ 4 & 3\end{bmatrix}$$
 
-$$B = P^{-1}AP = \begin{bmatrix}0 & 1 \\ 1 & 0\end{bmatrix}\begin{bmatrix}2 & 1 \\ 4 & 3\end{bmatrix} = \begin{bmatrix}4 & 3 \\ 2 & 1\end{bmatrix}$$
+$$B = P^{-1}AP = \begin{bmatrix}0 & 1 \\\\ 1 & 0\end{bmatrix}\begin{bmatrix}2 & 1 \\\\ 4 & 3\end{bmatrix} = \begin{bmatrix}4 & 3 \\\\ 2 & 1\end{bmatrix}$$
 
 所以 $A \sim B$。
 
@@ -695,11 +695,11 @@ $A$ 与 $B$ 描述的是同一个几何动作（同一个线性变换），只�
 
 1. 选定矩阵
 
-$$A = \begin{bmatrix}2 & 1 \\ 1 & 2\end{bmatrix}$$
+$$A = \begin{bmatrix}2 & 1 \\\\ 1 & 2\end{bmatrix}$$
 
 2. 求特征值
 
-$$\det(A - \lambda E) = \begin{vmatrix}2-\lambda & 1 \\ 1 & 2-\lambda\end{vmatrix} = (2-\lambda)^2 - 1 = 0$$
+$$\det(A - \lambda E) = \begin{vmatrix}2-\lambda & 1 \\\\ 1 & 2-\lambda\end{vmatrix} = (2-\lambda)^2 - 1 = 0$$
 
 $$(2-\lambda)^2 = 1 \quad\Longrightarrow\quad \lambda = 3 \quad\text{或}\quad \lambda = 1$$
 
@@ -707,29 +707,29 @@ $$(2-\lambda)^2 = 1 \quad\Longrightarrow\quad \lambda = 3 \quad\text{或}\quad \
 
 $\lambda = 3$：
 
-$$(A - 3E)u = 0 \implies \begin{bmatrix}-1 & 1 \\ 1 & -1\end{bmatrix}\begin{pmatrix}x \\ y\end{pmatrix} = \begin{pmatrix}0 \\ 0\end{pmatrix} \implies x = y$$
+$$(A - 3E)u = 0 \implies \begin{bmatrix}-1 & 1 \\\\ 1 & -1\end{bmatrix}\begin{pmatrix}x \\\\ y\end{pmatrix} = \begin{pmatrix}0 \\\\ 0\end{pmatrix} \implies x = y$$
 
  $u_1 = (1, 1)$
 
 $\lambda = 1$：
 
-$$\begin{bmatrix}1 & 1 \\ 1 & 1\end{bmatrix}\begin{pmatrix}x \\ y\end{pmatrix} = \begin{pmatrix}0 \\ 0\end{pmatrix} \implies x = -y$$
+$$\begin{bmatrix}1 & 1 \\\\ 1 & 1\end{bmatrix}\begin{pmatrix}x \\\\ y\end{pmatrix} = \begin{pmatrix}0 \\\\ 0\end{pmatrix} \implies x = -y$$
 
  $u_2 = (1, -1)$
 
 4. 将特征向量拼成 P
 
-$$P = \begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix}$$
+$$P = \begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix}$$
 
 求 $P$ 的逆（二阶公式 $P^{-1} = \dfrac{1}{ad-bc}\begin{bmatrix}d & -b \ -c & a\end{bmatrix}$）：
 
-$$P^{-1} = \frac{1}{2}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix}$$
+$$P^{-1} = \frac{1}{2}\begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix}$$
 
 5. 验证 $P^{-1}AP$
 
-$$AP = \begin{bmatrix}2 & 1 \\ 1 & 2\end{bmatrix}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix} = \begin{bmatrix}3 & 1 \\ 3 & -1\end{bmatrix}$$
+$$AP = \begin{bmatrix}2 & 1 \\\\ 1 & 2\end{bmatrix}\begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix} = \begin{bmatrix}3 & 1 \\\\ 3 & -1\end{bmatrix}$$
 
-$$D = P^{-1}(AP) = \frac{1}{2}\begin{bmatrix}1 & 1 \\ 1 & -1\end{bmatrix}\begin{bmatrix}3 & 1 \\ 3 & -1\end{bmatrix} = \begin{bmatrix}3 & 0 \\ 0 & 1\end{bmatrix}$$
+$$D = P^{-1}(AP) = \frac{1}{2}\begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix}\begin{bmatrix}3 & 1 \\\\ 3 & -1\end{bmatrix} = \begin{bmatrix}3 & 0 \\\\ 0 & 1\end{bmatrix}$$
 
 所以：
 
@@ -751,7 +751,7 @@ $$f(x,y) = x^2 + 2xy + 2y^2$$
 
 矩阵夹心形式：
 
-$$f(x,y) = \begin{bmatrix}x & y\end{bmatrix}\begin{bmatrix}1 & 1 \\ 1 & 2\end{bmatrix}\begin{bmatrix}x \\ y\end{bmatrix}$$
+$$f(x,y) = \begin{bmatrix}x & y\end{bmatrix}\begin{bmatrix}1 & 1 \\\\ 1 & 2\end{bmatrix}\begin{bmatrix}x \\\\ y\end{bmatrix}$$
 
 ![斜椭圆](eigenvalue_view.png)
 
@@ -760,19 +760,19 @@ $$f(x,y) = \begin{bmatrix}x & y\end{bmatrix}\begin{bmatrix}1 & 1 \\ 1 & 2\end{bm
 
 第一步：选二次型
 
-$$A = \begin{bmatrix}3 & 1 \\ 1 & 2\end{bmatrix}, \qquad f(x) = x^TAx = 3x_1^2 + 2x_1x_2 + 2x_2^2$$
+$$A = \begin{bmatrix}3 & 1 \\\\ 1 & 2\end{bmatrix}, \qquad f(x) = x^TAx = 3x_1^2 + 2x_1x_2 + 2x_2^2$$
 
 第二步：选换坐标矩阵 C
 
 C只需要在$f(x) = x^TAx = 3x_1^2 + 2x_1x_2 + 2x_2^2$坐标下垂直
 
-$$C = \begin{bmatrix}1 & 1 \\ -1 & 2\end{bmatrix} \quad \left(\text{可逆，}\det C = 3\right)$$
+$$C = \begin{bmatrix}1 & 1 \\\\ -1 & 2\end{bmatrix} \quad \left(\text{可逆，}\det C = 3\right)$$
 
 第三步：算 B = CᵀAC
 
-$$C^TA = \begin{bmatrix}1 & -1 \\ 1 & 2\end{bmatrix}\begin{bmatrix}3 & 1 \\ 1 & 2\end{bmatrix} = \begin{bmatrix}2 & -1 \\ 5 & 5\end{bmatrix}$$
+$$C^TA = \begin{bmatrix}1 & -1 \\\\ 1 & 2\end{bmatrix}\begin{bmatrix}3 & 1 \\\\ 1 & 2\end{bmatrix} = \begin{bmatrix}2 & -1 \\\\ 5 & 5\end{bmatrix}$$
 
-$$B = (C^TA)C = \begin{bmatrix}2 & -1 \\ 5 & 5\end{bmatrix}\begin{bmatrix}1 & 1 \\ -1 & 2\end{bmatrix} = \begin{bmatrix}3 & 0 \\ 0 & 15\end{bmatrix}$$
+$$B = (C^TA)C = \begin{bmatrix}2 & -1 \\\\ 5 & 5\end{bmatrix}\begin{bmatrix}1 & 1 \\\\ -1 & 2\end{bmatrix} = \begin{bmatrix}3 & 0 \\\\ 0 & 15\end{bmatrix}$$
 
 第四步：新坐标下的二次型
 
@@ -796,7 +796,7 @@ $$f(y) = y^TBy = 3y_1^2 + 15y_2^2$$
 
 TODO:多元微积分
 
-$\begin{pmatrix} \mathrm{d}x & \mathrm{d}y \end{pmatrix} \begin{pmatrix} \frac{\partial^2 f}{\partial x^2} & \frac{\partial^2 f}{\partial x\partial y}\\[4pt] \frac{\partial^2 f}{\partial x\partial y} & \frac{\partial^2 f}{\partial y^2} \end{pmatrix} \begin{pmatrix} \mathrm{d}x \\[4pt] \mathrm{d}y \end{pmatrix}$给出沿任意方向的二阶导数
+$\begin{pmatrix} \mathrm{d}x & \mathrm{d}y \end{pmatrix} \begin{pmatrix} \frac{\partial^2 f}{\partial x^2} & \frac{\partial^2 f}{\partial x\partial y}\\\\ \frac{\partial^2 f}{\partial x\partial y} & \frac{\partial^2 f}{\partial y^2} \end{pmatrix} \begin{pmatrix} \mathrm{d}x \\\\ \mathrm{d}y \end{pmatrix}$给出沿任意方向的二阶导数
 
 性质：正定矩阵的特征值全为正数（逆命题不成立）
 
@@ -808,5 +808,5 @@ $\begin{pmatrix} \mathrm{d}x & \mathrm{d}y \end{pmatrix} \begin{pmatrix} \frac{\
 
 性质：可以被正交矩阵对角化；只要特征值全为正数就是正定的
 
-$$A=\begin{pmatrix}2&1\\1&2\end{pmatrix}$$
+$$A=\begin{pmatrix}2&1\\\\1&2\end{pmatrix}$$
 

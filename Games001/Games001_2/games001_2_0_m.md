@@ -2,8 +2,8 @@
 
 $$A=
 \begin{pmatrix}
-9&6&0\\
-6&5&4\\
+9&6&0\\\\
+6&5&4\\\\
 3&4&10
 \end{pmatrix}$$
 
@@ -11,13 +11,13 @@ $$A=
 
 这三步都用到了高斯消元
 
-$$A_0=\begin{pmatrix}9&6&0\\0&1&4\\3&4&10\end{pmatrix}=\begin{pmatrix}1&0&0\\-\frac23&1&0\\0&0&1\end{pmatrix}A$$
+$$A_0=\begin{pmatrix}9&6&0\\\\0&1&4\\\\3&4&10\end{pmatrix}=\begin{pmatrix}1&0&0\\\\-\frac23&1&0\\\\0&0&1\end{pmatrix}A$$
 
 
 $$E_0=
 \begin{pmatrix}
-1&0&0\\
--\frac23&1&0\\
+1&0&0\\\\
+-\frac23&1&0\\\\
 0&0&1
 \end{pmatrix}$$
 
@@ -27,13 +27,13 @@ $$A_0=E_0A$$
 
 第二步：得到 $A_1$ $E_1$
 
-$$A_1=\begin{pmatrix}9&6&0\\0&1&4\\0&2&10\end{pmatrix}=\begin{pmatrix}1&0&0\\0&1&0\\-\frac13&0&1\end{pmatrix}A_0$$
+$$A_1=\begin{pmatrix}9&6&0\\\\0&1&4\\\\0&2&10\end{pmatrix}=\begin{pmatrix}1&0&0\\\\0&1&0\\\\-\frac13&0&1\end{pmatrix}A_0$$
 
 
 $$E_1=
 \begin{pmatrix}
-1&0&0\\
-0&1&0\\
+1&0&0\\\\
+0&1&0\\\\
 -\frac13&0&1
 \end{pmatrix}$$
 
@@ -42,13 +42,13 @@ $$A_1=E_1A_0$$
 
 第三步：得到 $A_2$(上三角) $E_2$
 
-$$A_2=\begin{pmatrix}9&6&0\\0&1&4\\0&0&10\end{pmatrix}=\begin{pmatrix}1&0&0\\0&1&0\\0&-2&1\end{pmatrix}A_1$$
+$$A_2=\begin{pmatrix}9&6&0\\\\0&1&4\\\\0&0&10\end{pmatrix}=\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&-2&1\end{pmatrix}A_1$$
 
 
 $$E_2=
 \begin{pmatrix}
-1&0&0\\
-0&1&0\\
+1&0&0\\\\
+0&1&0\\\\
 0&-2&1
 \end{pmatrix}$$
 
@@ -59,8 +59,8 @@ $A_2=E_2A_1$
 
 $$U=A_2=E_2E_1E_0A=
 \begin{pmatrix}
-9&6&0\\
-0&1&4\\
+9&6&0\\\\
+0&1&4\\\\
 0&0&2
 \end{pmatrix}$$
 
@@ -86,8 +86,8 @@ L=E_0^{-1}E_1^{-1}E_2^{-1}
 
 $$L=
 \begin{pmatrix}
-1&0&0\\
-2/3&1&0\\
+1&0&0\\\\
+2/3&1&0\\\\
 1/3&2&1
 \end{pmatrix}$$
 
@@ -163,8 +163,8 @@ $${U=L^T}$$
 
 $$A=
 \begin{pmatrix}
-4&2&2\\
-2&5&1\\
+4&2&2\\\\
+2&5&1\\\\
 2&1&6
 \end{pmatrix}$$
 
@@ -180,15 +180,15 @@ $${A=LL^T}$$
 
 $$L=
 \begin{pmatrix}
-l_{11}&0&0\\
-l_{21}&l_{22}&0\\
+l_{11}&0&0\\\\
+l_{21}&l_{22}&0\\\\
 l_{31}&l_{32}&l_{33}
 \end{pmatrix}$$
 
 $$L^T=
 \begin{pmatrix}
-l_{11}&l_{21}&l_{31}\\
-0&l_{22}&l_{32}\\
+l_{11}&l_{21}&l_{31}\\\\
+0&l_{22}&l_{32}\\\\
 0&0&l_{33}
 \end{pmatrix}$$
 
@@ -198,10 +198,10 @@ $$LL^T=
 \begin{pmatrix}
 l_{11}^2&
 l_{11}l_{21}&
-l_{11}l_{31}\\
+l_{11}l_{31}\\\\
 l_{11}l_{21}&
 l_{21}^2+l_{22}^2&
-l_{21}l_{31}+l_{22}l_{32}\\
+l_{21}l_{31}+l_{22}l_{32}\\\\
 l_{11}l_{31}&
 l_{21}l_{31}+l_{22}l_{32}&
 l_{31}^2+l_{32}^2+l_{33}^2
@@ -212,18 +212,18 @@ $$LL^T=A$$
 $$\begin{pmatrix}
 l_{11}^2&
 l_{11}l_{21}&
-l_{11}l_{31}\\
+l_{11}l_{31}\\\\
 l_{11}l_{21}&
 l_{21}^2+l_{22}^2&
-l_{21}l_{31}+l_{22}l_{32}\\
+l_{21}l_{31}+l_{22}l_{32}\\\\
 l_{11}l_{31}&
 l_{21}l_{31}+l_{22}l_{32}&
 l_{31}^2+l_{32}^2+l_{33}^2
 \end{pmatrix}
 =
 \begin{pmatrix}
-4&2&2\\
-2&5&1\\
+4&2&2\\\\
+2&5&1\\\\
 2&1&6
 \end{pmatrix}$$
 
@@ -290,8 +290,8 @@ $${l_{33}=\sqrt5}$$
 $${
 L=
 \begin{pmatrix}
-2&0&0\\
-1&2&0\\
+2&0&0\\\\
+1&2&0\\\\
 1&0&\sqrt5
 \end{pmatrix}
 }$$
@@ -301,8 +301,8 @@ $L^T=$：
 $${
 L^T=
 \begin{pmatrix}
-2&1&1\\
-0&2&0\\
+2&1&1\\\\
+0&2&0\\\\
 0&0&\sqrt5
 \end{pmatrix}
 }$$
@@ -312,13 +312,13 @@ L^T=
 $${
 A=
 \begin{pmatrix}
-2&0&0\\
-1&2&0\\
+2&0&0\\\\
+1&2&0\\\\
 1&0&\sqrt5
 \end{pmatrix}
 \begin{pmatrix}
-2&1&1\\
-0&2&0\\
+2&1&1\\\\
+0&2&0\\\\
 0&0&\sqrt5
 \end{pmatrix}
 }$$
@@ -327,20 +327,20 @@ A=
 
 $$LL^T=
 \begin{pmatrix}
-2&0&0\\
-1&2&0\\
+2&0&0\\\\
+1&2&0\\\\
 1&0&\sqrt5
 \end{pmatrix}
 \begin{pmatrix}
-2&1&1\\
-0&2&0\\
+2&1&1\\\\
+0&2&0\\\\
 0&0&\sqrt5
 \end{pmatrix}$$
 
 $$LL^T=
 \begin{pmatrix}
-4&2&2\\
-2&5&1\\
+4&2&2\\\\
+2&5&1\\\\
 2&1&6
 \end{pmatrix}
 =A$$
@@ -355,9 +355,9 @@ $${A=LL^T}$$
 
 $$A=
 \begin{pmatrix}
-4&2&0&0\\
-2&5&1&0\\
-0&1&6&2\\
+4&2&0&0\\\\
+2&5&1&0\\\\
+0&1&6&2\\\\
 0&0&2&7
 \end{pmatrix}$$
 
@@ -389,8 +389,8 @@ $${L^Tx=y}$$
 
 $$L=
 \begin{pmatrix}
-*&0&0\\
-*&*&0\\
+*&0&0\\\\
+*&*&0\\\\
 *&*&*
 \end{pmatrix}$$
 
@@ -400,8 +400,8 @@ $L^T$是上三角矩阵：
 
 $$L^T=
 \begin{pmatrix}
-*&*&*\\
-0&*&*\\
+*&*&*\\\\
+0&*&*\\\\
 0&0&*
 \end{pmatrix}$$
 
@@ -433,7 +433,7 @@ $$L^Tx_i=y_i$$
 
 $A$ 是一个 $10000\times10000$ 的矩阵。
 
-理论上有$100\,000\,000$ 个元素。
+理论上有$100\thinspace000\thinspace000$ 个元素。
 
 但如果其中99.9% 都是 $0$，那么实际上只有很少的元素需要参与计算。
 
@@ -457,45 +457,45 @@ $\boldsymbol Q_{m\times m}$ 为幺正矩阵，$\boldsymbol R_{m\times n}$ 为上
 
 分解矩阵：A
 
-$A=\begin{pmatrix}1&1\\1&0\\0&1\end{pmatrix}$
+$A=\begin{pmatrix}1&1\\\\1&0\\\\0&1\end{pmatrix}$
 
-$a_1=\begin{pmatrix}1\\1\\0\end{pmatrix},\qquad a_2=\begin{pmatrix}1\\0\\1\end{pmatrix}$
+$a_1=\begin{pmatrix}1\\\\1\\\\0\end{pmatrix},\qquad a_2=\begin{pmatrix}1\\\\0\\\\1\end{pmatrix}$
 
 规范化$a1$
-$\|a_1\|=\sqrt{1^2+1^2}=\sqrt2$
+$\Verta_1\Vert=\sqrt{1^2+1^2}=\sqrt2$
 
-$q_1=\frac{a_1}{\sqrt2}=\begin{pmatrix}1/\sqrt2\\1/\sqrt2\\0\end{pmatrix}$
+$q_1=\frac{a_1}{\sqrt2}=\begin{pmatrix}1/\sqrt2\\\\1/\sqrt2\\\\0\end{pmatrix}$
 
 去掉$a2$ 上与$a1$平行的部分并规整化得到$w2$
 
 $\langle a_2,q_1\rangle=\frac{1}{\sqrt2}$
 
 
-得到投影长度:$\langle a_2,q_1\rangle q_1=\begin{pmatrix}1/2\\1/2\\0\end{pmatrix}$
+得到投影长度:$\langle a_2,q_1\rangle q_1=\begin{pmatrix}1/2\\\\1/2\\\\0\end{pmatrix}$
 
-$a2$去掉$a1$在$a2$上的投影长度：$w_2=a_2-\begin{pmatrix}1/2\\1/2\\0\end{pmatrix}=\begin{pmatrix}1/2\\-1/2\\1\end{pmatrix}$
+$a2$去掉$a1$在$a2$上的投影长度：$w_2=a_2-\begin{pmatrix}1/2\\\\1/2\\\\0\end{pmatrix}=\begin{pmatrix}1/2\\\\-1/2\\\\1\end{pmatrix}$
 
 规范化$w2$
 
-$\|w_2\|=\sqrt{\frac14+\frac14+1}=\frac{\sqrt6}{2}$
+$\Vertw_2\Vert=\sqrt{\frac14+\frac14+1}=\frac{\sqrt6}{2}$
 
-$q_2=\frac{w_2}{\|w_2\|}=\begin{pmatrix}1/\sqrt6\\-1/\sqrt6\\2/\sqrt6\end{pmatrix}$
+$q_2=\frac{w_2}{\Vertw_2\Vert}=\begin{pmatrix}1/\sqrt6\\\\-1/\sqrt6\\\\2/\sqrt6\end{pmatrix}$
 
 所以：
 
-$Q=\begin{pmatrix}1/\sqrt2&1/\sqrt6\\1/\sqrt2&-1/\sqrt6\\0&2/\sqrt6\end{pmatrix}$
+$Q=\begin{pmatrix}1/\sqrt2&1/\sqrt6\\\\1/\sqrt2&-1/\sqrt6\\\\0&2/\sqrt6\end{pmatrix}$
 
 第 5 步：算 R
 
-$R=Q^T A=\begin{pmatrix}\langle q_1,a_1\rangle&\langle q_1,a_2\rangle\\0&\langle q_2,a_2\rangle\end{pmatrix}=\begin{pmatrix}\sqrt2&1/\sqrt2\\0&\sqrt6/2\end{pmatrix}$
+$R=Q^T A=\begin{pmatrix}\langle q_1,a_1\rangle&\langle q_1,a_2\rangle\\\\0&\langle q_2,a_2\rangle\end{pmatrix}=\begin{pmatrix}\sqrt2&1/\sqrt2\\\\0&\sqrt6/2\end{pmatrix}$
 
 验证:
 
-$QR=\begin{pmatrix}1/\sqrt2&1/\sqrt6\\1/\sqrt2&-1/\sqrt6\\0&2/\sqrt6\end{pmatrix}\begin{pmatrix}\sqrt2&1/\sqrt2\\0&\sqrt6/2\end{pmatrix}=\begin{pmatrix}1&1\\1&0\\0&1\end{pmatrix}=A$
+$QR=\begin{pmatrix}1/\sqrt2&1/\sqrt6\\\\1/\sqrt2&-1/\sqrt6\\\\0&2/\sqrt6\end{pmatrix}\begin{pmatrix}\sqrt2&1/\sqrt2\\\\0&\sqrt6/2\end{pmatrix}=\begin{pmatrix}1&1\\\\1&0\\\\0&1\end{pmatrix}=A$
 
 最后结果:
 
-$A=\underbrace{\begin{pmatrix}1/\sqrt2&1/\sqrt6\\1/\sqrt2&-1/\sqrt6\\0&2/\sqrt6\end{pmatrix}}_{Q}\underbrace{\begin{pmatrix}\sqrt2&1/\sqrt2\\0&\sqrt6/2\end{pmatrix}}_{R}$
+$A=\underbrace{\begin{pmatrix}1/\sqrt2&1/\sqrt6\\\\1/\sqrt2&-1/\sqrt6\\\\0&2/\sqrt6\end{pmatrix}}_{Q}\underbrace{\begin{pmatrix}\sqrt2&1/\sqrt2\\\\0&\sqrt6/2\end{pmatrix}}_{R}$
 
 TODO：当前的是经济型分解，这一步里的Q不算幺正矩阵，为Q再补上一个垂直的才算幺正矩阵
 
@@ -503,11 +503,11 @@ TODO：当前的是经济型分解，这一步里的Q不算幺正矩阵，为Q�
 
 由$q3^T​q2​=0,q3^T​q2​=0$计算
 
-$\begin{pmatrix} x & y & z \end{pmatrix} \begin{pmatrix} \dfrac{1}{\sqrt{2}} \\ \dfrac{1}{\sqrt{2}} \\ 0 \end{pmatrix} = 0$
+$\begin{pmatrix} x & y & z \end{pmatrix} \begin{pmatrix} \dfrac{1}{\sqrt{2}} \\\\ \dfrac{1}{\sqrt{2}} \\\\ 0 \end{pmatrix} = 0$
 
 得到$y=-x$
 
-$\begin{pmatrix} x & y & z \end{pmatrix} \begin{pmatrix} \dfrac{1}{\sqrt{6}} \\[6pt] -\dfrac{1}{\sqrt{6}} \\[6pt] \dfrac{2}{\sqrt{6}} \end{pmatrix} = 0$
+$\begin{pmatrix} x & y & z \end{pmatrix} \begin{pmatrix} \dfrac{1}{\sqrt{6}} \\\\ -\dfrac{1}{\sqrt{6}} \\\\ \dfrac{2}{\sqrt{6}} \end{pmatrix} = 0$
 
 代入$y=-x$
 
@@ -529,9 +529,9 @@ K不为1时，后面算的就是投影，点乘完再除以u的模长再乘以u�
 
 #### TODO 例子值对吗
 
-$A= \begin{pmatrix} 3 & 2 & 1 \\ 4 & 6 & 5 \\ 0 & 7 & 8 \end{pmatrix}$
+$A= \begin{pmatrix} 3 & 2 & 1 \\\\ 4 & 6 & 5 \\\\ 0 & 7 & 8 \end{pmatrix}$
 消去第 2 行第 1 列的元素 4
-$\begin{pmatrix} 3 \\ 4 \end{pmatrix}$
+$\begin{pmatrix} 3 \\\\ 4 \end{pmatrix}$
 
 $r_1=\sqrt{3^2+4^2}=5$
 
@@ -539,25 +539,25 @@ $c_1=\frac{3}{5},\quad s_1=\frac{4}{5}$
 
 吉文斯需要的是角度顺时针旋转让所需的角度在这个位置归零，所以负值在左下角
 
-$G_1= \begin{pmatrix} \frac{3}{5} & \frac{4}{5} & 0 \\ -\frac{4}{5} & \frac{3}{5} & 0 \\ 0 & 0 & 1 \end{pmatrix}$
+$G_1= \begin{pmatrix} \frac{3}{5} & \frac{4}{5} & 0 \\\\ -\frac{4}{5} & \frac{3}{5} & 0 \\\\ 0 & 0 & 1 \end{pmatrix}$
 
-$G_1A= \begin{pmatrix} \dfrac{3}{5} & \dfrac{4}{5} & 0 \\[4pt] -\dfrac{4}{5} & \dfrac{3}{5} & 0 \\[4pt] 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 3 & 2 & 1 \\ 4 & 6 & 5 \\ 0 & 7 & 8 \end{pmatrix}$
+$G_1A= \begin{pmatrix} \dfrac{3}{5} & \dfrac{4}{5} & 0 \\\\ -\dfrac{4}{5} & \dfrac{3}{5} & 0 \\\\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 3 & 2 & 1 \\\\ 4 & 6 & 5 \\\\ 0 & 7 & 8 \end{pmatrix}$
 
-$G_1A= \begin{pmatrix} 5 & 6 & \frac{23}{5} \\ 0 & 2 & \frac{11}{5} \\ 0 & 7 & 8 \end{pmatrix}$
+$G_1A= \begin{pmatrix} 5 & 6 & \frac{23}{5} \\\\ 0 & 2 & \frac{11}{5} \\\\ 0 & 7 & 8 \end{pmatrix}$
 
 消去第 3 行第 2 列的元素 7
 
-$\begin{pmatrix} 2 \\ 7 \end{pmatrix}$
+$\begin{pmatrix} 2 \\\\ 7 \end{pmatrix}$
 
 $r_2=\sqrt{2^2+7^2}=\sqrt{53}$
 
 $c_2=\frac{2}{\sqrt{53}},\quad s_2=\frac{7}{\sqrt{53}}$
 
-$G_2= \begin{pmatrix} 1 & 0 & 0 \\ 0 & \dfrac{2}{\sqrt{53}} & \dfrac{7}{\sqrt{53}} \\ 0 & -\dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix}$
+$G_2= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \dfrac{2}{\sqrt{53}} & \dfrac{7}{\sqrt{53}} \\\\ 0 & -\dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix}$
 
-$G_2(G_1A)= \begin{pmatrix} 1 & 0 & 0 \\ 0 & \dfrac{2}{\sqrt{53}} & \dfrac{7}{\sqrt{53}} \\ 0 & -\dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix} \begin{pmatrix} 5 & 6 & \dfrac{23}{5} \\[4pt] 0 & 2 & \dfrac{11}{5} \\[4pt] 0 & 7 & 8 \end{pmatrix}$
+$G_2(G_1A)= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \dfrac{2}{\sqrt{53}} & \dfrac{7}{\sqrt{53}} \\\\ 0 & -\dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix} \begin{pmatrix} 5 & 6 & \dfrac{23}{5} \\\\ 0 & 2 & \dfrac{11}{5} \\\\ 0 & 7 & 8 \end{pmatrix}$
 
-$R= \begin{pmatrix} 5 & 6 & \dfrac{23}{5} \\[4pt] 0 & \sqrt{53} & \dfrac{302}{5\sqrt{53}} \\[4pt] 0 & 0 & \dfrac{3}{5\sqrt{53}} \end{pmatrix} =G_2(G_1A)$
+$R= \begin{pmatrix} 5 & 6 & \dfrac{23}{5} \\\\ 0 & \sqrt{53} & \dfrac{302}{5\sqrt{53}} \\\\ 0 & 0 & \dfrac{3}{5\sqrt{53}} \end{pmatrix} =G_2(G_1A)$
 
 计算Q矩阵
 
@@ -572,7 +572,7 @@ $A = G_1^T G_2^T R$
 $Q = G_1^T G_2^T$
 
 即：
-$Q= \begin{pmatrix} \dfrac{3}{5} & -\dfrac{4}{5} & 0 \\[4pt] \dfrac{4}{5} & \dfrac{3}{5} & 0 \\[4pt] 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 & 0 \\[4pt] 0 & \dfrac{2}{\sqrt{53}} & -\dfrac{7}{\sqrt{53}} \\[4pt] 0 & \dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix}$
+$Q= \begin{pmatrix} \dfrac{3}{5} & -\dfrac{4}{5} & 0 \\\\ \dfrac{4}{5} & \dfrac{3}{5} & 0 \\\\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \dfrac{2}{\sqrt{53}} & -\dfrac{7}{\sqrt{53}} \\\\ 0 & \dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix}$
 
 ### TODO 豪斯霍尔德变换
 
@@ -582,15 +582,15 @@ $Q= \begin{pmatrix} \dfrac{3}{5} & -\dfrac{4}{5} & 0 \\[4pt] \dfrac{4}{5} & \dfr
 
 xy平面下
 
-$\begin{pmatrix} \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta \end{pmatrix}$
+$\begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix}$
 
 3*3矩阵中zx平面
 
-$R_y(\theta)= \begin{pmatrix} \cos\theta & 0 & \sin\theta \\ 0 & 1 & 0 \\ -\sin\theta & 0 & \cos\theta \end{pmatrix}$
+$R_y(\theta)= \begin{pmatrix} \cos\theta & 0 & \sin\theta \\\\ 0 & 1 & 0 \\\\ -\sin\theta & 0 & \cos\theta \end{pmatrix}$
 
 yz平面
 
-$R_x(\theta)= \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \sin\theta & \cos\theta \end{pmatrix}$
+$R_x(\theta)= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \cos\theta & -\sin\theta \\\\ 0 & \sin\theta & \cos\theta \end{pmatrix}$
 
 # 奇异值分解
 
@@ -600,7 +600,7 @@ $R_x(\theta)= \begin{pmatrix} 1 & 0 & 0 \\ 0 & \cos\theta & -\sin\theta \\ 0 & \
 
 $U_{m\times m}$ 为幺正矩阵，$V_{n\times n}$ 为幺正矩阵，$\Sigma_{m\times n}$ 为对角矩阵
 
-$A= \begin{pmatrix} 0 & 2 \\ 1 & 0 \end{pmatrix}$
+$A= \begin{pmatrix} 0 & 2 \\\\ 1 & 0 \end{pmatrix}$
 
 求V
 
@@ -608,16 +608,16 @@ A^(T)A的特征向量组成的矩阵为V
 
 $$A^\mathrm{T}A=
 \begin{pmatrix}
-0 & 1 \\
+0 & 1 \\\\
 2 & 0
 \end{pmatrix}
 \begin{pmatrix}
-0 & 2 \\
+0 & 2 \\\\
 1 & 0
 \end{pmatrix}
 =
 \begin{pmatrix}
-1 & 0 \\
+1 & 0 \\\\
 0 & 4
 \end{pmatrix}$$
 
@@ -625,14 +625,14 @@ $$A^\mathrm{T}A=
 
 将得到的特征值 $\lambda = 4, 1$ 代入 $A^{T}A - \lambda E$，得到特征向量为 $(0,1), (1,0)$，将得到的特征向量列填入 $V$ 矩阵：
 
-$V = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}$
+$V = \begin{pmatrix} 0 & 1 \\\\ 1 & 0 \end{pmatrix}$
 
 求 $\Sigma$：
 
 特征值：$4, 1$  
 奇异值（根号下特征值）：$2, 1$
 
-$\Sigma = \begin{pmatrix} 2 & 0 \\ 0 & 1 \end{pmatrix}$
+$\Sigma = \begin{pmatrix} 2 & 0 \\\\ 0 & 1 \end{pmatrix}$
 
 $A^TA$的特征值的平方根，组成奇异值 $\Sigma$。
 
@@ -648,37 +648,37 @@ $AV \Sigma^{-1} = U$
 
 $$AV=
 \begin{pmatrix}
-0 & 2 \\
+0 & 2 \\\\
 1 & 0
 \end{pmatrix}
 \begin{pmatrix}
-0 & 1 \\
+0 & 1 \\\\
 1 & 0
 \end{pmatrix}
 =
 \begin{pmatrix}
-2 & 0 \\
+2 & 0 \\\\
 0 & 1
 \end{pmatrix}$$
 
 $$\Sigma^{-1}=
 \begin{pmatrix}
-\dfrac12 & 0 \\
+\dfrac12 & 0 \\\\
 0 & 1
 \end{pmatrix}$$
 
 $$U=
 \begin{pmatrix}
-2 & 0 \\
+2 & 0 \\\\
 0 & 1
 \end{pmatrix}
 \begin{pmatrix}
-\dfrac12 & 0 \\
+\dfrac12 & 0 \\\\
 0 & 1
 \end{pmatrix}
 =
 \begin{pmatrix}
-1 & 0 \\
+1 & 0 \\\\
 0 & 1
 \end{pmatrix}$$
 
@@ -686,20 +686,20 @@ $$U=
 
 $$U\Sigma V^\mathrm{T}=
 \begin{pmatrix}
-1 & 0 \\
+1 & 0 \\\\
 0 & 1
 \end{pmatrix}
 \begin{pmatrix}
-2 & 0 \\
+2 & 0 \\\\
 0 & 1
 \end{pmatrix}
 \begin{pmatrix}
-0 & 1 \\
+0 & 1 \\\\
 1 & 0
 \end{pmatrix}
 =
 \begin{pmatrix}
-0 & 2 \\
+0 & 2 \\\\
 1 & 0
 \end{pmatrix}
 =A$$
@@ -750,44 +750,44 @@ U和V没有数值上的关系
 
 正定性：
 
-$$\|u\|\ge0,\quad \|u\|=0 \iff u=0$$
+$$\Vertu\Vert\ge0,\quad \Vertu\Vert=0 \iff u=0$$
 
 正齐次性：
 
-$$\|au\|=|a|\|u\|,\quad a\in\mathbb{R}$$
+$$\Vertau\Vert=|a|\Vertu\Vert,\quad a\in\mathbb{R}$$
 
 三角不等式：
 
-$$\|u+v\|\le\|u\|+\|v\|$$
+$$\Vertu+v\Vert\le\Vertu\Vert+\Vertv\Vert$$
 
 $L_0$ 范数：非零元素的个数(伪范数，不满足正齐次性)
 不能构成度量函数；本质上不是范数
 不可导；作为优化目标时性能非常低下
-$\|\boldsymbol x\|_0 = 2$（因为 3 和 $-4$ 非零，$0$ 是零）
-$\|\boldsymbol{x}\|_0 = \sum_{i=1}^{n}[x_i \neq 0]$
+$\Vert\boldsymbol x\Vert_0 = 2$（因为 3 和 $-4$ 非零，$0$ 是零）
+$\Vert\boldsymbol{x}\Vert_0 = \sum_{i=1}^{n}[x_i \neq 0]$
 
 $L_1$ 范数：绝对值之和
-$\|\boldsymbol x\|_1 = |3| + |-4| + |0| = 3 + 4 + 0 = 7$
-$\|\boldsymbol{x}\|_1 = \sum_{i=1}^{n}|x_i| = |x_1| + |x_2| + \dots + |x_n|$
+$\Vert\boldsymbol x\Vert_1 = |3| + |-4| + |0| = 3 + 4 + 0 = 7$
+$\Vert\boldsymbol{x}\Vert_1 = \sum_{i=1}^{n}|x_i| = |x_1| + |x_2| + \dots + |x_n|$
 
 $L_2$ 范数：平方和开根号
-$\|\boldsymbol x\|_2 = \sqrt{3^2 + (-4)^2 + 0^2} = \sqrt{9 + 16} = 5$
-$\|\boldsymbol{x}\|_2 = \sqrt{\sum_{i=1}^{n}x_i^2} = \left(x_1^2 + x_2^2 + \dots + x_n^2\right)^{\frac12}$
+$\Vert\boldsymbol x\Vert_2 = \sqrt{3^2 + (-4)^2 + 0^2} = \sqrt{9 + 16} = 5$
+$\Vert\boldsymbol{x}\Vert_2 = \sqrt{\sum_{i=1}^{n}x_i^2} = \left(x_1^2 + x_2^2 + \dots + x_n^2\right)^{\frac12}$
 
 $L_p$ 范数：如果取 $p=3$，则
 $L_3 = \big(|3|^3 + |-4|^3 + 0\big)^{1/3} = (27 + 64)^{1/3} \approx 4.5$
-$\|\boldsymbol{x}\|_p = \left(|x_1|^p + |x_2|^p + \dots + |x_n|^p\right)^{\frac1p} \quad (p \ge 1)$
+$\Vert\boldsymbol{x}\Vert_p = \left(|x_1|^p + |x_2|^p + \dots + |x_n|^p\right)^{\frac1p} \quad (p \ge 1)$
 
 $L_\infty$ 范数：绝对值最大分量
-$\|\boldsymbol x\|_\infty = \max\{3,4,0\} = 4$
-$\|\boldsymbol{x}\|_\infty = \max\{|x_1|,|x_2|,\dots,|x_n|\}$
+$\Vert\boldsymbol x\Vert_\infty = \max\lbrace3,4,0\rbrace = 4$
+$\Vert\boldsymbol{x}\Vert_\infty = \max\lbrace|x_1|,|x_2|,\dots,|x_n|\rbrace$
 
 # 矩阵范数
 
 诱导范数
 
 
-$\|A\| = \max\{\|Ax\|: x \in \mathbb R^n,\|x\| = 1\} = \max\left\{\frac{\|Ax\|}{\|x\|}: x \in \mathbb R^n,\|x\| \neq 0\right\}$
+$\VertA\Vert = \max\lbrace\VertAx\Vert: x \in \mathbb R^n,\Vertx\Vert = 1\rbrace = \max\left\lbrace\frac{\VertAx\Vert}{\Vertx\Vert}: x \in \mathbb R^n,\Vertx\Vert \neq 0\right\rbrace$
 
 前一个公式说的是，模长为1的x向量，被A变换后最大长度
 后一个公式说的是，模长不为0的向量，被A变换后再除以x的模长，之后再找到最大的长度
@@ -803,19 +803,19 @@ A作为线性变换所产生的对向量模长的的最大放大倍数。
 
 ## 作业
 
-$$\|A\|_1 = \max_{1\le j\le n}\sum_{i=1}^{m}|a_{ij}| \quad(\boldsymbol A\text{ 的所有列向量的最大绝对值和})$$
+$$\VertA\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^{m}|a_{ij}| \quad(\boldsymbol A\text{ 的所有列向量的最大绝对值和})$$
 
-$$\|A\|_2 = \sigma_{\max}(A) \quad(\boldsymbol A\text{ 的最大奇异值，故该范数又称为谱范数})$$
+$$\VertA\Vert_2 = \sigma_{\max}(A) \quad(\boldsymbol A\text{ 的最大奇异值，故该范数又称为谱范数})$$
 
-$$\|A\|_\infty = \max_{1\le i\le m}\sum_{j=1}^{n}|a_{ij}| \quad(\boldsymbol A\text{ 的所有行向量的最大绝对值和})$$
+$$\VertA\Vert_\infty = \max_{1\le i\le m}\sum_{j=1}^{n}|a_{ij}| \quad(\boldsymbol A\text{ 的所有行向量的最大绝对值和})$$
 
-$\displaystyle \|A\|_p = \max\left\{\frac{\|Ax\|_p}{\|x\|_p}: x \in \mathbb R^n,\|x\| \neq 0\right\}$
+$\displaystyle \VertA\Vert_p = \max\left\lbrace\frac{\VertAx\Vert_p}{\Vertx\Vert_p}: x \in \mathbb R^n,\Vertx\Vert \neq 0\right\rbrace$
 
-所有x分量被A变换后的$\| \cdot \|_p$的除以X向量所有分量的$\| \cdot \|_p$，公式上是省略了西格玛符号
+所有x分量被A变换后的$\Vert \cdot \Vert_p$的除以X向量所有分量的$\Vert \cdot \Vert_p$，公式上是省略了西格玛符号
 
 完整公式(不同L的展开形式将不同)：
 
-$\|A\|_p = \max \left\{ \frac{ \left( \sum_{i=1}^{m} |(Ax)_i|^p \right)^{1/p} }{ \left( \sum_{j=1}^{n} |x_j|^p \right)^{1/p} } : x \in \mathbb{R}^n, x \neq 0 \right\}$
+$\VertA\Vert_p = \max \left\lbrace \frac{ \left( \sum_{i=1}^{m} |(Ax)_i|^p \right)^{1/p} }{ \left( \sum_{j=1}^{n} |x_j|^p \right)^{1/p} } : x \in \mathbb{R}^n, x \neq 0 \right\rbrace$
 
 #### TODO不同展开什么样子,上面公式看不懂
 
@@ -823,7 +823,7 @@ $\|A\|_p = \max \left\{ \frac{ \left( \sum_{i=1}^{m} |(Ax)_i|^p \right)^{1/p} }{
 #### TODO作用是什么
 
 谱范数
-$\|A\|_2=$最大奇异值$A^TA$的特征值开根号
+$\VertA\Vert_2=$最大奇异值$A^TA$的特征值开根号
 
 谱半径
 $\rho(A)=$最大特征值
@@ -836,21 +836,21 @@ $\rho(A)=$最大特征值
 
 ### 和范数，$L_1$范数
 
-$\|A\|_{1,\mathrm{entry}} = \|\operatorname{vec}(A)\|_1 = \sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}|$
+$\VertA\Vert_{1,\mathrm{entry}} = \Vert\operatorname{vec}(A)\Vert_1 = \sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}|$
 
 矩阵中所有绝对值之和,和向量L1一样
 
 ### Frobenius 范数(Schur 范数)
 
-$\|A\|_F=\left(\sum_{i=1}^m\sum_{j=1}^n a_{ij}^2\right)^{1/2}$
+$\VertA\Vert_F=\left(\sum_{i=1}^m\sum_{j=1}^n a_{ij}^2\right)^{1/2}$
 
-$\|A\|_F^2=\operatorname{tr}(A^\mathrm{T}A)$
+$\VertA\Vert_F^2=\operatorname{tr}(A^\mathrm{T}A)$
 
 矩阵的所有值的平方的开根号，或者是$A^TA$的迹(这个等于Frobenius 范数的平方)，手推下就能发现这两个算的东西一样
 
 ### Euclidean 范数(欧几里得范数)
 
-$\|x\|_2 = \sqrt{\sum_{i=1}^n x_i^2}$
+$\Vertx\Vert_2 = \sqrt{\sum_{i=1}^n x_i^2}$
 
 向量每个值的平方的和的开方，向量长度。
 
@@ -864,10 +864,10 @@ $\|x\|_2 = \sqrt{\sum_{i=1}^n x_i^2}$
 
 不随幺正变换而改变的范数
 
-$$\|\boldsymbol{A}\|_p
+$$\Vert\boldsymbol{A}\Vert_p
 =
 \left(
-\sum_{i=1}^{\max\{m,n\}}
+\sum_{i=1}^{\max\lbracem,n\rbrace}
 \sigma_i^p
 \right)^{1/p}$$
 
@@ -877,12 +877,12 @@ $$\|\boldsymbol{A}\|_p
 
 p为无限的时候，这个取极限值
 
-$$\|\boldsymbol{A}\|_\infty
+$$\Vert\boldsymbol{A}\Vert_\infty
 =
 \lim_{p \to \infty}
 \left(
-\sum_{i=1}^{\max\{m,n\}} \sigma_i^p
+\sum_{i=1}^{\max\lbracem,n\rbrace} \sigma_i^p
 \right)^{1/p}
 =
-\max_{1 \le i \le \max\{m,n\}} \sigma_i
+\max_{1 \le i \le \max\lbracem,n\rbrace} \sigma_i
 = 3$$

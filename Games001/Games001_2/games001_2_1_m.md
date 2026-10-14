@@ -5,7 +5,7 @@
 $$\frac{\partial \boldsymbol{f}_{2\times1}(\boldsymbol{x})}{\partial \boldsymbol{x}^{T}_{3\times1}}
 =
 \begin{pmatrix}
-\frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \frac{\partial f_1}{\partial x_3} \\
+\frac{\partial f_1}{\partial x_1} & \frac{\partial f_1}{\partial x_2} & \frac{\partial f_1}{\partial x_3} \\\\
 \frac{\partial f_2}{\partial x_1} & \frac{\partial f_2}{\partial x_2} & \frac{\partial f_2}{\partial x_3}
 \end{pmatrix}_{2\times3}$$
 
@@ -14,8 +14,8 @@ $$\frac{\partial \boldsymbol{f}_{2\times1}(\boldsymbol{x})}{\partial \boldsymbol
 $$\frac{\partial \boldsymbol{f}^{T}_{2\times1}(\boldsymbol{x})}{\partial \boldsymbol{x}_{3\times1}}
 =
 \begin{pmatrix}
-\frac{\partial f_1}{\partial x_1} & \frac{\partial f_2}{\partial x_1} \\
-\frac{\partial f_1}{\partial x_2} & \frac{\partial f_2}{\partial x_2} \\
+\frac{\partial f_1}{\partial x_1} & \frac{\partial f_2}{\partial x_1} \\\\
+\frac{\partial f_1}{\partial x_2} & \frac{\partial f_2}{\partial x_2} \\\\
 \frac{\partial f_1}{\partial x_3} & \frac{\partial f_2}{\partial x_3}
 \end{pmatrix}_{3\times2}$$
 
@@ -29,37 +29,37 @@ $$L(a \vec{v}) = a L(\vec{v})$$
 
 $$L(\vec{v} + \vec{w}) = L(\vec{v}) + L(\vec{w})$$
 
-$$L\left(\begin{bmatrix} x \\ y \end{bmatrix}\right) = L\left(x \begin{bmatrix} 1 \\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\ 1 \end{bmatrix}\right)$$
+$$L\left(\begin{bmatrix} x \\\\ y \end{bmatrix}\right) = L\left(x \begin{bmatrix} 1 \\\\ 0 \end{bmatrix} + y \begin{bmatrix} 0 \\\\ 1 \end{bmatrix}\right)$$
 
 ### 多元函数的局部线性属性
 
-$$f\left(\begin{bmatrix} x \\ y \end{bmatrix}\right) = \begin{bmatrix} x + \sin(y) \\ y + \sin(x) \end{bmatrix}$$
+$$f\left(\begin{bmatrix} x \\\\ y \end{bmatrix}\right) = \begin{bmatrix} x + \sin(y) \\\\ y + \sin(x) \end{bmatrix}$$
 
-$$\begin{bmatrix} \pi/2 \\ 0 \end{bmatrix} = \begin{bmatrix} \pi/2 \\ 0 + \sin(\pi/2) \end{bmatrix}$$
+$$\begin{bmatrix} \pi/2 \\\\ 0 \end{bmatrix} = \begin{bmatrix} \pi/2 \\\\ 0 + \sin(\pi/2) \end{bmatrix}$$
 
 将图像的某个点无限放大，会看到图像类似线性变换了，可以用其他函数表示
 
 要找到的就是这种极小的局部如何表示的函数
 
 ### 雅可比矩阵
-$$f\left(\begin{bmatrix} x \\ y \end{bmatrix}\right) = \begin{bmatrix} x + \sin(y) \\ y + \sin(x) \end{bmatrix}$$
+$$f\left(\begin{bmatrix} x \\\\ y \end{bmatrix}\right) = \begin{bmatrix} x + \sin(y) \\\\ y + \sin(x) \end{bmatrix}$$
 
 $$J = \begin{bmatrix} 
-\frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} \\ 
+\frac{\partial f_1}{\partial x} & \frac{\partial f_1}{\partial y} \\\\ 
 \frac{\partial f_2}{\partial x} & \frac{\partial f_2}{\partial y} 
 \end{bmatrix} = \begin{bmatrix} 
-1 & \cos(y) \\ 
+1 & \cos(y) \\\\ 
 \cos(x) & 1 
 \end{bmatrix}$$
 
 $$J = \begin{bmatrix}
-\frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n} \\
-\vdots & \ddots & \vdots \\
+\frac{\partial f_1}{\partial x_1} & \cdots & \frac{\partial f_1}{\partial x_n} \\\\
+\vdots & \ddots & \vdots \\\\
 \frac{\partial f_m}{\partial x_1} & \cdots & \frac{\partial f_m}{\partial x_n}
 \end{bmatrix}$$
 
-*   **第一列** $\begin{bmatrix} 1 \\ \cos(x) \end{bmatrix}$：表示在输入空间只沿着 x 方向走一小步，输出空间会怎么变。它的水平分量固定是 1，垂直分量取决于当前位置的 $\cos(x)$。
-*   **第二列** $\begin{bmatrix} \cos(y) \\ 1 \end{bmatrix}$：表示在输入空间只沿着 y 方向走一小步，输出空间会怎么变。它的垂直分量固定是 1，水平分量取决于当前位置的 $\cos(y)$。
+*   **第一列** $\begin{bmatrix} 1 \\\\ \cos(x) \end{bmatrix}$：表示在输入空间只沿着 x 方向走一小步，输出空间会怎么变。它的水平分量固定是 1，垂直分量取决于当前位置的 $\cos(x)$。
+*   **第二列** $\begin{bmatrix} \cos(y) \\\\ 1 \end{bmatrix}$：表示在输入空间只沿着 y 方向走一小步，输出空间会怎么变。它的垂直分量固定是 1，水平分量取决于当前位置的 $\cos(y)$。
 
 ### 雅可比矩阵行列式
 
@@ -153,13 +153,13 @@ TODO：这个是事后验证，没有公式来源的推导
 
 $$x=
 \begin{pmatrix}
-x_1\\
+x_1\\\\
 x_2
 \end{pmatrix},
 \qquad
 A=
 \begin{pmatrix}
-1&2\\
+1&2\\\\
 3&4
 \end{pmatrix}$$
 
@@ -175,25 +175,25 @@ $$x^TAx
 x_1&x_2
 \end{pmatrix}
 \begin{pmatrix}
-1&2\\
+1&2\\\\
 3&4
 \end{pmatrix}
 \begin{pmatrix}
-x_1\\
+x_1\\\\
 x_2
 \end{pmatrix}$$
 
 $$\begin{pmatrix}
-1&2\\
+1&2\\\\
 3&4
 \end{pmatrix}
 \begin{pmatrix}
-x_1\\
+x_1\\\\
 x_2
 \end{pmatrix}
 =
 \begin{pmatrix}
-x_1+2x_2\\
+x_1+2x_2\\\\
 3x_1+4x_2
 \end{pmatrix}$$
 
@@ -201,7 +201,7 @@ $$\begin{pmatrix}
 x_1&x_2
 \end{pmatrix}
 \begin{pmatrix}
-x_1+2x_2\\
+x_1+2x_2\\\\
 3x_1+4x_2
 \end{pmatrix}
 =
@@ -234,7 +234,7 @@ x_1^2+5x_1x_2+4x_2^2
 $$\frac{\partial(x^TAx)}{\partial x}
 =
 \begin{pmatrix}
-2x_1+5x_2\\
+2x_1+5x_2\\\\
 5x_1+8x_2
 \end{pmatrix}$$
 
@@ -242,48 +242,48 @@ $$\frac{\partial(x^TAx)}{\partial x}
 
 $$Ax=
 \begin{pmatrix}
-1&2\\
+1&2\\\\
 3&4
 \end{pmatrix}
 \begin{pmatrix}
-x_1\\
+x_1\\\\
 x_2
 \end{pmatrix}
 =
 \begin{pmatrix}
-x_1+2x_2\\
+x_1+2x_2\\\\
 3x_1+4x_2
 \end{pmatrix}$$
 
 $$A^Tx=
 \begin{pmatrix}
-1&3\\
+1&3\\\\
 2&4
 \end{pmatrix}
 \begin{pmatrix}
-x_1\\
+x_1\\\\
 x_2
 \end{pmatrix}
 =
 \begin{pmatrix}
-x_1+3x_2\\
+x_1+3x_2\\\\
 2x_1+4x_2
 \end{pmatrix}$$
 
 $$Ax+A^Tx
 =
 \begin{pmatrix}
-x_1+2x_2\\
+x_1+2x_2\\\\
 3x_1+4x_2
 \end{pmatrix}
 +
 \begin{pmatrix}
-x_1+3x_2\\
+x_1+3x_2\\\\
 2x_1+4x_2
 \end{pmatrix}
 =
 \begin{pmatrix}
-2x_1+5x_2\\
+2x_1+5x_2\\\\
 5x_1+8x_2
 \end{pmatrix}$$
 
@@ -333,7 +333,7 @@ ab^T x+ba^T x$$
 
 $\boldsymbol{X}_{m \times n} = (x_{ij})_{i=1, j=1}^{m, n}$
 
-$\nabla_{\boldsymbol{X}} f(\boldsymbol{X}) = \frac{\partial f(\boldsymbol{X})}{\partial \boldsymbol{X}_{m \times n}} = \begin{pmatrix} \frac{\partial f}{\partial x_{11}} & \cdots & \frac{\partial f}{\partial x_{1n}} \\ \vdots & \ddots & \vdots \\ \frac{\partial f}{\partial x_{m1}} & \cdots & \frac{\partial f}{\partial x_{mn}} \end{pmatrix}$
+$\nabla_{\boldsymbol{X}} f(\boldsymbol{X}) = \frac{\partial f(\boldsymbol{X})}{\partial \boldsymbol{X}_{m \times n}} = \begin{pmatrix} \frac{\partial f}{\partial x_{11}} & \cdots & \frac{\partial f}{\partial x_{1n}} \\\\ \vdots & \ddots & \vdots \\\\ \frac{\partial f}{\partial x_{m1}} & \cdots & \frac{\partial f}{\partial x_{mn}} \end{pmatrix}$
 
 将输入和函数写在一起，结果和输入都是M*N矩阵
 
@@ -375,13 +375,13 @@ $$\frac{\partial (a^T X b)}{\partial x_{ij}} = a_i b_j$$
 $$\frac{\partial (a^T X b)}{\partial X}
 =
 \begin{pmatrix}
-a_1 b_1 & a_1 b_2 & \cdots & a_1 b_n \\
-a_2 b_1 & a_2 b_2 & \cdots & a_2 b_n \\
-\vdots & \vdots & \ddots & \vdots \\
+a_1 b_1 & a_1 b_2 & \cdots & a_1 b_n \\\\
+a_2 b_1 & a_2 b_2 & \cdots & a_2 b_n \\\\
+\vdots & \vdots & \ddots & \vdots \\\\
 a_m b_1 & a_m b_2 & \cdots & a_m b_n
 \end{pmatrix}
 =
-\begin{pmatrix} a_1 \\ a_2 \\ \vdots \\ a_m \end{pmatrix}
+\begin{pmatrix} a_1 \\\\ a_2 \\\\ \vdots \\\\ a_m \end{pmatrix}
 \begin{pmatrix} b_1 & b_2 & \cdots & b_n \end{pmatrix}$$
 
 **结论**
@@ -467,18 +467,18 @@ $$b_i a_j.$$
 $$\frac{\partial(a^TX^Tb)}{\partial X}
 =
 \begin{pmatrix}
-b_1a_1 & b_1a_2 & \cdots & b_1a_n\\
-b_2a_1 & b_2a_2 & \cdots & b_2a_n\\
-\vdots & \vdots & \ddots & \vdots\\
+b_1a_1 & b_1a_2 & \cdots & b_1a_n\\\\
+b_2a_1 & b_2a_2 & \cdots & b_2a_n\\\\
+\vdots & \vdots & \ddots & \vdots\\\\
 b_ma_1 & b_ma_2 & \cdots & b_ma_n
 \end{pmatrix}.$$
 
 这正好是列向量 $b$ 和行向量 $a^T$ 的外积：
 
 $$\begin{pmatrix}
-b_1\\
-b_2\\
-\vdots\\
+b_1\\\\
+b_2\\\\
+\vdots\\\\
 b_m
 \end{pmatrix}
 \begin{pmatrix}
@@ -601,7 +601,7 @@ $$f(\boldsymbol{x}+d\boldsymbol{x}) \approx f(\boldsymbol{x}) + df$$
 
 ## 向量变元的实值标量函数（全微分）
 
-$$\text{d}f(\boldsymbol{x}) = \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \dots, \frac{\partial f}{\partial x_n}\right) \begin{pmatrix} \text{d}x_1 \\ \text{d}x_2 \\ \vdots \\ \text{d}x_n \end{pmatrix} = \text{tr} \left[ \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \dots, \frac{\partial f}{\partial x_n}\right) \begin{pmatrix} \text{d}x_1 \\ \text{d}x_2 \\ \vdots \\ \text{d}x_n \end{pmatrix} \right]$$
+$$\text{d}f(\boldsymbol{x}) = \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \dots, \frac{\partial f}{\partial x_n}\right) \begin{pmatrix} \text{d}x_1 \\\\ \text{d}x_2 \\\\ \vdots \\\\ \text{d}x_n \end{pmatrix} = \text{tr} \left[ \left(\frac{\partial f}{\partial x_1}, \frac{\partial f}{\partial x_2}, \dots, \frac{\partial f}{\partial x_n}\right) \begin{pmatrix} \text{d}x_1 \\\\ \text{d}x_2 \\\\ \vdots \\\\ \text{d}x_n \end{pmatrix} \right]$$
 
 **左侧**：$\text{d}f(\boldsymbol{x})$ 是标量函数的全微分。
 
@@ -611,7 +611,7 @@ $$\text{d}f(\boldsymbol{x}) = \left(\frac{\partial f}{\partial x_1}, \frac{\part
 
 **2. 公式解析**
 
-$$\text{d}f(\boldsymbol{X}) = \text{tr} \left[ \begin{pmatrix} \frac{\partial f}{\partial x_{11}} & \frac{\partial f}{\partial x_{21}} & \dots & \frac{\partial f}{\partial x_{m1}} \\ \frac{\partial f}{\partial x_{12}} & \frac{\partial f}{\partial x_{22}} & \dots & \frac{\partial f}{\partial x_{m2}} \\ \vdots & \vdots & \ddots & \vdots \\ \frac{\partial f}{\partial x_{1n}} & \frac{\partial f}{\partial x_{2n}} & \dots & \frac{\partial f}{\partial x_{mn}} \end{pmatrix}_{n \times m} \begin{pmatrix} \text{d}x_{11} & \text{d}x_{12} & \dots & \text{d}x_{1n} \\ \text{d}x_{21} & \text{d}x_{22} & \dots & \text{d}x_{2n} \\ \vdots & \vdots & \ddots & \vdots \\ \text{d}x_{m1} & \text{d}x_{m2} & \dots & \text{d}x_{mn} \end{pmatrix}_{m \times n} \right]$$
+$$\text{d}f(\boldsymbol{X}) = \text{tr} \left[ \begin{pmatrix} \frac{\partial f}{\partial x_{11}} & \frac{\partial f}{\partial x_{21}} & \dots & \frac{\partial f}{\partial x_{m1}} \\\\ \frac{\partial f}{\partial x_{12}} & \frac{\partial f}{\partial x_{22}} & \dots & \frac{\partial f}{\partial x_{m2}} \\\\ \vdots & \vdots & \ddots & \vdots \\\\ \frac{\partial f}{\partial x_{1n}} & \frac{\partial f}{\partial x_{2n}} & \dots & \frac{\partial f}{\partial x_{mn}} \end{pmatrix}_{n \times m} \begin{pmatrix} \text{d}x_{11} & \text{d}x_{12} & \dots & \text{d}x_{1n} \\\\ \text{d}x_{21} & \text{d}x_{22} & \dots & \text{d}x_{2n} \\\\ \vdots & \vdots & \ddots & \vdots \\\\ \text{d}x_{m1} & \text{d}x_{m2} & \dots & \text{d}x_{mn} \end{pmatrix}_{m \times n} \right]$$
 
 就是需要对应的dx与梯度相乘，之后把所有结果相加，这个公式就是写出这个结果如何用矩阵表示，迹，对角线之和
 
@@ -630,9 +630,9 @@ $$\text{d}f(\boldsymbol{X}) = \text{tr} \left[ \begin{pmatrix} \frac{\partial f}
 
 $$\text{d}\boldsymbol{F}_{p \times q}(X) = 
 \begin{pmatrix} 
-\text{d}f_{11}(X) & \text{d}f_{12}(X) & \dots & \text{d}f_{1q}(X) \\ 
-\text{d}f_{21}(X) & \text{d}f_{22}(X) & \dots & \text{d}f_{2q}(X) \\ 
-\vdots & \vdots & \ddots & \vdots \\ 
+\text{d}f_{11}(X) & \text{d}f_{12}(X) & \dots & \text{d}f_{1q}(X) \\\\ 
+\text{d}f_{21}(X) & \text{d}f_{22}(X) & \dots & \text{d}f_{2q}(X) \\\\ 
+\vdots & \vdots & \ddots & \vdots \\\\ 
 \text{d}f_{p1}(X) & \text{d}f_{p2}(X) & \dots & \text{d}f_{pq}(X) 
 \end{pmatrix}_{p \times q}$$
 
@@ -642,13 +642,13 @@ $$\text{d}\boldsymbol{F}_{p \times q}(X) =
 
 假设自变量是 $2 \times 2$ 矩阵：
 
-$$X = \begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix}$$
+$$X = \begin{pmatrix} x_{11} & x_{12} \\\\ x_{21} & x_{22} \end{pmatrix}$$
 
 定义一个矩阵函数：输出也是 $2 \times 2$ 矩阵，设 $F(X) = X^2$：
 
 $$F(X) = X \cdot X = 
-\begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix}
-\begin{pmatrix} x_{11} & x_{12} \\ x_{21} & x_{22} \end{pmatrix}$$
+\begin{pmatrix} x_{11} & x_{12} \\\\ x_{21} & x_{22} \end{pmatrix}
+\begin{pmatrix} x_{11} & x_{12} \\\\ x_{21} & x_{22} \end{pmatrix}$$
 
 乘开后得到四个标量函数：
 
@@ -656,11 +656,11 @@ $$F(X) = X \cdot X =
 
 $$F(X) = 
 \begin{pmatrix} 
-f_{11}(X) & f_{12}(X) \\ 
+f_{11}(X) & f_{12}(X) \\\\ 
 f_{21}(X) & f_{22}(X) 
 \end{pmatrix} = 
 \begin{pmatrix} 
-x_{11}^2 + x_{12}x_{21} & x_{11}x_{12} + x_{12}x_{22} \\ 
+x_{11}^2 + x_{12}x_{21} & x_{11}x_{12} + x_{12}x_{22} \\\\ 
 x_{21}x_{11} + x_{22}x_{21} & x_{21}x_{12} + x_{22}^2 
 \end{pmatrix}$$
 
@@ -744,7 +744,7 @@ $$\mathrm{d}f_{22} = x_{12}\mathrm{d}x_{21} + x_{21}\mathrm{d}x_{12} + 2x_{22}\m
 
 $$\mathrm{d}\boldsymbol{F}(X) = 
 \begin{pmatrix} 
-\mathrm{d}f_{11} & \mathrm{d}f_{12} \\ 
+\mathrm{d}f_{11} & \mathrm{d}f_{12} \\\\ 
 \mathrm{d}f_{21} & \mathrm{d}f_{22} 
 \end{pmatrix}$$
 
@@ -767,7 +767,7 @@ $$\text{d}[\boldsymbol{F}(X)\boldsymbol{G}(X)] = [\text{d}\boldsymbol{F}(X)]\bol
 *   **解释**：形式上和标量的“左乘右导，右乘左导”一模一样，但必须严格保持矩阵乘法的顺序！
 *   你不能写成 $\boldsymbol{G}(X)[\text{d}\boldsymbol{F}(X)]$。因为矩阵乘法不满足交换律（$\boldsymbol{A}\boldsymbol{B} \neq \boldsymbol{B}\boldsymbol{A}$）。
 *   **三阶推广**：
-    $$\text{d}[\boldsymbol{F}(X)\boldsymbol{G}(X)\boldsymbol{H}(X)] = [\text{d}\boldsymbol{F}(X)]\boldsymbol{G}(X)\boldsymbol{H}(X) + \boldsymbol{F}(X)[\text{d}\boldsymbol{G}(X)]\boldsymbol{H}(X) + \boldsymbol{F}(X)\boldsymbol{G}(X)[\text{d}\boldsymbol{H}(X)]$$
+$$\text{d}[\boldsymbol{F}(X)\boldsymbol{G}(X)\boldsymbol{H}(X)] = [\text{d}\boldsymbol{F}(X)]\boldsymbol{G}(X)\boldsymbol{H}(X) + \boldsymbol{F}(X)[\text{d}\boldsymbol{G}(X)]\boldsymbol{H}(X) + \boldsymbol{F}(X)\boldsymbol{G}(X)[\text{d}\boldsymbol{H}(X)]$$
 
 **微分转置法则**
 $$\text{d}\boldsymbol{F}^{T}_{p \times q}(X) = [\text{d}\boldsymbol{F}_{p \times q}(X)]^{T}$$

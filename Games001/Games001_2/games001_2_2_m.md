@@ -11,9 +11,9 @@ $$f(X), \quad X_{m \times n} = (x_{ij})_{i=1, j=1}^{m, n}$$
 **自变量的微分**
 $$\mathrm{d}X_{m \times n} =
 \begin{pmatrix}
-\mathrm{d}x_{11} & \mathrm{d}x_{12} & \dots & \mathrm{d}x_{1n} \\
-\mathrm{d}x_{21} & \mathrm{d}x_{22} & \dots & \mathrm{d}x_{2n} \\
-\vdots & \vdots & \ddots & \vdots \\
+\mathrm{d}x_{11} & \mathrm{d}x_{12} & \dots & \mathrm{d}x_{1n} \\\\
+\mathrm{d}x_{21} & \mathrm{d}x_{22} & \dots & \mathrm{d}x_{2n} \\\\
+\vdots & \vdots & \ddots & \vdots \\\\
 \mathrm{d}x_{m1} & \mathrm{d}x_{m2} & \dots & \mathrm{d}x_{mn}
 \end{pmatrix}_{m \times n}$$
 
@@ -23,9 +23,9 @@ $$\mathrm{d}X_{m \times n} =
 
 $$\frac{\partial f(X)}{\partial X^T_{n \times m}} =
 \begin{pmatrix}
-\frac{\partial f}{\partial x_{11}} & \frac{\partial f}{\partial x_{21}} & \dots & \frac{\partial f}{\partial x_{m1}} \\
-\frac{\partial f}{\partial x_{12}} & \frac{\partial f}{\partial x_{22}} & \dots & \frac{\partial f}{\partial x_{m2}} \\
-\vdots & \vdots & \ddots & \vdots \\
+\frac{\partial f}{\partial x_{11}} & \frac{\partial f}{\partial x_{21}} & \dots & \frac{\partial f}{\partial x_{m1}} \\\\
+\frac{\partial f}{\partial x_{12}} & \frac{\partial f}{\partial x_{22}} & \dots & \frac{\partial f}{\partial x_{m2}} \\\\
+\vdots & \vdots & \ddots & \vdots \\\\
 \frac{\partial f}{\partial x_{1n}} & \frac{\partial f}{\partial x_{2n}} & \dots & \frac{\partial f}{\partial x_{mn}}
 \end{pmatrix}_{n \times m}$$
 
@@ -113,7 +113,7 @@ $X^*$ 是伴随矩阵。
 
 代数余子式矩阵：
 
-$$C = \begin{pmatrix} A_{11} & A_{12} & \dots \\ A_{21} & A_{22} & \dots \\ \vdots & \vdots & \ddots \end{pmatrix}$$
+$$C = \begin{pmatrix} A_{11} & A_{12} & \dots \\\\ A_{21} & A_{22} & \dots \\\\ \vdots & \vdots & \ddots \end{pmatrix}$$
 
 伴随矩阵：
 
@@ -197,11 +197,11 @@ $$X^{-1} = \frac{X^*}{|X|}$$
 
 设：
 
-$$X = \begin{pmatrix} a & b \\ c & d \end{pmatrix}$$
+$$X = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$$
 
 伴随矩阵：
 
-$$X^* = \begin{pmatrix} d & -b \\ -c & a \end{pmatrix}$$
+$$X^* = \begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}$$
 
 计算 $X X^*$：
 
@@ -223,7 +223,7 @@ $$c \cdot (-b) + d \cdot a = -bc + ad = ad - bc = |X|$$
 
 所以：
 
-$$X X^* = \begin{pmatrix} |X| & 0 \\ 0 & |X| \end{pmatrix} = |X| E$$
+$$X X^* = \begin{pmatrix} |X| & 0 \\\\ 0 & |X| \end{pmatrix} = |X| E$$
 
 **一般情况**
 
@@ -247,7 +247,7 @@ $$\sum_{k=1}^n x_{ik} A_{jk} = 0$$
 
 所以：
 
-$$X X^* = \begin{pmatrix} |X| & 0 & \dots \\ 0 & |X| & \dots \\ \vdots & \vdots & \ddots \end{pmatrix} = |X| E$$
+$$X X^* = \begin{pmatrix} |X| & 0 & \dots \\\\ 0 & |X| & \dots \\\\ \vdots & \vdots & \ddots \end{pmatrix} = |X| E$$
 
 
 ### 行列式全微分公式$|X| \mathrm{tr}(X^{-1} \mathrm{d}X)$
@@ -304,7 +304,7 @@ $$\mathrm{d}(X^{-1}) = -X^{-1}(\mathrm{d}X)X^{-1}$$
 **题目**：证明 $\frac{\partial \mathrm{tr}(X^T X)}{\partial X} = 2X$
 
 **证明**：
-$\mathrm{d}\,\mathrm{tr}(X^T X) = \mathrm{tr}[\mathrm{d}(X^T)X] + \mathrm{tr}[X^T \mathrm{d}X]$
+$\mathrm{d}\thinspace\mathrm{tr}(X^T X) = \mathrm{tr}[\mathrm{d}(X^T)X] + \mathrm{tr}[X^T \mathrm{d}X]$
 右边公式对等于微分乘积法则中的左乘右导，右乘左导，并且d可以穿透tr直接作用在X上。
 
 利用转置法则和迹的转置不变性（因为 $\mathrm{tr}(A) = \mathrm{tr}(A^T)$）：
@@ -331,12 +331,12 @@ $H$：表示共轭转置（Hermitian 转置）。
 **实数域上的矩阵表示**
 
 
-$$\begin{pmatrix} a_x \\ a_y \\ a_z \end{pmatrix} 
+$$\begin{pmatrix} a_x \\\\ a_y \\\\ a_z \end{pmatrix} 
 \begin{pmatrix} b_x & b_y & b_z \end{pmatrix} 
 = 
 \begin{pmatrix}
-a_x b_x & a_x b_y & a_x b_z \\
-a_y b_x & a_y b_y & a_y b_z \\
+a_x b_x & a_x b_y & a_x b_z \\\\
+a_y b_x & a_y b_y & a_y b_z \\\\
 a_z b_x & a_z b_y & a_z b_z
 \end{pmatrix}$$
 
@@ -353,11 +353,11 @@ $$\operatorname{tr}(\boldsymbol{a} \otimes \boldsymbol{b}) = \boldsymbol{a} \cdo
 
 **定义**
 对矩阵 $A_{m \times n}$ 和 $B_{p \times q}$，克罗内克积 $A \otimes B$ 是一个 $mp \times nq$ 的分块矩阵：
-$$A \otimes B = \begin{pmatrix} a_{11}B & \cdots & a_{1n}B \\ \vdots & \ddots & \vdots \\ a_{m1}B & \cdots & a_{mn}B \end{pmatrix}$$
+$$A \otimes B = \begin{pmatrix} a_{11}B & \cdots & a_{1n}B \\\\ \vdots & \ddots & \vdots \\\\ a_{m1}B & \cdots & a_{mn}B \end{pmatrix}$$
 
-设 $A = \begin{pmatrix} 1 & 2 \\ 3 & 4 \end{pmatrix}, \quad B = \begin{pmatrix} 0 & 5 \\ 6 & 7 \end{pmatrix}$
+设 $A = \begin{pmatrix} 1 & 2 \\\\ 3 & 4 \end{pmatrix}, \quad B = \begin{pmatrix} 0 & 5 \\\\ 6 & 7 \end{pmatrix}$
 
-则 $A \otimes B = \begin{pmatrix} 1B & 2B \\ 3B & 4B \end{pmatrix} = \begin{pmatrix} 0 & 5 & 0 & 10 \\ 6 & 7 & 12 & 14 \\ 0 & 15 & 0 & 20 \\ 18 & 21 & 24 & 28 \end{pmatrix}_{4 \times 4}$
+则 $A \otimes B = \begin{pmatrix} 1B & 2B \\\\ 3B & 4B \end{pmatrix} = \begin{pmatrix} 0 & 5 & 0 & 10 \\\\ 6 & 7 & 12 & 14 \\\\ 0 & 15 & 0 & 20 \\\\ 18 & 21 & 24 & 28 \end{pmatrix}_{4 \times 4}$
 
 **与外积（并矢）的区别**
 
@@ -400,11 +400,11 @@ $$A \otimes B = \begin{pmatrix} a_{11}B & \cdots & a_{1n}B \\ \vdots & \ddots & 
 
 **克罗内克符号 $\delta_i^j$**
 
- 在一般情况下 $x_i \neq x^i$，可以定义一组新的基底 $\{\boldsymbol{e}^1, \boldsymbol{e}^2, \boldsymbol{e}^3\}$ 使得 $\boldsymbol{e}_i \cdot \boldsymbol{e}^j = \delta_i^j$
+ 在一般情况下 $x_i \neq x^i$，可以定义一组新的基底 $\lbrace\boldsymbol{e}^1, \boldsymbol{e}^2, \boldsymbol{e}^3\rbrace$ 使得 $\boldsymbol{e}_i \cdot \boldsymbol{e}^j = \delta_i^j$
 拼凑用的数量 → 逆变分量（上标 $x^i$）
 点乘的投影读数 → 协变分量（下标 $x_i$）
 
-克罗内克符号 $\delta_i^j = \begin{cases} 0, & i \neq j \\ 1, & i = j \end{cases}$
+克罗内克符号 $\delta_i^j = \begin{cases} 0, & i \neq j \\\\ 1, & i = j \end{cases}$
 $\delta_i^j$ 比较的是基向量 $\boldsymbol{e}_i$ 和 $\boldsymbol{e}^j$ 的指标。
 
 $$\boldsymbol{e}_i \cdot \boldsymbol{e}^j = \delta_i^j$$
