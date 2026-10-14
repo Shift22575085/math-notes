@@ -228,7 +228,7 @@ $$e^{i\theta}=\cos\theta+i\sin\theta$$
 推导骨架（待展开成完整步骤）：
 
 $$e^{i\theta}=\sum_{n=0}^{\infty}\frac{(i\theta)^n}{n!}
-\thickspace\xrightarrow{\thickspace i^n\text{ 四次循环}\thickspace}\thickspace
+\ \xrightarrow{\  i^n\text{ 四次循环}\ }\ 
 \underbrace{\left(1-\frac{\theta^2}{2!}+\frac{\theta^4}{4!}-\cdots\right)}_{\text{偶次项}=\cos\theta}
 +i\underbrace{\left(\theta-\frac{\theta^3}{3!}+\frac{\theta^5}{5!}-\cdots\right)}_{\text{奇次项系数}=\sin\theta}$$
 

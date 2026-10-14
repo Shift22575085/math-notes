@@ -306,7 +306,7 @@ $$\mathrm{d}(X^{-1}) = -X^{-1}(\mathrm{d}X)X^{-1}$$
 **题目**：证明 $`\frac{\partial \mathrm{tr}(X^T X)}{\partial X} = 2X`$
 
 **证明**：
-$`\mathrm{d}\thinspace\mathrm{tr}(X^T X) = \mathrm{tr}[\mathrm{d}(X^T)X] + \mathrm{tr}[X^T \mathrm{d}X]`$
+$`\mathrm{d}\ \mathrm{tr}(X^T X) = \mathrm{tr}[\mathrm{d}(X^T)X] + \mathrm{tr}[X^T \mathrm{d}X]`$
 右边公式对等于微分乘积法则中的左乘右导，右乘左导，并且d可以穿透tr直接作用在X上。
 
 利用转置法则和迹的转置不变性（因为 $`\mathrm{tr}(A) = \mathrm{tr}(A^T)`$）：
