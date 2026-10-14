@@ -58,8 +58,16 @@ $$J = \begin{bmatrix}
 \frac{\partial f_m}{\partial x_1} & \cdots & \frac{\partial f_m}{\partial x_n}
 \end{bmatrix}$$
 
-*   **第一列** $\begin{bmatrix} 1 \\\\ \cos(x) \end{bmatrix}$：表示在输入空间只沿着 x 方向走一小步，输出空间会怎么变。它的水平分量固定是 1，垂直分量取决于当前位置的 $\cos(x)$。
-*   **第二列** $\begin{bmatrix} \cos(y) \\\\ 1 \end{bmatrix}$：表示在输入空间只沿着 y 方向走一小步，输出空间会怎么变。它的垂直分量固定是 1，水平分量取决于当前位置的 $\cos(y)$。
+*   **第一列** 
+
+$$\begin{bmatrix} 1 \\\\ \cos(x) \end{bmatrix}$$
+
+：表示在输入空间只沿着 x 方向走一小步，输出空间会怎么变。它的水平分量固定是 1，垂直分量取决于当前位置的 $\cos(x)$。
+*   **第二列** 
+
+$$\begin{bmatrix} \cos(y) \\\\ 1 \end{bmatrix}$$
+
+：表示在输入空间只沿着 y 方向走一小步，输出空间会怎么变。它的垂直分量固定是 1，水平分量取决于当前位置的 $\cos(y)$。
 
 ### 雅可比矩阵行列式
 
@@ -120,7 +128,6 @@ $$\frac{\Delta q}{\Delta x} = \frac{g \frac{\Delta f}{\Delta x} - f \frac{\Delta
 \quad \longrightarrow \quad
 q' = \frac{g f' - f g'}{g^2}$$
 
-
 ### 常用公式（分母布局）
 
 **前提定义**：
@@ -149,7 +156,6 @@ $$\frac{\partial(x^TAx)}{\partial x} = Ax + A^Tx$$
 
 **二次型求导例子**：
 TODO：这个是事后验证，没有公式来源的推导
-
 
 $$x=
 \begin{pmatrix}
@@ -295,7 +301,6 @@ $${
 Ax+A^Tx
 }$$
 
-
 **双重乘积求导**：
 $$\frac{\partial(a^T x x^T b)}{\partial x} = \frac{\partial(x^T a b^T x)}{\partial x} = ab^Tx + ba^Tx$$
 
@@ -333,10 +338,9 @@ ab^T x+ba^T x$$
 
 $\boldsymbol{X}_{m \times n} = (x_{ij})_{i=1, j=1}^{m, n}$
 
-$\nabla_{\boldsymbol{X}} f(\boldsymbol{X}) = \frac{\partial f(\boldsymbol{X})}{\partial \boldsymbol{X}_{m \times n}} = \begin{pmatrix} \frac{\partial f}{\partial x_{11}} & \cdots & \frac{\partial f}{\partial x_{1n}} \\\\ \vdots & \ddots & \vdots \\\\ \frac{\partial f}{\partial x_{m1}} & \cdots & \frac{\partial f}{\partial x_{mn}} \end{pmatrix}$
+$$\nabla_{\boldsymbol{X}} f(\boldsymbol{X}) = \frac{\partial f(\boldsymbol{X})}{\partial \boldsymbol{X}_{m \times n}} = \begin{pmatrix} \frac{\partial f}{\partial x_{11}} & \cdots & \frac{\partial f}{\partial x_{1n}} \\\\ \vdots & \ddots & \vdots \\\\ \frac{\partial f}{\partial x_{m1}} & \cdots & \frac{\partial f}{\partial x_{mn}} \end{pmatrix}$$
 
 将输入和函数写在一起，结果和输入都是M*N矩阵
-
 
 ### 运算法则
 
@@ -351,7 +355,6 @@ $\frac{\partial [f(X)g(X)]}{\partial X} = \frac{\partial f(X)}{\partial X} g(X) 
 $\frac{\partial [\frac{f(X)}{g(X)}]}{\partial X} = \frac{1}{g^2(X)} \left[ \frac{\partial f(X)}{\partial X} g(X) - f(X) \frac{\partial g(X)}{\partial X} \right]$
 
 上面这些通用于上面的笔记“向量变元的实值标量函数$f(x)$”的运算法则(仅是抄了笔记，未验证)
-
 
 ## 常用公式
 ### $\frac{\partial(a^T X b)}{\partial X} = ab^T$
@@ -396,7 +399,6 @@ $a_{n \times 1}, b_{m \times 1}$ 为常数向量
 
 **展开成双重求和**
 
-
 $$(X^T)_{ij} = x_{ji}$$
 
 转置后j代表行，i代表列。
@@ -413,7 +415,6 @@ $$a^T X^T b
 =
 \sum_{i=1}^n \sum_{j=1}^m a_i x_{ji} b_j$$
 
-
 设
 
 $$X=(x_{ij})_{m\times n},
@@ -422,7 +423,6 @@ $$X=(x_{ij})_{m\times n},
 $$(X^T)_{ji}=x_{ij}.$$
 
 也就是说，$X^T$ 的第 $j$ 行第 $i$ 列元素是 $x_{ij}$。
-
 
 **对 $x_{ij}$ 求偏导**
 
@@ -500,7 +500,6 @@ $a_{m \times 1}, b_{m \times 1}$ 为常数向量
 $\frac{\partial(a^T X^T X b)}{\partial X} = Xba^T + Xab^T$
 $a_{n \times 1}, b_{n \times 1}$ 为常数向量
 
-
 ### $\frac{\partial(a^T X X^T b)}{\partial X} = ab^T X + ba^T X$
 
 **已知条件：**
@@ -574,7 +573,6 @@ $$\frac{\partial(a^T X X^T b)}{\partial X} = a (b^T X) + b (a^T X) = a b^T X + b
 
 结果均为 $m \times n$，与分母 $X$ 的维度完全一致。
 
-
 # 全微分
 
 在原函数上，让输入走一小段 $d\boldsymbol{x}$，求函数值的变化量 $df$，这个过程叫全微分。
@@ -615,10 +613,7 @@ $$\text{d}f(\boldsymbol{X}) = \text{tr} \left[ \begin{pmatrix} \frac{\partial f}
 
 就是需要对应的dx与梯度相乘，之后把所有结果相加，这个公式就是写出这个结果如何用矩阵表示，迹，对角线之和
 
-
-
 # 矩阵函数的微分
-
 
  **自变量**：矩阵 $\boldsymbol{X}_{m \times n} = (x_{ij})_{i=1, j=1}^{m, n}$
 **函数**：矩阵 $\boldsymbol{F}_{p \times q}(X) = (f_{ij})_{i=1, j=1}^{p, q}$
@@ -772,12 +767,4 @@ $$\text{d}[\boldsymbol{F}(X)\boldsymbol{G}(X)\boldsymbol{H}(X)] = [\text{d}\bold
 **微分转置法则**
 $$\text{d}\boldsymbol{F}^{T}_{p \times q}(X) = [\text{d}\boldsymbol{F}_{p \times q}(X)]^{T}$$
  **解释**：微分的转置 = 转置的微分。先转置再求微分，或者先求微分再转置，结果一样。注意维度变化：$p \times q$ 变成 $q \times p$。
-
-
-
-
-
-
-
-
 

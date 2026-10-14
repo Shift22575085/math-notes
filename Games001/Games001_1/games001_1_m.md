@@ -33,8 +33,13 @@ $$\operatorname{adj}(A) = C^T = \begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}
 $$A = \begin{pmatrix} 1 & 2 \\\\ 3 & 4 \end{pmatrix}$$
 
 - $A_{11} = 4$，$A_{12} = -3$，$A_{21} = -2$，$A_{22} = 1$
-- 代数余子式矩阵：$\begin{pmatrix} 4 & -3 \\\\ -2 & 1 \end{pmatrix}$
-- 伴随矩阵：$\operatorname{adj}(A) = \begin{pmatrix} 4 & -2 \\\\ -3 & 1 \end{pmatrix}$
+- 代数余子式矩阵：
+
+$$\begin{pmatrix} 4 & -3 \\\\ -2 & 1 \end{pmatrix}$$
+
+- 伴随矩阵：
+
+$$\operatorname{adj}(A) = \begin{pmatrix} 4 & -2 \\\\ -3 & 1 \end{pmatrix}$$
 
 验证 $A \cdot \operatorname{adj}(A) = \det(A) E$：
 
@@ -119,9 +124,7 @@ $$B^TA^T=
 
 结果相同，验证成立。
 
-
 $(AB)^T=B^TA^T$相等的原因
-
 
 矩阵乘法第 i 行第 j 列的元素是：
 
@@ -200,9 +203,17 @@ $$3\cdot7+4\cdot(-6)=-3$$
 
 #### 高斯消元法求逆矩阵
 
-目标：已知 $A=\begin{pmatrix}a&b\\\\c&d\end{pmatrix}$，求 $X=A^{-1}$，使得 $AX=E$。
+目标：已知 
 
-设 $X=\begin{pmatrix}x&y\\\\z&w\end{pmatrix}$。
+$$A=\begin{pmatrix}a&b\\\\c&d\end{pmatrix}$$
+
+，求 $X=A^{-1}$，使得 $AX=E$。
+
+设 
+
+$$X=\begin{pmatrix}x&y\\\\z&w\end{pmatrix}$$
+
+。
 
 把 $AX=E$ 展开：
 
@@ -306,7 +317,11 @@ $$A^{-1}=\frac{1}{\det A}
 
 **数字验证**
 
-例：$A=\begin{pmatrix}1&2\\\\3&2\end{pmatrix}$，$\det A=1\cdot2-2\cdot3=-4$
+例：
+
+$$A=\begin{pmatrix}1&2\\\\3&2\end{pmatrix}$$
+
+，$\det A=1\cdot2-2\cdot3=-4$
 
 $$A^{-1}=
 \frac{1}{-4}
@@ -368,8 +383,6 @@ TODO:
 - 函数求特征值
 
 # 特征分解
-
-
 
 # 向量空间
 
@@ -597,18 +610,17 @@ $Q^TQ=E,\quad \det Q=\pm1$
 
 幺正变换对矩阵：
 
-
 # 幺正矩阵例子
 
-$U=\begin{bmatrix}i & 0\\\\0 & 1\end{bmatrix}$
+$$U=\begin{bmatrix}i & 0\\\\0 & 1\end{bmatrix}$$
 
 共轭转置：
 
-$U^\dagger=\begin{bmatrix}-i & 0\\\\0 & 1\end{bmatrix}$
+$$U^\dagger=\begin{bmatrix}-i & 0\\\\0 & 1\end{bmatrix}$$
 
 所以：
 
-$U^\dagger U=\begin{bmatrix}-i & 0\\\\0 & 1\end{bmatrix}\begin{bmatrix}i & 0\\\\0 & 1\end{bmatrix}=\begin{bmatrix}(-i)i & 0\\\\0 & 1\end{bmatrix}=\begin{bmatrix}1 & 0\\\\0 & 1\end{bmatrix}=E$
+$$U^\dagger U=\begin{bmatrix}-i & 0\\\\0 & 1\end{bmatrix}\begin{bmatrix}i & 0\\\\0 & 1\end{bmatrix}=\begin{bmatrix}(-i)i & 0\\\\0 & 1\end{bmatrix}=\begin{bmatrix}1 & 0\\\\0 & 1\end{bmatrix}=E$$
 
 U为幺正矩阵
 
@@ -721,7 +733,11 @@ $$\begin{bmatrix}1 & 1 \\\\ 1 & 1\end{bmatrix}\begin{pmatrix}x \\\\ y\end{pmatri
 
 $$P = \begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix}$$
 
-求 $P$ 的逆（二阶公式 $P^{-1} = \dfrac{1}{ad-bc}\begin{bmatrix}d & -b \ -c & a\end{bmatrix}$）：
+求 $P$ 的逆（二阶公式 
+
+$$P^{-1} = \dfrac{1}{ad-bc}\begin{bmatrix}d & -b \\ -c & a\end{bmatrix}$$
+
+）：
 
 $$P^{-1} = \frac{1}{2}\begin{bmatrix}1 & 1 \\\\ 1 & -1\end{bmatrix}$$
 
@@ -754,7 +770,6 @@ $$f(x,y) = x^2 + 2xy + 2y^2$$
 $$f(x,y) = \begin{bmatrix}x & y\end{bmatrix}\begin{bmatrix}1 & 1 \\\\ 1 & 2\end{bmatrix}\begin{bmatrix}x \\\\ y\end{bmatrix}$$
 
 ![斜椭圆](eigenvalue_view.png)
-
 
 # 合同变换
 
@@ -796,7 +811,9 @@ $$f(y) = y^TBy = 3y_1^2 + 15y_2^2$$
 
 TODO:多元微积分
 
-$\begin{pmatrix} \mathrm{d}x & \mathrm{d}y \end{pmatrix} \begin{pmatrix} \frac{\partial^2 f}{\partial x^2} & \frac{\partial^2 f}{\partial x\partial y}\\\\ \frac{\partial^2 f}{\partial x\partial y} & \frac{\partial^2 f}{\partial y^2} \end{pmatrix} \begin{pmatrix} \mathrm{d}x \\\\ \mathrm{d}y \end{pmatrix}$给出沿任意方向的二阶导数
+$$\begin{pmatrix} \mathrm{d}x & \mathrm{d}y \end{pmatrix} \begin{pmatrix} \frac{\partial^2 f}{\partial x^2} & \frac{\partial^2 f}{\partial x\partial y}\\\\ \frac{\partial^2 f}{\partial x\partial y} & \frac{\partial^2 f}{\partial y^2} \end{pmatrix} \begin{pmatrix} \mathrm{d}x \\\\ \mathrm{d}y \end{pmatrix}$$
+
+给出沿任意方向的二阶导数
 
 性质：正定矩阵的特征值全为正数（逆命题不成立）
 

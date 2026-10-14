@@ -65,11 +65,9 @@ $\frac{\Vert Ax\Vert_1}{\Vert x\Vert_1} = \frac{\Vert c_k\Vert_1}{1} = M$
 
 结论：$\displaystyle \Vert A\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^m |a_{ij}|$ 证毕。
 
-
 # 证明 $\Vert A\Vert_\infty = \max_{1\le i\le m} \sum_{j=1}^n |a_{ij}|$
 
 $$\Vert A\Vert_\infty = \max_{1\le i\le m}\sum_{j=1}^{n}|a_{ij}| \quad(\boldsymbol A\text{ 的所有行向量的最大绝对值和})$$
-
 
 ## 第一步：证明放大倍数 ≤ 最大行和
 
@@ -134,7 +132,6 @@ $$\frac{\Vert Ax\Vert_\infty}{\Vert x\Vert_\infty} = \frac{M}{1} = M$$
 
 等号可以取到，证毕。
 
-
 ## 结论
 
 综上两步，矩阵的 $L_\infty$ 诱导范数等于其所有行向量的绝对值和的最大值：
@@ -143,7 +140,6 @@ ${\Vert A\Vert_\infty = \max_{1\le i\le m} \sum_{j=1}^n |a_{ij}|}$
 # TODO 证明 $\Vert A\Vert_2 = \sigma_{\max}(A)$（谱范数 / 最大奇异值）
 
 $$\Vert A\Vert_2 = \sigma_{\max}(A) \quad(\boldsymbol A\text{ 的最大奇异值，故该范数又称为谱范数})$$
-
 
 ## 目标
 

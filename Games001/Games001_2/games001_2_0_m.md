@@ -13,7 +13,6 @@ $$A=
 
 $$A_0=\begin{pmatrix}9&6&0\\\\0&1&4\\\\3&4&10\end{pmatrix}=\begin{pmatrix}1&0&0\\\\-\frac23&1&0\\\\0&0&1\end{pmatrix}A$$
 
-
 $$E_0=
 \begin{pmatrix}
 1&0&0\\\\
@@ -21,14 +20,11 @@ $$E_0=
 0&0&1
 \end{pmatrix}$$
 
-
 $$A_0=E_0A$$
-
 
 第二步：得到 $A_1$ $E_1$
 
 $$A_1=\begin{pmatrix}9&6&0\\\\0&1&4\\\\0&2&10\end{pmatrix}=\begin{pmatrix}1&0&0\\\\0&1&0\\\\-\frac13&0&1\end{pmatrix}A_0$$
-
 
 $$E_1=
 \begin{pmatrix}
@@ -37,13 +33,11 @@ $$E_1=
 -\frac13&0&1
 \end{pmatrix}$$
 
-
 $$A_1=E_1A_0$$
 
 第三步：得到 $A_2$(上三角) $E_2$
 
 $$A_2=\begin{pmatrix}9&6&0\\\\0&1&4\\\\0&0&10\end{pmatrix}=\begin{pmatrix}1&0&0\\\\0&1&0\\\\0&-2&1\end{pmatrix}A_1$$
-
 
 $$E_2=
 \begin{pmatrix}
@@ -51,7 +45,6 @@ $$E_2=
 0&1&0\\\\
 0&-2&1
 \end{pmatrix}$$
-
 
 $A_2=E_2A_1$
 
@@ -76,8 +69,6 @@ $$(E_2E_1E_0)^{-1}U
 
 $$A=(E_2E_1E_0)^{-1}U$$
 
-
-
 $$L=(E_2E_1E_0)^{-1}=E_0^{-1}E_1^{-1}E_2^{-1}$$
 
 $${
@@ -95,8 +86,6 @@ PLU分解(P为初等变换矩阵)：
 
 $$A=PLU$$
 
-
-
 # 实对称正定矩阵 $U=L^T$
 
 ## 1. 从 LU 分解开始
@@ -106,7 +95,6 @@ $$A=PLU$$
 $$A=LU$$
 
 $$(AB)^T=B^TA^T$$
-
 
 $A$ 是实对称矩阵可得：
 
@@ -141,7 +129,6 @@ $$L^T：\text{上三角矩阵}$$
 ${\text{下三角}\times\text{上三角}}$
 
 形式的分解。
-
 
 ## 3. 利用 LU 分解的唯一性
 
@@ -457,45 +444,48 @@ $\boldsymbol Q_{m\times m}$ 为幺正矩阵，$\boldsymbol R_{m\times n}$ 为上
 
 分解矩阵：A
 
-$A=\begin{pmatrix}1&1\\\\1&0\\\\0&1\end{pmatrix}$
+$$A=\begin{pmatrix}1&1\\\\1&0\\\\0&1\end{pmatrix}$$
 
-$a_1=\begin{pmatrix}1\\\\1\\\\0\end{pmatrix},\qquad a_2=\begin{pmatrix}1\\\\0\\\\1\end{pmatrix}$
+$$a_1=\begin{pmatrix}1\\\\1\\\\0\end{pmatrix},\qquad a_2=\begin{pmatrix}1\\\\0\\\\1\end{pmatrix}$$
 
 规范化$a1$
 $\Vert a_1\Vert=\sqrt{1^2+1^2}=\sqrt2$
 
-$q_1=\frac{a_1}{\sqrt2}=\begin{pmatrix}1/\sqrt2\\\\1/\sqrt2\\\\0\end{pmatrix}$
+$$q_1=\frac{a_1}{\sqrt2}=\begin{pmatrix}1/\sqrt2\\\\1/\sqrt2\\\\0\end{pmatrix}$$
 
 去掉$a2$ 上与$a1$平行的部分并规整化得到$w2$
 
 $\langle a_2,q_1\rangle=\frac{1}{\sqrt2}$
 
+得到投影长度:
 
-得到投影长度:$\langle a_2,q_1\rangle q_1=\begin{pmatrix}1/2\\\\1/2\\\\0\end{pmatrix}$
+$$\langle a_2,q_1\rangle q_1=\begin{pmatrix}1/2\\\\1/2\\\\0\end{pmatrix}$$
 
-$a2$去掉$a1$在$a2$上的投影长度：$w_2=a_2-\begin{pmatrix}1/2\\\\1/2\\\\0\end{pmatrix}=\begin{pmatrix}1/2\\\\-1/2\\\\1\end{pmatrix}$
+$a2$去掉$a1$在$a2$上的投影长度：
+
+$$w_2=a_2-\begin{pmatrix}1/2\\\\1/2\\\\0\end{pmatrix}=\begin{pmatrix}1/2\\\\-1/2\\\\1\end{pmatrix}$$
 
 规范化$w2$
 
 $\Vert w_2\Vert=\sqrt{\frac14+\frac14+1}=\frac{\sqrt6}{2}$
 
-$q_2=\frac{w_2}{\Vert w_2\Vert}=\begin{pmatrix}1/\sqrt6\\\\-1/\sqrt6\\\\2/\sqrt6\end{pmatrix}$
+$$q_2=\frac{w_2}{\Vert w_2\Vert}=\begin{pmatrix}1/\sqrt6\\\\-1/\sqrt6\\\\2/\sqrt6\end{pmatrix}$$
 
 所以：
 
-$Q=\begin{pmatrix}1/\sqrt2&1/\sqrt6\\\\1/\sqrt2&-1/\sqrt6\\\\0&2/\sqrt6\end{pmatrix}$
+$$Q=\begin{pmatrix}1/\sqrt2&1/\sqrt6\\\\1/\sqrt2&-1/\sqrt6\\\\0&2/\sqrt6\end{pmatrix}$$
 
 第 5 步：算 R
 
-$R=Q^T A=\begin{pmatrix}\langle q_1,a_1\rangle&\langle q_1,a_2\rangle\\\\0&\langle q_2,a_2\rangle\end{pmatrix}=\begin{pmatrix}\sqrt2&1/\sqrt2\\\\0&\sqrt6/2\end{pmatrix}$
+$$R=Q^T A=\begin{pmatrix}\langle q_1,a_1\rangle&\langle q_1,a_2\rangle\\\\0&\langle q_2,a_2\rangle\end{pmatrix}=\begin{pmatrix}\sqrt2&1/\sqrt2\\\\0&\sqrt6/2\end{pmatrix}$$
 
 验证:
 
-$QR=\begin{pmatrix}1/\sqrt2&1/\sqrt6\\\\1/\sqrt2&-1/\sqrt6\\\\0&2/\sqrt6\end{pmatrix}\begin{pmatrix}\sqrt2&1/\sqrt2\\\\0&\sqrt6/2\end{pmatrix}=\begin{pmatrix}1&1\\\\1&0\\\\0&1\end{pmatrix}=A$
+$$QR=\begin{pmatrix}1/\sqrt2&1/\sqrt6\\\\1/\sqrt2&-1/\sqrt6\\\\0&2/\sqrt6\end{pmatrix}\begin{pmatrix}\sqrt2&1/\sqrt2\\\\0&\sqrt6/2\end{pmatrix}=\begin{pmatrix}1&1\\\\1&0\\\\0&1\end{pmatrix}=A$$
 
 最后结果:
 
-$A=\underbrace{\begin{pmatrix}1/\sqrt2&1/\sqrt6\\\\1/\sqrt2&-1/\sqrt6\\\\0&2/\sqrt6\end{pmatrix}}_{Q}\underbrace{\begin{pmatrix}\sqrt2&1/\sqrt2\\\\0&\sqrt6/2\end{pmatrix}}_{R}$
+$$A=\underbrace{\begin{pmatrix}1/\sqrt2&1/\sqrt6\\\\1/\sqrt2&-1/\sqrt6\\\\0&2/\sqrt6\end{pmatrix}}_{Q}\underbrace{\begin{pmatrix}\sqrt2&1/\sqrt2\\\\0&\sqrt6/2\end{pmatrix}}_{R}$$
 
 TODO：当前的是经济型分解，这一步里的Q不算幺正矩阵，为Q再补上一个垂直的才算幺正矩阵
 
@@ -503,11 +493,11 @@ TODO：当前的是经济型分解，这一步里的Q不算幺正矩阵，为Q�
 
 由$q3^T​q2​=0,q3^T​q2​=0$计算
 
-$\begin{pmatrix} x & y & z \end{pmatrix} \begin{pmatrix} \dfrac{1}{\sqrt{2}} \\\\ \dfrac{1}{\sqrt{2}} \\\\ 0 \end{pmatrix} = 0$
+$$\begin{pmatrix} x & y & z \end{pmatrix} \begin{pmatrix} \dfrac{1}{\sqrt{2}} \\\\ \dfrac{1}{\sqrt{2}} \\\\ 0 \end{pmatrix} = 0$$
 
 得到$y=-x$
 
-$\begin{pmatrix} x & y & z \end{pmatrix} \begin{pmatrix} \dfrac{1}{\sqrt{6}} \\\\ -\dfrac{1}{\sqrt{6}} \\\\ \dfrac{2}{\sqrt{6}} \end{pmatrix} = 0$
+$$\begin{pmatrix} x & y & z \end{pmatrix} \begin{pmatrix} \dfrac{1}{\sqrt{6}} \\\\ -\dfrac{1}{\sqrt{6}} \\\\ \dfrac{2}{\sqrt{6}} \end{pmatrix} = 0$$
 
 代入$y=-x$
 
@@ -529,9 +519,11 @@ K不为1时，后面算的就是投影，点乘完再除以u的模长再乘以u�
 
 #### TODO 例子值对吗
 
-$A= \begin{pmatrix} 3 & 2 & 1 \\\\ 4 & 6 & 5 \\\\ 0 & 7 & 8 \end{pmatrix}$
+$$A= \begin{pmatrix} 3 & 2 & 1 \\\\ 4 & 6 & 5 \\\\ 0 & 7 & 8 \end{pmatrix}$$
+
 消去第 2 行第 1 列的元素 4
-$\begin{pmatrix} 3 \\\\ 4 \end{pmatrix}$
+
+$$\begin{pmatrix} 3 \\\\ 4 \end{pmatrix}$$
 
 $r_1=\sqrt{3^2+4^2}=5$
 
@@ -539,25 +531,25 @@ $c_1=\frac{3}{5},\quad s_1=\frac{4}{5}$
 
 吉文斯需要的是角度顺时针旋转让所需的角度在这个位置归零，所以负值在左下角
 
-$G_1= \begin{pmatrix} \frac{3}{5} & \frac{4}{5} & 0 \\\\ -\frac{4}{5} & \frac{3}{5} & 0 \\\\ 0 & 0 & 1 \end{pmatrix}$
+$$G_1= \begin{pmatrix} \frac{3}{5} & \frac{4}{5} & 0 \\\\ -\frac{4}{5} & \frac{3}{5} & 0 \\\\ 0 & 0 & 1 \end{pmatrix}$$
 
-$G_1A= \begin{pmatrix} \dfrac{3}{5} & \dfrac{4}{5} & 0 \\\\ -\dfrac{4}{5} & \dfrac{3}{5} & 0 \\\\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 3 & 2 & 1 \\\\ 4 & 6 & 5 \\\\ 0 & 7 & 8 \end{pmatrix}$
+$$G_1A= \begin{pmatrix} \dfrac{3}{5} & \dfrac{4}{5} & 0 \\\\ -\dfrac{4}{5} & \dfrac{3}{5} & 0 \\\\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 3 & 2 & 1 \\\\ 4 & 6 & 5 \\\\ 0 & 7 & 8 \end{pmatrix}$$
 
-$G_1A= \begin{pmatrix} 5 & 6 & \frac{23}{5} \\\\ 0 & 2 & \frac{11}{5} \\\\ 0 & 7 & 8 \end{pmatrix}$
+$$G_1A= \begin{pmatrix} 5 & 6 & \frac{23}{5} \\\\ 0 & 2 & \frac{11}{5} \\\\ 0 & 7 & 8 \end{pmatrix}$$
 
 消去第 3 行第 2 列的元素 7
 
-$\begin{pmatrix} 2 \\\\ 7 \end{pmatrix}$
+$$\begin{pmatrix} 2 \\\\ 7 \end{pmatrix}$$
 
 $r_2=\sqrt{2^2+7^2}=\sqrt{53}$
 
 $c_2=\frac{2}{\sqrt{53}},\quad s_2=\frac{7}{\sqrt{53}}$
 
-$G_2= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \dfrac{2}{\sqrt{53}} & \dfrac{7}{\sqrt{53}} \\\\ 0 & -\dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix}$
+$$G_2= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \dfrac{2}{\sqrt{53}} & \dfrac{7}{\sqrt{53}} \\\\ 0 & -\dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix}$$
 
-$G_2(G_1A)= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \dfrac{2}{\sqrt{53}} & \dfrac{7}{\sqrt{53}} \\\\ 0 & -\dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix} \begin{pmatrix} 5 & 6 & \dfrac{23}{5} \\\\ 0 & 2 & \dfrac{11}{5} \\\\ 0 & 7 & 8 \end{pmatrix}$
+$$G_2(G_1A)= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \dfrac{2}{\sqrt{53}} & \dfrac{7}{\sqrt{53}} \\\\ 0 & -\dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix} \begin{pmatrix} 5 & 6 & \dfrac{23}{5} \\\\ 0 & 2 & \dfrac{11}{5} \\\\ 0 & 7 & 8 \end{pmatrix}$$
 
-$R= \begin{pmatrix} 5 & 6 & \dfrac{23}{5} \\\\ 0 & \sqrt{53} & \dfrac{302}{5\sqrt{53}} \\\\ 0 & 0 & \dfrac{3}{5\sqrt{53}} \end{pmatrix} =G_2(G_1A)$
+$$R= \begin{pmatrix} 5 & 6 & \dfrac{23}{5} \\\\ 0 & \sqrt{53} & \dfrac{302}{5\sqrt{53}} \\\\ 0 & 0 & \dfrac{3}{5\sqrt{53}} \end{pmatrix} =G_2(G_1A)$$
 
 计算Q矩阵
 
@@ -572,7 +564,8 @@ $A = G_1^T G_2^T R$
 $Q = G_1^T G_2^T$
 
 即：
-$Q= \begin{pmatrix} \dfrac{3}{5} & -\dfrac{4}{5} & 0 \\\\ \dfrac{4}{5} & \dfrac{3}{5} & 0 \\\\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \dfrac{2}{\sqrt{53}} & -\dfrac{7}{\sqrt{53}} \\\\ 0 & \dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix}$
+
+$$Q= \begin{pmatrix} \dfrac{3}{5} & -\dfrac{4}{5} & 0 \\\\ \dfrac{4}{5} & \dfrac{3}{5} & 0 \\\\ 0 & 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \dfrac{2}{\sqrt{53}} & -\dfrac{7}{\sqrt{53}} \\\\ 0 & \dfrac{7}{\sqrt{53}} & \dfrac{2}{\sqrt{53}} \end{pmatrix}$$
 
 ### TODO 豪斯霍尔德变换
 
@@ -582,15 +575,15 @@ $Q= \begin{pmatrix} \dfrac{3}{5} & -\dfrac{4}{5} & 0 \\\\ \dfrac{4}{5} & \dfrac{
 
 xy平面下
 
-$\begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix}$
+$$\begin{pmatrix} \cos\theta & -\sin\theta \\\\ \sin\theta & \cos\theta \end{pmatrix}$$
 
 3*3矩阵中zx平面
 
-$R_y(\theta)= \begin{pmatrix} \cos\theta & 0 & \sin\theta \\\\ 0 & 1 & 0 \\\\ -\sin\theta & 0 & \cos\theta \end{pmatrix}$
+$$R_y(\theta)= \begin{pmatrix} \cos\theta & 0 & \sin\theta \\\\ 0 & 1 & 0 \\\\ -\sin\theta & 0 & \cos\theta \end{pmatrix}$$
 
 yz平面
 
-$R_x(\theta)= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \cos\theta & -\sin\theta \\\\ 0 & \sin\theta & \cos\theta \end{pmatrix}$
+$$R_x(\theta)= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \cos\theta & -\sin\theta \\\\ 0 & \sin\theta & \cos\theta \end{pmatrix}$$
 
 # 奇异值分解
 
@@ -600,7 +593,7 @@ $R_x(\theta)= \begin{pmatrix} 1 & 0 & 0 \\\\ 0 & \cos\theta & -\sin\theta \\\\ 0
 
 $U_{m\times m}$ 为幺正矩阵，$V_{n\times n}$ 为幺正矩阵，$\Sigma_{m\times n}$ 为对角矩阵
 
-$A= \begin{pmatrix} 0 & 2 \\\\ 1 & 0 \end{pmatrix}$
+$$A= \begin{pmatrix} 0 & 2 \\\\ 1 & 0 \end{pmatrix}$$
 
 求V
 
@@ -625,14 +618,14 @@ $$A^\mathrm{T}A=
 
 将得到的特征值 $\lambda = 4, 1$ 代入 $A^{T}A - \lambda E$，得到特征向量为 $(0,1), (1,0)$，将得到的特征向量列填入 $V$ 矩阵：
 
-$V = \begin{pmatrix} 0 & 1 \\\\ 1 & 0 \end{pmatrix}$
+$$V = \begin{pmatrix} 0 & 1 \\\\ 1 & 0 \end{pmatrix}$$
 
 求 $\Sigma$：
 
 特征值：$4, 1$  
 奇异值（根号下特征值）：$2, 1$
 
-$\Sigma = \begin{pmatrix} 2 & 0 \\\\ 0 & 1 \end{pmatrix}$
+$$\Sigma = \begin{pmatrix} 2 & 0 \\\\ 0 & 1 \end{pmatrix}$$
 
 $A^TA$的特征值的平方根，组成奇异值 $\Sigma$。
 
@@ -726,10 +719,8 @@ A^TA的特征向量组成的矩阵，是矩阵A的输入旋转方向的逆，是
 西格玛是原矩阵A^TA的特征值的根号下，代表A矩阵的拉伸长度
 U是由原矩阵，V矩阵，西格玛矩阵求出的
 
-
 右奇异向量 **$V$** 是 **$A^T A$** 的特征向量，对应输入空间（行空间）的自相关。
 左奇异向量 **$U$** 是 **$A A^T$** 的特征向量，对应输出空间（列空间）的自相关。
-
 
 V将单位向量转到拉伸方向
 西格玛拉伸矩阵
@@ -786,7 +777,6 @@ $\Vert\boldsymbol{x}\Vert_\infty = \max\lbrace|x_1|,|x_2|,\dots,|x_n|\rbrace$
 
 诱导范数
 
-
 $\Vert A\Vert = \max\lbrace\Vert Ax\Vert: x \in \mathbb R^n,\Vert x\Vert = 1\rbrace = \max\left\lbrace\frac{\Vert Ax\Vert}{\Vert x\Vert}: x \in \mathbb R^n,\Vert x\Vert \neq 0\right\rbrace$
 
 前一个公式说的是，模长为1的x向量，被A变换后最大长度
@@ -796,7 +786,6 @@ $\Vert A\Vert = \max\lbrace\Vert Ax\Vert: x \in \mathbb R^n,\Vert x\Vert = 1\rbr
 
 由向量的Lp范数可以得到矩阵的诱导Lp范数
 先有“向量尺子”，才有“矩阵大小”，矩阵的尺子完全听命于向量的尺子，所以叫“诱导”。
-
 
 A作为线性变换所产生的对向量模长的的最大放大倍数。
 不同于物理中的模长，数学中的模长是范数，对除了$L_0$外的所有矩阵都成立

@@ -155,9 +155,6 @@ $$\frac{\partial |X|}{\partial x_{ji}} = A_{ji}$$
 
 $$\frac{\partial |X|}{\partial X^T} = X^*$$
 
-
-
-
 ### 逆矩阵公式：$X^{-1} = \dfrac{X^*}{|X|}$
 
 $\frac{\partial |X|}{\partial X^T} = X^*$（$X^*$ 即伴随矩阵，$X^{-1} = X^* / |X|$）。
@@ -249,14 +246,11 @@ $$\sum_{k=1}^n x_{ik} A_{jk} = 0$$
 
 $$X X^* = \begin{pmatrix} |X| & 0 & \dots \\\\ 0 & |X| & \dots \\\\ \vdots & \vdots & \ddots \end{pmatrix} = |X| E$$
 
-
 ### 行列式全微分公式$|X| \mathrm{tr}(X^{-1} \mathrm{d}X)$
 
 $\mathrm{d}|X| = \mathrm{tr}(|X| X^{-1} \mathrm{d}X) = |X| \mathrm{tr}(X^{-1} \mathrm{d}X)$
 
 其中 $X$ 为 $n$ 阶可逆矩阵，$|X|=\det(X)$。
-
-
 
 **推导**
 
@@ -291,7 +285,6 @@ $$\mathrm{d}|X| = \sum_{i,j} A_{ij} \mathrm{d}x_{ij}
 
 当 $X$ 可逆时，由 $X X^* = |X| E$ 两边左乘 $X^{-1}$，得 $X^* = |X| X^{-1}$，即 $\operatorname{adj}(X) = |X| X^{-1}$。
 
-
 $$\mathrm{d}|X| = \operatorname{tr}(|X| X^{-1} \mathrm{d}X)
 = |X| \operatorname{tr}(X^{-1} \mathrm{d}X)$$
 
@@ -313,7 +306,6 @@ $$= \mathrm{tr}[(\mathrm{d}X)^T X] + \mathrm{tr}[X^T \mathrm{d}X] = \mathrm{tr}[
 
 对照标准公式 $\mathrm{d}f = \mathrm{tr}\left[\frac{\partial f}{\partial X^T} \mathrm{d}X\right]$，可得 $\frac{\partial f}{\partial X^T} = 2X^T$，转置后得 $\frac{\partial f}{\partial X} = 2X$（因为分母是 $X^T$，提取出的是 $\frac{\partial f}{\partial X^T}$；若要分母布局的 $\frac{\partial f}{\partial X}$，转置即可）。
 
-
 # 张量积分
 
 ### 外积
@@ -329,7 +321,6 @@ $H$：表示共轭转置（Hermitian 转置）。
 在实数域中，$\boldsymbol{b}^H = \boldsymbol{b}^T$（直接转置），因此公式简化为 $\boldsymbol{a}\boldsymbol{b}^T$。
 
 **实数域上的矩阵表示**
-
 
 $$\begin{pmatrix} a_x \\\\ a_y \\\\ a_z \end{pmatrix} 
 \begin{pmatrix} b_x & b_y & b_z \end{pmatrix} 
@@ -355,9 +346,13 @@ $$\operatorname{tr}(\boldsymbol{a} \otimes \boldsymbol{b}) = \boldsymbol{a} \cdo
 对矩阵 $A_{m \times n}$ 和 $B_{p \times q}$，克罗内克积 $A \otimes B$ 是一个 $mp \times nq$ 的分块矩阵：
 $$A \otimes B = \begin{pmatrix} a_{11}B & \cdots & a_{1n}B \\\\ \vdots & \ddots & \vdots \\\\ a_{m1}B & \cdots & a_{mn}B \end{pmatrix}$$
 
-设 $A = \begin{pmatrix} 1 & 2 \\\\ 3 & 4 \end{pmatrix}, \quad B = \begin{pmatrix} 0 & 5 \\\\ 6 & 7 \end{pmatrix}$
+设 
 
-则 $A \otimes B = \begin{pmatrix} 1B & 2B \\\\ 3B & 4B \end{pmatrix} = \begin{pmatrix} 0 & 5 & 0 & 10 \\\\ 6 & 7 & 12 & 14 \\\\ 0 & 15 & 0 & 20 \\\\ 18 & 21 & 24 & 28 \end{pmatrix}_{4 \times 4}$
+$$A = \begin{pmatrix} 1 & 2 \\\\ 3 & 4 \end{pmatrix}, \quad B = \begin{pmatrix} 0 & 5 \\\\ 6 & 7 \end{pmatrix}$$
+
+则 
+
+$$A \otimes B = \begin{pmatrix} 1B & 2B \\\\ 3B & 4B \end{pmatrix} = \begin{pmatrix} 0 & 5 & 0 & 10 \\\\ 6 & 7 & 12 & 14 \\\\ 0 & 15 & 0 & 20 \\\\ 18 & 21 & 24 & 28 \end{pmatrix}_{4 \times 4}$$
 
 **与外积（并矢）的区别**
 
@@ -404,7 +399,10 @@ $$A \otimes B = \begin{pmatrix} a_{11}B & \cdots & a_{1n}B \\\\ \vdots & \ddots 
 拼凑用的数量 → 逆变分量（上标 $x^i$）
 点乘的投影读数 → 协变分量（下标 $x_i$）
 
-克罗内克符号 $\delta_i^j = \begin{cases} 0, & i \neq j \\\\ 1, & i = j \end{cases}$
+克罗内克符号 
+
+$$\delta_i^j = \begin{cases} 0, & i \neq j \\\\ 1, & i = j \end{cases}$$
+
 $\delta_i^j$ 比较的是基向量 $\boldsymbol{e}_i$ 和 $\boldsymbol{e}^j$ 的指标。
 
 $$\boldsymbol{e}_i \cdot \boldsymbol{e}^j = \delta_i^j$$
@@ -461,7 +459,6 @@ $$\boldsymbol{x} = \sum_{i=1}^{n} x_i \boldsymbol{e}^i = \sum_{i=1}^{n} x^i \bol
 则：
 $$\boldsymbol{x}=x^1\boldsymbol{e}_1+x^2\boldsymbol{e}_2=1(1,0)+1(1,1)=(2,1)$$
 
-
 在三维空间中（$n=3$）：
 
 $$\boldsymbol{x} = x_1 \boldsymbol{e}^1 + x_2 \boldsymbol{e}^2 + x_3 \boldsymbol{e}^3 = x^1 \boldsymbol{e}_1 + x^2 \boldsymbol{e}_2 + x^3 \boldsymbol{e}_3$$
@@ -473,7 +470,6 @@ $x_i = \boldsymbol{x} \cdot \boldsymbol{e}_i, \ x^j = \boldsymbol{x} \cdot \bold
 $g_{ij} = \boldsymbol{e}_i \cdot \boldsymbol{e}_j$ 称为度规张量
 
 上面代入x的公式是使用了爱因斯坦求和的逆变分量点乘原基底得到的x,这个j是求和指标，后面将$X_j$提取了
-
 
 # 从标量、矢量到张量
 
@@ -529,5 +525,4 @@ $(1,1)$ 阶张量（一个上标，一个下标）
 | 标量 | 0阶 | 0 | 无 | 温度、质量 |
 | 矢量 | 1阶 | 1 | 1个指标 | 位移、速度 |
 | 张量 | 2阶 | 2 | 2个指标 | 应力、度规、线性变换矩阵 |
-
 
