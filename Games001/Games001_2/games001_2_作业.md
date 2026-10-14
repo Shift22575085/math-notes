@@ -1,5 +1,5 @@
 
-# $\Vert A\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^m |a_{ij}|$
+# $\Vert A\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^m |a_{ij}|$​
 
 $$\Vert A\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^{m}|a_{ij}| \quad(\boldsymbol A\text{ 的所有列向量的最大绝对值和})$$
 
@@ -13,16 +13,16 @@ $$\Vert A\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^{m}|a_{ij}| \quad(\boldsymbol A\
 
 ## 第一步：证明对向量的拉伸倍数 ≤ 最大列和
 
-把矩阵 $A$ 写成列向量的形式：
-$A = [c_1, c_2, \cdots, c_n]$
-其中 $c_j$ 是第 $j$ 列。
+把矩阵 $A$​ 写成列向量的形式：
+$A = [c_1, c_2, \cdots, c_n]$​
+其中 $c_j$​ 是第 $j$​ 列。
 
 那么
-$Ax = x_1 c_1 + x_2 c_2 + \cdots + x_n c_n$
+$Ax = x_1 c_1 + x_2 c_2 + \cdots + x_n c_n$​
 
-最终出来的结果是列向量$Ax$，X1，X2是向量第一，第二的值，c1,c2是矩阵的列
+最终出来的结果是列向量$Ax$​，X1，X2是向量第一，第二的值，c1,c2是矩阵的列
 
-两边取 $L_1$ 范数（绝对值求和），根据三角不等式：
+两边取 $L_1$​ 范数（绝对值求和），根据三角不等式：
 
 Ax列向量的L1范数一定小于A矩阵的列的L1范数乘X向量中对应的值的所有值之和
 
@@ -30,51 +30,51 @@ Ax列向量的L1范数一定小于A矩阵的列的L1范数乘X向量中对应的
 
 公式1：
 
-$\Vert Ax\Vert_1 \le |x_1| \Vert c_1\Vert_1 + |x_2| \Vert c_2\Vert_1 + \cdots + |x_n| \Vert c_n\Vert_1$
+$\Vert Ax\Vert_1 \le |x_1| \Vert c_1\Vert_1 + |x_2| \Vert c_2\Vert_1 + \cdots + |x_n| \Vert c_n\Vert_1$​
 
-令$M = \max_{1\le j\le n} \Vert c_j\Vert_1$
+令$M = \max_{1\le j\le n} \Vert c_j\Vert_1$​
 
-$M  = \max_{1 \le j \le n} \sum_{i=1}^{m} |a_{ij}|$最大列和
+$M  = \max_{1 \le j \le n} \sum_{i=1}^{m} |a_{ij}|$​最大列和
 
-则有所有的$\Vert c_j\Vert_1 \le M$，可以等于M
+则有所有的$\Vert c_j\Vert_1 \le M$​，可以等于M
 
 将公式1中所有的C项替换为M
 
-$\Vert Ax\Vert_1 \le M \bigl( |x_1| + |x_2| + \cdots + |x_n| \bigr) = M \Vert x\Vert_1$
+$\Vert Ax\Vert_1 \le M \bigl( |x_1| + |x_2| + \cdots + |x_n| \bigr) = M \Vert x\Vert_1$​
 
 因此
-$\frac{\Vert Ax\Vert_1}{\Vert x\Vert_1} \le M$
+$\frac{\Vert Ax\Vert_1}{\Vert x\Vert_1} \le M$​
 上界证完。
 
 ## 第二步：证明能达到这个上界
 
-假设第 $k$ 列的列和 $M$ 最大。取向量 $x$ 为只在第 $k$ 个位置为 1、其余为 0 的单位向量（即 $x = e_k$）。
+假设第 $k$​ 列的列和 $M$​ 最大。取向量 $x$​ 为只在第 $k$​ 个位置为 1、其余为 0 的单位向量（即 $x = e_k$​）。
 
-$e_k$：除了第 k 位是 1，其他全是 0 的向量
+$e_k$​：除了第 k 位是 1，其他全是 0 的向量
 
 此时
-$\Vert x\Vert_1 = 1$(只在k的位置有个1，其他位置是0)
+$\Vert x\Vert_1 = 1$​(只在k的位置有个1，其他位置是0)
 而
-$Ax = A e_k = c_k=$(最大列和的列本身，c是A的列)
-即结果恰好是矩阵的第 $k$ 列。
+$Ax = A e_k = c_k=$​(最大列和的列本身，c是A的列)
+即结果恰好是矩阵的第 $k$​ 列。
 
 所以比值
-$\frac{\Vert Ax\Vert_1}{\Vert x\Vert_1} = \frac{\Vert c_k\Vert_1}{1} = M$
+$\frac{\Vert Ax\Vert_1}{\Vert x\Vert_1} = \frac{\Vert c_k\Vert_1}{1} = M$​
 
 当变换的向量是在最大列处为1，其余为0的情况时，达到上界，矩阵对向量的拉伸最大。
 
-结论：$\displaystyle \Vert A\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^m |a_{ij}|$ 证毕。
+结论：$\displaystyle \Vert A\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^m |a_{ij}|$​ 证毕。
 
-# 证明 $\Vert A\Vert_\infty = \max_{1\le i\le m} \sum_{j=1}^n |a_{ij}|$
+# 证明 $\Vert A\Vert_\infty = \max_{1\le i\le m} \sum_{j=1}^n |a_{ij}|$​
 
 $$\Vert A\Vert_\infty = \max_{1\le i\le m}\sum_{j=1}^{n}|a_{ij}| \quad(\boldsymbol A\text{ 的所有行向量的最大绝对值和})$$
 
 ## 第一步：证明放大倍数 ≤ 最大行和
 
-把矩阵 $A$ 的行向量记为：
+把矩阵 $A$​ 的行向量记为：
 
 $$r_1, r_2, \cdots, r_m$$
-（每一行是一个横向量）。那么 $Ax$ 的第 $i$ 个分量是点积：
+（每一行是一个横向量）。那么 $Ax$​ 的第 $i$​ 个分量是点积：
 
 $$(Ax)_i = r_i \cdot x$$
 根据绝对值不等式（点积绝对值 ≤ 各分量绝对值乘积之和）：
@@ -83,27 +83,27 @@ $$(Ax)_i = r_i \cdot x$$
 
 $$|(Ax)_i| \le |a_{i1}||x_1| + |a_{i2}||x_2| + \cdots + |a_{in}||x_n|$$
 
-$L_\infty$的定义就是向量中的值的绝对值的最大项
+$L_\infty$​的定义就是向量中的值的绝对值的最大项
 
-因为 $L_\infty$ 范数 $\Vert x\Vert_\infty = \max\limits_{1\le j\le n} |x_j|$，所以每个分量都满足：
+因为 $L_\infty$​ 范数 $\Vert x\Vert_\infty = \max\limits_{1\le j\le n} |x_j|$​，所以每个分量都满足：
 
 $$|x_j| \le \Vert x\Vert_\infty$$
 
-于是第 $i$ 行绝对值的和满足：
+于是第 $i$​ 行绝对值的和满足：
 
 中间的求和逻辑是矩阵A的i不变，列向量(j)的绝对值求和
 
-$|(Ax)_i| \le \left( \sum_{j=1}^n |a_{ij}| \right) \cdot \Vert x\Vert_\infty \le M \cdot \Vert x\Vert_\infty$
+$|(Ax)_i| \le \left( \sum_{j=1}^n |a_{ij}| \right) \cdot \Vert x\Vert_\infty \le M \cdot \Vert x\Vert_\infty$​
 
 其中：
 
-$M = \max_{1\le i\le m} \sum_{j=1}^n |a_{ij}|$即最大的绝对行和。
+$M = \max_{1\le i\le m} \sum_{j=1}^n |a_{ij}|$​即最大的绝对行和。
 
-将等式右边规整为绝对行和$M$和$L_\infty$范数，右边公式的上界可以达到这个值。
+将等式右边规整为绝对行和$M$​和$L_\infty$​范数，右边公式的上界可以达到这个值。
 
-既然每一个分量都满足 $|(Ax)_i| \le M \cdot \Vert x\Vert_\infty$，那么它们当中的最大值也满足：
+既然每一个分量都满足 $|(Ax)_i| \le M \cdot \Vert x\Vert_\infty$​，那么它们当中的最大值也满足：
 
-$\Vert Ax\Vert_\infty \le M \cdot \Vert x\Vert_\infty$
+$\Vert Ax\Vert_\infty \le M \cdot \Vert x\Vert_\infty$​
 
 因此放大倍数：
 
@@ -113,9 +113,9 @@ $$\frac{\Vert Ax\Vert_\infty}{\Vert x\Vert_\infty} \le M$$
 
 ## 第二步：证明能达到这个上界
 
-假设第 $k$ 行的行和 $M$ 最大。我们构造一个特殊的向量 $x$：
+假设第 $k$​ 行的行和 $M$​ 最大。我们构造一个特殊的向量 $x$​：
 
-取 $x_j$ 的符号（正负号）与第 $k$ 行的元素 $a_{kj}$ 完全一致，并且让每个分量的模长都取最大值1,为了让对应的点乘值绝对不为负值：
+取 $x_j$​ 的符号（正负号）与第 $k$​ 行的元素 $a_{kj}$​ 完全一致，并且让每个分量的模长都取最大值1,为了让对应的点乘值绝对不为负值：
 
 $$|x_j| = 1$$
 
@@ -123,14 +123,14 @@ $$|x_j| = 1$$
 
 $$\Vert x\Vert_\infty = 1$$
 
-此时第 $k$ 行的点积为：
+此时第 $k$​ 行的点积为：
 
 $$|(Ax)_k| = |a_{k1}x_1 + a_{k2}x_2 + \cdots + a_{kn}x_n|$$
-由于每个 $x_j$ 的符号与 $a_{kj}$ 一致，所以每一项的乘积 $a_{kj}x_j$ 都等于 $|a_{kj}|$，因此：
+由于每个 $x_j$​ 的符号与 $a_{kj}$​ 一致，所以每一项的乘积 $a_{kj}x_j$​ 都等于 $|a_{kj}|$​，因此：
 
 $$|(Ax)_k| = |a_{k1}| + |a_{k2}| + \cdots + |a_{kn}| = M$$
 
-因为其他任何一行的点积绝对值都不会超过该行的行和，而行和最大也才 $M$，所以整个向量 $Ax$ 的 $L_\infty$ 范数（所有分量绝对值的最大值）正好就是：
+因为其他任何一行的点积绝对值都不会超过该行的行和，而行和最大也才 $M$​，所以整个向量 $Ax$​ 的 $L_\infty$​ 范数（所有分量绝对值的最大值）正好就是：
 
 $$\Vert Ax\Vert_\infty = M$$
 
@@ -142,16 +142,16 @@ $$\frac{\Vert Ax\Vert_\infty}{\Vert x\Vert_\infty} = \frac{M}{1} = M$$
 
 ## 结论
 
-综上两步，矩阵的 $L_\infty$ 诱导范数等于其所有行向量的绝对值和的最大值：
-${\Vert A\Vert_\infty = \max_{1\le i\le m} \sum_{j=1}^n |a_{ij}|}$
+综上两步，矩阵的 $L_\infty$​ 诱导范数等于其所有行向量的绝对值和的最大值：
+${\Vert A\Vert_\infty = \max_{1\le i\le m} \sum_{j=1}^n |a_{ij}|}$​
 
-# TODO 证明 $\Vert A\Vert_2 = \sigma_{\max}(A)$（谱范数 / 最大奇异值）
+# TODO 证明 $\Vert A\Vert_2 = \sigma_{\max}(A)$​（谱范数 / 最大奇异值）
 
 $$\Vert A\Vert_2 = \sigma_{\max}(A) \quad(\boldsymbol A\text{ 的最大奇异值，故该范数又称为谱范数})$$
 
 ## 目标
 
-证明矩阵的 $L_2$ 诱导范数等于其最大奇异值（即 $A^T A$ 的最大特征值开根号）。
+证明矩阵的 $L_2$​ 诱导范数等于其最大奇异值（即 $A^T A$​ 的最大特征值开根号）。
 
 ## 证明过程
 
@@ -172,7 +172,7 @@ $$B = A^T A$$
 根据线性代数中的**瑞利商（Rayleigh quotient）定理**：对于一个对称矩阵，
 
 $$\max_{x \neq 0} \frac{x^T B x}{x^T x}$$
-恰好等于矩阵 $B$ 的最大特征值 $\lambda_{\max}(B)$。
+恰好等于矩阵 $B$​ 的最大特征值 $\lambda_{\max}(B)$​。
 
 因此：
 
@@ -183,7 +183,7 @@ $$\max_{x \neq 0} \frac{\Vert Ax\Vert_2^2}{\Vert x\Vert_2^2}
 
 $$\Vert A\Vert_2 = \sqrt{\lambda_{\max}(A^T A)}$$
 
-而矩阵 $A$ 的**最大奇异值** $\sigma_{\max}(A)$ 的定义正是：
+而矩阵 $A$​ 的**最大奇异值** $\sigma_{\max}(A)$​ 的定义正是：
 
 $$\sigma_{\max}(A) = \sqrt{\lambda_{\max}(A^T A)}$$
 
@@ -192,4 +192,4 @@ $$\sigma_{\max}(A) = \sqrt{\lambda_{\max}(A^T A)}$$
 $$\boxed{\Vert A\Vert_2 = \sigma_{\max}(A)}$$
 
 ## 补充说明（等号成立条件）
-同样地，当向量 $x$ 取为最大特征值 $\lambda_{\max}(A^T A)$ 对应的特征向量时，上述瑞利商取到最大值，即放大倍数达到上限，等号成立。这也意味着，谱范数对应的“最拉伸方向”是最大奇异值对应的右奇异向量方向。
+同样地，当向量 $x$​ 取为最大特征值 $\lambda_{\max}(A^T A)$​ 对应的特征向量时，上述瑞利商取到最大值，即放大倍数达到上限，等号成立。这也意味着，谱范数对应的“最拉伸方向”是最大奇异值对应的右奇异向量方向。
