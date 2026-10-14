@@ -401,7 +401,7 @@ $$(a+b)v=av+bv$$
 
 向量空间 + 度量函数：
 
-$$d(u,v)=\Vertu-v\Vert$$
+$$d(u,v)=\Vert u-v\Vert$$
 
 u 到 v 的距离 = 差向量 u-v 的长度。这个公式把“向量有多长”和“两个向量隔多远”连接起来。
 
@@ -458,13 +458,13 @@ TODO：不够详细
 
 # 内积与正交
 
-$\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}=\frac{\Vertu\Vert\cdot\Vertv\Vert\cdot\cos\theta}{\Vertu\Vert\cdot\Vertv\Vert}=\cos\theta$
+$\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}=\frac{\Vert u\Vert\cdot\Vert v\Vert\cdot\cos\theta}{\Vert u\Vert\cdot\Vert v\Vert}=\cos\theta$
 
 两向量夹角为 $\theta_{uv}=\arccos\frac{\langle u,v\rangle}{\sqrt{\langle u,u\rangle\langle v,v\rangle}}$ ，当cosθ_uv=0时称为两向量正交
 
-范(向量的长度)：$\Vertu\Vert=\sqrt{\langle u,u\rangle}=\sqrt{\langle u,u\rangle}\cos 0\ (\cos 0=1),\ \langle u,u\rangle=\Vertu\Vert^2$
+范(向量的长度)：$\Vert u\Vert=\sqrt{\langle u,u\rangle}=\sqrt{\langle u,u\rangle}\cos 0\ (\cos 0=1),\ \langle u,u\rangle=\Vert u\Vert^2$
 
-点乘：$\langle u,v\rangle=\Vertu\Vert\cdot\Vertv\Vert\cdot\cos\theta$
+点乘：$\langle u,v\rangle=\Vert u\Vert\cdot\Vert v\Vert\cdot\cos\theta$
 
 $\arccos(\cos\theta)=\theta$
 
@@ -476,7 +476,7 @@ $\arccos(\cos\theta)=\theta$
 
 $$v_1=(1,1),\quad v_2=(1,0)$$
 
-$$e_1=\frac{v_1}{\Vertv_1\Vert}=\left(\frac{1}{\sqrt2},\frac{1}{\sqrt2}\right)$$
+$$e_1=\frac{v_1}{\Vert v_1\Vert}=\left(\frac{1}{\sqrt2},\frac{1}{\sqrt2}\right)$$
 
 投影,之后用$u_2$减去投影，得到与$u_1$垂直的向量：
 
@@ -490,9 +490,9 @@ $$\langle e_1,w_2\rangle=\frac{1}{\sqrt2}\cdot\frac12+\frac{1}{\sqrt2}\cdot\left
 
 规范化：
 
-$$\Vertw_2\Vert=\sqrt{\frac14+\frac14}=\frac{1}{\sqrt2}$$
+$$\Vert w_2\Vert=\sqrt{\frac14+\frac14}=\frac{1}{\sqrt2}$$
 
-$$e_2=\frac{w_2}{\Vertw_2\Vert}=\left(\frac{1}{\sqrt2},-\frac{1}{\sqrt2}\right)$$
+$$e_2=\frac{w_2}{\Vert w_2\Vert}=\left(\frac{1}{\sqrt2},-\frac{1}{\sqrt2}\right)$$
 
 # 单位正交基底的性质
 
@@ -573,7 +573,7 @@ $$\langle u,u\rangle=u^Hu=
 \begin{pmatrix}1+i\\\\2-3i\end{pmatrix}
 =(1-i)(1+i)+(2+3i)(2-3i)=15$$
 
-$$\Vertu\Vert=\sqrt{\langle u,u\rangle}=\sqrt{15}$$
+$$\Vert u\Vert=\sqrt{\langle u,u\rangle}=\sqrt{15}$$
 
 实数矩阵：$L^H = L^T$
 
@@ -646,7 +646,7 @@ $$\langle Uu,Uv\rangle=\langle u,v\rangle$$
 
 一旦内积不变，下面全部自动不变：
 
-- 长度：$\VertUu\Vert=\Vertu\Vert$
+- 长度：$\Vert Uu\Vert=\Vert u\Vert$
 - 夹角：夹角公式只含内积和长度
 - 正交性：若 $\langle u,v\rangle=0$，则 $\langle Uu,Uv\rangle=0$
 - 单位正交基：变换后仍然单位正交

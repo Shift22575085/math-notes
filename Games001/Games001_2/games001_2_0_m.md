@@ -462,7 +462,7 @@ $A=\begin{pmatrix}1&1\\\\1&0\\\\0&1\end{pmatrix}$
 $a_1=\begin{pmatrix}1\\\\1\\\\0\end{pmatrix},\qquad a_2=\begin{pmatrix}1\\\\0\\\\1\end{pmatrix}$
 
 规范化$a1$
-$\Verta_1\Vert=\sqrt{1^2+1^2}=\sqrt2$
+$\Vert a_1\Vert=\sqrt{1^2+1^2}=\sqrt2$
 
 $q_1=\frac{a_1}{\sqrt2}=\begin{pmatrix}1/\sqrt2\\\\1/\sqrt2\\\\0\end{pmatrix}$
 
@@ -477,9 +477,9 @@ $a2$去掉$a1$在$a2$上的投影长度：$w_2=a_2-\begin{pmatrix}1/2\\\\1/2\\\\
 
 规范化$w2$
 
-$\Vertw_2\Vert=\sqrt{\frac14+\frac14+1}=\frac{\sqrt6}{2}$
+$\Vert w_2\Vert=\sqrt{\frac14+\frac14+1}=\frac{\sqrt6}{2}$
 
-$q_2=\frac{w_2}{\Vertw_2\Vert}=\begin{pmatrix}1/\sqrt6\\\\-1/\sqrt6\\\\2/\sqrt6\end{pmatrix}$
+$q_2=\frac{w_2}{\Vert w_2\Vert}=\begin{pmatrix}1/\sqrt6\\\\-1/\sqrt6\\\\2/\sqrt6\end{pmatrix}$
 
 所以：
 
@@ -750,15 +750,15 @@ U和V没有数值上的关系
 
 正定性：
 
-$$\Vertu\Vert\ge0,\quad \Vertu\Vert=0 \iff u=0$$
+$$\Vert u\Vert\ge0,\quad \Vert u\Vert=0 \iff u=0$$
 
 正齐次性：
 
-$$\Vertau\Vert=|a|\Vertu\Vert,\quad a\in\mathbb{R}$$
+$$\Vert au\Vert=|a|\Vert u\Vert,\quad a\in\mathbb{R}$$
 
 三角不等式：
 
-$$\Vertu+v\Vert\le\Vertu\Vert+\Vertv\Vert$$
+$$\Vert u+v\Vert\le\Vert u\Vert+\Vert v\Vert$$
 
 $L_0$ 范数：非零元素的个数(伪范数，不满足正齐次性)
 不能构成度量函数；本质上不是范数
@@ -787,7 +787,7 @@ $\Vert\boldsymbol{x}\Vert_\infty = \max\lbrace|x_1|,|x_2|,\dots,|x_n|\rbrace$
 诱导范数
 
 
-$\VertA\Vert = \max\lbrace\VertAx\Vert: x \in \mathbb R^n,\Vertx\Vert = 1\rbrace = \max\left\lbrace\frac{\VertAx\Vert}{\Vertx\Vert}: x \in \mathbb R^n,\Vertx\Vert \neq 0\right\rbrace$
+$\Vert A\Vert = \max\lbrace\Vert Ax\Vert: x \in \mathbb R^n,\Vert x\Vert = 1\rbrace = \max\left\lbrace\frac{\Vert Ax\Vert}{\Vert x\Vert}: x \in \mathbb R^n,\Vert x\Vert \neq 0\right\rbrace$
 
 前一个公式说的是，模长为1的x向量，被A变换后最大长度
 后一个公式说的是，模长不为0的向量，被A变换后再除以x的模长，之后再找到最大的长度
@@ -803,19 +803,19 @@ A作为线性变换所产生的对向量模长的的最大放大倍数。
 
 ## 作业
 
-$$\VertA\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^{m}|a_{ij}| \quad(\boldsymbol A\text{ 的所有列向量的最大绝对值和})$$
+$$\Vert A\Vert_1 = \max_{1\le j\le n}\sum_{i=1}^{m}|a_{ij}| \quad(\boldsymbol A\text{ 的所有列向量的最大绝对值和})$$
 
-$$\VertA\Vert_2 = \sigma_{\max}(A) \quad(\boldsymbol A\text{ 的最大奇异值，故该范数又称为谱范数})$$
+$$\Vert A\Vert_2 = \sigma_{\max}(A) \quad(\boldsymbol A\text{ 的最大奇异值，故该范数又称为谱范数})$$
 
-$$\VertA\Vert_\infty = \max_{1\le i\le m}\sum_{j=1}^{n}|a_{ij}| \quad(\boldsymbol A\text{ 的所有行向量的最大绝对值和})$$
+$$\Vert A\Vert_\infty = \max_{1\le i\le m}\sum_{j=1}^{n}|a_{ij}| \quad(\boldsymbol A\text{ 的所有行向量的最大绝对值和})$$
 
-$\displaystyle \VertA\Vert_p = \max\left\lbrace\frac{\VertAx\Vert_p}{\Vertx\Vert_p}: x \in \mathbb R^n,\Vertx\Vert \neq 0\right\rbrace$
+$\displaystyle \Vert A\Vert_p = \max\left\lbrace\frac{\Vert Ax\Vert_p}{\Vert x\Vert_p}: x \in \mathbb R^n,\Vert x\Vert \neq 0\right\rbrace$
 
 所有x分量被A变换后的$\Vert \cdot \Vert_p$的除以X向量所有分量的$\Vert \cdot \Vert_p$，公式上是省略了西格玛符号
 
 完整公式(不同L的展开形式将不同)：
 
-$\VertA\Vert_p = \max \left\lbrace \frac{ \left( \sum_{i=1}^{m} |(Ax)_i|^p \right)^{1/p} }{ \left( \sum_{j=1}^{n} |x_j|^p \right)^{1/p} } : x \in \mathbb{R}^n, x \neq 0 \right\rbrace$
+$\Vert A\Vert_p = \max \left\lbrace \frac{ \left( \sum_{i=1}^{m} |(Ax)_i|^p \right)^{1/p} }{ \left( \sum_{j=1}^{n} |x_j|^p \right)^{1/p} } : x \in \mathbb{R}^n, x \neq 0 \right\rbrace$
 
 #### TODO不同展开什么样子,上面公式看不懂
 
@@ -823,7 +823,7 @@ $\VertA\Vert_p = \max \left\lbrace \frac{ \left( \sum_{i=1}^{m} |(Ax)_i|^p \righ
 #### TODO作用是什么
 
 谱范数
-$\VertA\Vert_2=$最大奇异值$A^TA$的特征值开根号
+$\Vert A\Vert_2=$最大奇异值$A^TA$的特征值开根号
 
 谱半径
 $\rho(A)=$最大特征值
@@ -836,21 +836,21 @@ $\rho(A)=$最大特征值
 
 ### 和范数，$L_1$范数
 
-$\VertA\Vert_{1,\mathrm{entry}} = \Vert\operatorname{vec}(A)\Vert_1 = \sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}|$
+$\Vert A\Vert_{1,\mathrm{entry}} = \Vert\operatorname{vec}(A)\Vert_1 = \sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}|$
 
 矩阵中所有绝对值之和,和向量L1一样
 
 ### Frobenius 范数(Schur 范数)
 
-$\VertA\Vert_F=\left(\sum_{i=1}^m\sum_{j=1}^n a_{ij}^2\right)^{1/2}$
+$\Vert A\Vert_F=\left(\sum_{i=1}^m\sum_{j=1}^n a_{ij}^2\right)^{1/2}$
 
-$\VertA\Vert_F^2=\operatorname{tr}(A^\mathrm{T}A)$
+$\Vert A\Vert_F^2=\operatorname{tr}(A^\mathrm{T}A)$
 
 矩阵的所有值的平方的开根号，或者是$A^TA$的迹(这个等于Frobenius 范数的平方)，手推下就能发现这两个算的东西一样
 
 ### Euclidean 范数(欧几里得范数)
 
-$\Vertx\Vert_2 = \sqrt{\sum_{i=1}^n x_i^2}$
+$\Vert x\Vert_2 = \sqrt{\sum_{i=1}^n x_i^2}$
 
 向量每个值的平方的和的开方，向量长度。
 
@@ -867,7 +867,7 @@ $\Vertx\Vert_2 = \sqrt{\sum_{i=1}^n x_i^2}$
 $$\Vert\boldsymbol{A}\Vert_p
 =
 \left(
-\sum_{i=1}^{\max\lbracem,n\rbrace}
+\sum_{i=1}^{\max\lbrace m,n\rbrace}
 \sigma_i^p
 \right)^{1/p}$$
 
@@ -881,8 +881,8 @@ $$\Vert\boldsymbol{A}\Vert_\infty
 =
 \lim_{p \to \infty}
 \left(
-\sum_{i=1}^{\max\lbracem,n\rbrace} \sigma_i^p
+\sum_{i=1}^{\max\lbrace m,n\rbrace} \sigma_i^p
 \right)^{1/p}
 =
-\max_{1 \le i \le \max\lbracem,n\rbrace} \sigma_i
+\max_{1 \le i \le \max\lbrace m,n\rbrace} \sigma_i
 = 3$$
