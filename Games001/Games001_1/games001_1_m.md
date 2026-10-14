@@ -28,7 +28,7 @@ $$C = \begin{pmatrix} A_{11} & A_{12} \\\\ A_{21} & A_{22} \end{pmatrix}
 
 **转置得到伴随矩阵**
 
-$$\operatorname{adj}(A) = C^T = \begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}$$
+$$\mathrm{adj}(A) = C^T = \begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}$$
 
 ### 具体例子
 
@@ -41,15 +41,15 @@ $$\begin{pmatrix} 4 & -3 \\\\ -2 & 1 \end{pmatrix}$$
 
 - 伴随矩阵：
 
-$$\operatorname{adj}(A) = \begin{pmatrix} 4 & -2 \\\\ -3 & 1 \end{pmatrix}$$
+$$\mathrm{adj}(A) = \begin{pmatrix} 4 & -2 \\\\ -3 & 1 \end{pmatrix}$$
 
-验证 $`A \cdot \operatorname{adj}(A) = \det(A) E`$：
+验证 $`A \cdot \mathrm{adj}(A) = \det(A) E`$：
 
 **伴随矩阵是逆矩阵去掉缩放**
 
 $$\det(A) = 1 \cdot 4 - 2 \cdot 3 = -2$$
 
-$$A \cdot \operatorname{adj}(A) =
+$$A \cdot \mathrm{adj}(A) =
 \begin{pmatrix} 1 & 2 \\\\ 3 & 4 \end{pmatrix}
 \begin{pmatrix} 4 & -2 \\\\ -3 & 1 \end{pmatrix} =
 \begin{pmatrix} -2 & 0 \\\\ 0 & -2 \end{pmatrix}
@@ -338,13 +338,13 @@ $$\begin{pmatrix}1&2\\\\3&2\end{pmatrix}
 
 对角线元素之和：
 
-$$\operatorname{tr}A=a+d$$
+$$\mathrm{tr}A=a+d$$
 
-$$\operatorname{tr}(A^T)=\operatorname{tr}A$$
+$$\mathrm{tr}(A^T)=\mathrm{tr}A$$
 
-$$\operatorname{tr}(A+B)=\operatorname{tr}A+\operatorname{tr}B$$
+$$\mathrm{tr}(A+B)=\mathrm{tr}A+\mathrm{tr}B$$
 
-$$\operatorname{tr}(cA)=c\operatorname{tr}A$$
+$$\mathrm{tr}(cA)=c\mathrm{tr}A$$
 
 # 特征值与特征向量
 
@@ -689,7 +689,7 @@ $$B = P^{-1}AP = \begin{bmatrix}0 & 1 \\\\ 1 & 0\end{bmatrix}\begin{bmatrix}2 & 
 
 相似矩阵的性质：
 
-迹相同：$`\operatorname{tr}(A) = \operatorname{tr}(B)`$
+迹相同：$`\mathrm{tr}(A) = \mathrm{tr}(B)`$
 
 行列式相同：$`\det(A) = \det(B)`$
 

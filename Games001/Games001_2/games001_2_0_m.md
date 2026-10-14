@@ -819,7 +819,7 @@ $`\rho(A)=`$最大特征值
 
 ### 和范数，$`L_1`$范数
 
-$`\Vert A\Vert_{1,\mathrm{entry}} = \Vert\operatorname{vec}(A)\Vert_1 = \sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}|`$
+$`\Vert A\Vert_{1,\mathrm{entry}} = \Vert\mathrm{vec}(A)\Vert_1 = \sum_{i=1}^{m}\sum_{j=1}^{n}|a_{ij}|`$
 
 矩阵中所有绝对值之和,和向量L1一样
 
@@ -827,7 +827,7 @@ $`\Vert A\Vert_{1,\mathrm{entry}} = \Vert\operatorname{vec}(A)\Vert_1 = \sum_{i=
 
 $`\Vert A\Vert_F=\left(\sum_{i=1}^m\sum_{j=1}^n a_{ij}^2\right)^{1/2}`$
 
-$`\Vert A\Vert_F^2=\operatorname{tr}(A^\mathrm{T}A)`$
+$`\Vert A\Vert_F^2=\mathrm{tr}(A^\mathrm{T}A)`$
 
 矩阵的所有值的平方的开根号，或者是$`A^TA`$的迹(这个等于Frobenius 范数的平方)，手推下就能发现这两个算的东西一样
 

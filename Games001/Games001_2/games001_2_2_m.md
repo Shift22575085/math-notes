@@ -269,7 +269,7 @@ $$|X| = \sum_{j=1}^n x_{ij} A_{ij}$$
 
 $$\frac{\partial |X|}{\partial x_{ij}} = A_{ij}$$
 
-#### $`\mathrm{d}|X| = \sum_{i,j} A_{ij} \mathrm{d}x_{ij}= \operatorname{tr}(\operatorname{adj}(X) \mathrm{d}X)`$
+#### $`\mathrm{d}|X| = \sum_{i,j} A_{ij} \mathrm{d}x_{ij}= \mathrm{tr}(\mathrm{adj}(X) \mathrm{d}X)`$
 
 因为 $`|X|`$ 是矩阵 $`X`$ 里所有 $`n \times n`$ 个元素的函数，所以它的全微分是：
 
@@ -281,19 +281,19 @@ $$\mathrm{d}|X| = \sum_{i=1}^n \sum_{j=1}^n A_{ij} \mathrm{d}x_{aij}$$
 
 $`A_{ij}`$ 属于代数余子式矩阵（伴随矩阵的转置），$`\mathrm{d}x_{ij}`$ 属于微分矩阵 $`\mathrm{d}X`$。这种“对应位置相乘再相加”的操作，可以表示为矩阵乘法加迹的形式：
 
-$$\sum_{i=1}^n \sum_{j=1}^n A_{ij} \mathrm{d}x_{ij} = \operatorname{tr}(C^T \mathrm{d}X)$$
+$$\sum_{i=1}^n \sum_{j=1}^n A_{ij} \mathrm{d}x_{ij} = \mathrm{tr}(C^T \mathrm{d}X)$$
 
-其中 $`C`$ 是代数余子式矩阵，$`C^T`$ 正好是伴随矩阵 $`\operatorname{adj}(X)`$。所以：
+其中 $`C`$ 是代数余子式矩阵，$`C^T`$ 正好是伴随矩阵 $`\mathrm{adj}(X)`$。所以：
 
-$$\mathrm{d}|X| = \operatorname{tr}(\operatorname{adj}(X) \mathrm{d}X)$$
+$$\mathrm{d}|X| = \mathrm{tr}(\mathrm{adj}(X) \mathrm{d}X)$$
 
 $$\mathrm{d}|X| = \sum_{i,j} A_{ij} \mathrm{d}x_{ij}
-= \operatorname{tr}(\operatorname{adj}(X) \mathrm{d}X)$$
+= \mathrm{tr}(\mathrm{adj}(X) \mathrm{d}X)$$
 
-当 $`X`$ 可逆时，由 $`X X^\ast  = |X| E`$ 两边左乘 $`X^{-1}`$，得 $`X^\ast  = |X| X^{-1}`$，即 $`\operatorname{adj}(X) = |X| X^{-1}`$。
+当 $`X`$ 可逆时，由 $`X X^\ast  = |X| E`$ 两边左乘 $`X^{-1}`$，得 $`X^\ast  = |X| X^{-1}`$，即 $`\mathrm{adj}(X) = |X| X^{-1}`$。
 
-$$\mathrm{d}|X| = \operatorname{tr}(|X| X^{-1} \mathrm{d}X)
-= |X| \operatorname{tr}(X^{-1} \mathrm{d}X)$$
+$$\mathrm{d}|X| = \mathrm{tr}(|X| X^{-1} \mathrm{d}X)
+= |X| \mathrm{tr}(X^{-1} \mathrm{d}X)$$
 
 ### 逆矩阵的微分
 由 $`X X^{-1} = E`$ 两边求微分：
@@ -346,7 +346,7 @@ a_z b_x & a_z b_y & a_z b_z
 
 图片中给出了一个非常重要的性质：
 
-$$\operatorname{tr}(\boldsymbol{a} \otimes \boldsymbol{b}) = \boldsymbol{a} \cdot \boldsymbol{b}$$
+$$\mathrm{tr}(\boldsymbol{a} \otimes \boldsymbol{b}) = \boldsymbol{a} \cdot \boldsymbol{b}$$
 
 因为是$`ab^T`$，这个的对角线之后等于对应点相乘
 
