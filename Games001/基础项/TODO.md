@@ -59,7 +59,7 @@ $${\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta}$$
 
 ## 推导三：用诱导公式（互余）得到 sin 的和角公式
 
-正弦是余弦的互余角：$\sin\theta=\cos(90°-\theta)$。
+正弦是余弦的互余角：$\sin\theta=\cos(90^{\circ}-\theta)$。
 
 $$\sin(\alpha+\beta)=\cos\bigl(90°-(\alpha+\beta)\bigr)=\cos\bigl((90°-\alpha)-\beta\bigr)$$
 
@@ -67,7 +67,7 @@ $$\sin(\alpha+\beta)=\cos\bigl(90°-(\alpha+\beta)\bigr)=\cos\bigl((90°-\alpha)
 
 $$=\cos(90°-\alpha)\cos\beta+\sin(90°-\alpha)\sin\beta$$
 
-再用互余关系 $\cos(90°-\alpha)=\sin\alpha$、$\sin(90°-\alpha)=\cos\alpha$：
+再用互余关系 $\cos(90^{\circ}-\alpha)=\sin\alpha$、$\sin(90^{\circ}-\alpha)=\cos\alpha$：
 
 $${\sin(\alpha+\beta)=\sin\alpha\cos\beta+\cos\alpha\sin\beta}$$
 
@@ -87,7 +87,7 @@ $$\tan(\alpha+\beta)=\frac{\sin(\alpha+\beta)}{\cos(\alpha+\beta)}
 $$=\dfrac{\dfrac{\sin\alpha}{\cos\alpha}+\dfrac{\sin\beta}{\cos\beta}}{1-\dfrac{\sin\alpha\sin\beta}{\cos\alpha\cos\beta}}
 =\frac{\tan\alpha+\tan\beta}{1-\tan\alpha\tan\beta}$$
 
-成立条件：$\cos\alpha\cos\beta\neq 0$，且 $1-\tan\alpha\tan\beta\neq 0$（否则 $\alpha+\beta=90°$，正切不存在）。
+成立条件：$\cos\alpha\cos\beta\neq 0$，且 $1-\tan\alpha\tan\beta\neq 0$（否则 $\alpha+\beta=90^{\circ}$，正切不存在）。
 
 ---
 
@@ -103,7 +103,7 @@ $$=\dfrac{\dfrac{\sin\alpha}{\cos\alpha}+\dfrac{\sin\beta}{\cos\beta}}{1-\dfrac{
 
 ## 例题：求 sin 75°
 
-把 75° 拆成两个特殊角：$75°=45°+30°$。
+把 75° 拆成两个特殊角：$75^{\circ}=45^{\circ}+30^{\circ}$。
 
 $$\sin 75°=\sin 45°\cos 30°+\cos 45°\sin 30°$$
 
@@ -112,7 +112,7 @@ $$\sin 75°=\sin 45°\cos 30°+\cos 45°\sin 30°$$
 $$=\frac{\sqrt2}{2}\cdot\frac{\sqrt3}{2}+\frac{\sqrt2}{2}\cdot\frac{1}{2}
 =\frac{\sqrt6+\sqrt2}{4}$$
 
-验算：$\sin 75°\approx 0.9659$，$(\sqrt6+\sqrt2)/4\approx 0.9659$ ✓
+验算：$\sin 75^{\circ}\approx 0.9659$，$(\sqrt6+\sqrt2)/4\approx 0.9659$ ✓
 
 同理可得：
 
@@ -128,7 +128,9 @@ $$\sin 30°=\frac12,\quad \sin 45°=\frac{\sqrt2}{2},\quad \sin 60°=\frac{\sqrt
 
 $$\cos 30°=\frac{\sqrt3}{2},\quad \cos 45°=\frac{\sqrt2}{2},\quad \cos 60°=\frac12$$
 
-$$\tan 30°=\frac{\sqrt3}{3},\quad \tan 45°=1,\quad \tan 60°=\sqrt3$$---
+$$\tan 30°=\frac{\sqrt3}{3},\quad \tan 45°=1,\quad \tan 60°=\sqrt3$$
+
+---
 
 ## 推导五：sin、cos 的导数
 
