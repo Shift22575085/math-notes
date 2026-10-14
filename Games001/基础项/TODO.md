@@ -264,3 +264,22 @@ $$e^{i\theta}=\sum_{n=0}^{\infty}\frac{(i\theta)^n}{n!}
 11 句号结尾+同段文字在前：文字在前 $x=1$。文字在后
 
 12 半角句点结尾：$x=1$.
+
+
+## ZZTEST2 修复方案实验区（临时）
+
+B1 control end-span: $x=1$。
+
+B2 zero-width after $: $x=1$​。
+
+B3 dollar-backtick: $`x=1`$。
+
+B4 nbsp after $: $x=1$ 。
+
+B5 control alpha end: $lpha$
+
+B6 ascii-space after: $x=1$ x
+
+B7 ZWSP mid CJK: 文字 $x=1$​ 文字后
+
+B8 backtick mid: 文字 $`x=1`$ 文字后
