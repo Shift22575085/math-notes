@@ -83,15 +83,15 @@ $$x_{ij}A_{ij},$$
 
 这一项。所以求导结果是 $`A_{ij}`$,行列式作为函数，固定点作为变量，求导结果为这个点的余子式。
 
-### 行列式对 $`X^T`$ 的梯度：$`\frac{\partial |X|}{\partial X^T} = X^*`$
+### 行列式对 $`X^T`$ 的梯度：$`\frac{\partial |X|}{\partial X^T} = X^\ast `$
 
 **公式**
 
-$${\frac{\partial |X|}{\partial X^T} = X^*}$$
+$${\frac{\partial |X|}{\partial X^T} = X^\ast }$$
 
 $`|X|`$：矩阵 $`X`$ 的行列式（一个标量）
 $`\frac{\partial |X|}{\partial X^T}`$：行列式对 $`X^T`$ 的梯度（分子布局，结果是一个矩阵）
-$`X^*`$：$`X`$ 的伴随矩阵
+$`X^\ast `$：$`X`$ 的伴随矩阵
 
 一句话含义：行列式对 $`X^T`$ 的梯度，等于伴随矩阵。
 
@@ -109,9 +109,9 @@ $$\left(\frac{\partial |X|}{\partial X^T}\right)_{ij} = \frac{\partial |X|}{\par
 
 行列式是函数，矩阵是变量。
 
-**右边：$`X^*`$**
+**右边：$`X^\ast `$**
 
-$`X^*`$ 是伴随矩阵。
+$`X^\ast `$ 是伴随矩阵。
 
 伴随矩阵的定义是：代数余子式矩阵的转置。
 
@@ -123,11 +123,11 @@ $$C = \begin{pmatrix} A_{11} & A_{12} & \dots \\\\ A_{21} & A_{22} & \dots \\\\ 
 
 伴随矩阵：
 
-$$X^* = C^T$$
+$$X^\ast  = C^T$$
 
-所以 $`X^*`$ 的第 $`(i,j)`$ 个元素是：
+所以 $`X^\ast `$ 的第 $`(i,j)`$ 个元素是：
 
-$$(X^*)_{ij} = A_{ji}$$
+$$(X^\ast )_{ij} = A_{ji}$$
 
 注意下标也是反的：伴随矩阵的第 $`(i,j)`$ 个元素，是 $`x_{ji}`$ 的代数余子式。
 
@@ -141,7 +141,7 @@ $$\left(\frac{\partial |X|}{\partial X^T}\right)_{ij} = \frac{\partial |X|}{\par
 
 右边：
 
-$$(X^*)_{ij} = A_{ji}$$
+$$(X^\ast )_{ij} = A_{ji}$$
 
 需要证明：
 
@@ -159,21 +159,21 @@ $$\frac{\partial |X|}{\partial x_{ji}} = A_{ji}$$
 
 **对任意 $`(i,j)`$ 都成立，所以两个矩阵相等：**
 
-$$\frac{\partial |X|}{\partial X^T} = X^*$$
+$$\frac{\partial |X|}{\partial X^T} = X^\ast $$
 
-### 逆矩阵公式：$`X^{-1} = \dfrac{X^*}{|X|}`$
+### 逆矩阵公式：$`X^{-1} = \dfrac{X^\ast }{|X|}`$
 
-$`\frac{\partial |X|}{\partial X^T} = X^*`$（$`X^*`$ 即伴随矩阵，$`X^{-1} = X^* / |X|`$）。
+$`\frac{\partial |X|}{\partial X^T} = X^\ast `$（$`X^\ast `$ 即伴随矩阵，$`X^{-1} = X^\ast  / |X|`$）。
 
 **推导：**
 
-$${X^{-1} = \frac{X^*}{|X|}}$$
+$${X^{-1} = \frac{X^\ast }{|X|}}$$
 
 **第一步：伴随矩阵的核心性质**
 
 伴随矩阵满足：
 
-$$X X^* = |X| E$$
+$$X X^\ast  = |X| E$$
 
 其中 $`E`$ 是单位矩阵。
 
@@ -181,7 +181,7 @@ $$X X^* = |X| E$$
 
 前提是 $`|X| \neq 0`$（行列式不为零，矩阵可逆）。
 
-$$X \cdot \frac{X^*}{|X|} = E$$
+$$X \cdot \frac{X^\ast }{|X|} = E$$
 
 **第三步：对照逆矩阵的定义**
 
@@ -191,13 +191,13 @@ $$X \cdot \frac{X^*}{|X|} = E$$
 
 所以：
 
-$$\frac{X^*}{|X|} = X^{-1}$$
+$$\frac{X^\ast }{|X|} = X^{-1}$$
 
 即：
 
-$$X^{-1} = \frac{X^*}{|X|}$$
+$$X^{-1} = \frac{X^\ast }{|X|}$$
 
-**为什么 $`X X^* = |X| E`$**
+**为什么 $`X X^\ast  = |X| E`$**
 
 设：
 
@@ -205,9 +205,9 @@ $$X = \begin{pmatrix} a & b \\\\ c & d \end{pmatrix}$$
 
 伴随矩阵：
 
-$$X^* = \begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}$$
+$$X^\ast  = \begin{pmatrix} d & -b \\\\ -c & a \end{pmatrix}$$
 
-计算 $`X X^*`$：
+计算 $`X X^\ast `$：
 
 第一行第一列：
 
@@ -227,13 +227,13 @@ $$c \cdot (-b) + d \cdot a = -bc + ad = ad - bc = |X|$$
 
 所以：
 
-$$X X^* = \begin{pmatrix} |X| & 0 \\\\ 0 & |X| \end{pmatrix} = |X| E$$
+$$X X^\ast  = \begin{pmatrix} |X| & 0 \\\\ 0 & |X| \end{pmatrix} = |X| E$$
 
 **一般情况**
 
-对 $`n`$ 阶矩阵，$`X X^*`$ 的第 $`(i,j)`$ 个元素是：
+对 $`n`$ 阶矩阵，$`X X^\ast `$ 的第 $`(i,j)`$ 个元素是：
 
-$$(X X^*)_{ij} = \sum_{k=1}^n x_{ik} (X^*)_{kj} = \sum_{k=1}^n x_{ik} A_{jk}$$
+$$(X X^\ast )_{ij} = \sum_{k=1}^n x_{ik} (X^\ast )_{kj} = \sum_{k=1}^n x_{ik} A_{jk}$$
 
 其中 $`A_{jk}`$ 是 $`x_{jk}`$ 的代数余子式。
 
@@ -251,7 +251,7 @@ $$\sum_{k=1}^n x_{ik} A_{jk} = 0$$
 
 所以：
 
-$$X X^* = \begin{pmatrix} |X| & 0 & \dots \\\\ 0 & |X| & \dots \\\\ \vdots & \vdots & \ddots \end{pmatrix} = |X| E$$
+$$X X^\ast  = \begin{pmatrix} |X| & 0 & \dots \\\\ 0 & |X| & \dots \\\\ \vdots & \vdots & \ddots \end{pmatrix} = |X| E$$
 
 ### 行列式全微分公式$`|X| \mathrm{tr}(X^{-1} \mathrm{d}X)`$
 
@@ -290,7 +290,7 @@ $$\mathrm{d}|X| = \operatorname{tr}(\operatorname{adj}(X) \mathrm{d}X)$$
 $$\mathrm{d}|X| = \sum_{i,j} A_{ij} \mathrm{d}x_{ij}
 = \operatorname{tr}(\operatorname{adj}(X) \mathrm{d}X)$$
 
-当 $`X`$ 可逆时，由 $`X X^* = |X| E`$ 两边左乘 $`X^{-1}`$，得 $`X^* = |X| X^{-1}`$，即 $`\operatorname{adj}(X) = |X| X^{-1}`$。
+当 $`X`$ 可逆时，由 $`X X^\ast  = |X| E`$ 两边左乘 $`X^{-1}`$，得 $`X^\ast  = |X| X^{-1}`$，即 $`\operatorname{adj}(X) = |X| X^{-1}`$。
 
 $$\mathrm{d}|X| = \operatorname{tr}(|X| X^{-1} \mathrm{d}X)
 = |X| \operatorname{tr}(X^{-1} \mathrm{d}X)$$
@@ -327,7 +327,7 @@ $`\boldsymbol{a}, \boldsymbol{b}`$：均为列向量。
 $`\boldsymbol{a} \otimes \boldsymbol{b}`$：表示外积（张量积）。
 $`\boldsymbol{a}\boldsymbol{b}^H`$：矩阵乘法，列向量乘以行向量。
 $`H`$：表示共轭转置（Hermitian 转置）。
-在复数域中，$`\boldsymbol{b}^H = (\boldsymbol{b}^*)^T`$（共轭并转置）。
+在复数域中，$`\boldsymbol{b}^H = (\boldsymbol{b}^\ast )^T`$（共轭并转置）。
 在实数域中，$`\boldsymbol{b}^H = \boldsymbol{b}^T`$（直接转置），因此公式简化为 $`\boldsymbol{a}\boldsymbol{b}^T`$。
 
 **实数域上的矩阵表示**

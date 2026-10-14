@@ -374,9 +374,9 @@ $${L^Tx=y}$$
 
 $$L=
 \begin{pmatrix}
-*&0&0\\\\
-*&*&0\\\\
-*&*&*
+\ast &0&0\\\\
+\ast &\ast &0\\\\
+\ast &\ast &\ast 
 \end{pmatrix}$$
 
 $`Ly=b`$ 非常容易求，可以直接从上往下计算。
@@ -385,9 +385,9 @@ $`L^T`$是上三角矩阵：
 
 $$L^T=
 \begin{pmatrix}
-*&*&*\\\\
-0&*&*\\\\
-0&0&*
+\ast &\ast &\ast \\\\
+0&\ast &\ast \\\\
+0&0&\ast 
 \end{pmatrix}$$
 
 $`L^Tx=y`$可以直接从下往上计算。
